@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Moe\\Projects\\GitHub\\VK-Bot-CRUNGE-BOT\\VK-Bot-CRUNGE-BOT.csproj": {}
+    "D:\\Moe\\Projects\\GitHub\\VK_Control_Panel_Bot\\VK_Control_Panel_Bot.csproj": {}
   },
   "projects": {
-    "D:\\Moe\\Projects\\GitHub\\VK-Bot-CRUNGE-BOT\\VK-Bot-CRUNGE-BOT.csproj": {
+    "D:\\Moe\\Projects\\GitHub\\VK_Control_Panel_Bot\\VK_Control_Panel_Bot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Moe\\Projects\\GitHub\\VK-Bot-CRUNGE-BOT\\VK-Bot-CRUNGE-BOT.csproj",
-        "projectName": "VK-Bot-CRUNGE-BOT",
-        "projectPath": "D:\\Moe\\Projects\\GitHub\\VK-Bot-CRUNGE-BOT\\VK-Bot-CRUNGE-BOT.csproj",
+        "projectUniqueName": "D:\\Moe\\Projects\\GitHub\\VK_Control_Panel_Bot\\VK_Control_Panel_Bot.csproj",
+        "projectName": "VK_Control_Panel_Bot",
+        "projectPath": "D:\\Moe\\Projects\\GitHub\\VK_Control_Panel_Bot\\VK_Control_Panel_Bot.csproj",
         "packagesPath": "C:\\Users\\fralorange\\.nuget\\packages\\",
-        "outputPath": "D:\\Moe\\Projects\\GitHub\\VK-Bot-CRUNGE-BOT\\obj\\",
+        "outputPath": "D:\\Moe\\Projects\\GitHub\\VK_Control_Panel_Bot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fralorange\\AppData\\Roaming\\NuGet\\NuGet.Config",

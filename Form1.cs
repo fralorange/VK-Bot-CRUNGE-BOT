@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VK_Bot_CRUNGE_BOT
+namespace VK_Control_Panel_Bot
 {
-    public partial class MainForm : Form
+    public partial class Form1 : Form
     {
-        public MainForm()
+        public Form1()
         {
             InitializeComponent();
         }
