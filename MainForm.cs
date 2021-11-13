@@ -22,7 +22,8 @@ namespace VK_Control_Panel_Bot
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            pictureBox1.Focus();
+            this.pictureBox1.Focus();
+            this.LoginPanel.Hide();
         }
 
         private void exit_Click(object sender, EventArgs e)
