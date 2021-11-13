@@ -123,14 +123,17 @@
             // iconified
             // 
             resources.ApplyResources(this.iconified, "iconified");
+            this.iconified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconified.ForeColor = System.Drawing.SystemColors.Highlight;
             this.iconified.Name = "iconified";
+            this.iconified.TabStop = false;
             this.iconified.UseVisualStyleBackColor = true;
             this.iconified.Click += new System.EventHandler(this.iconified_Click);
             // 
             // exit
             // 
             resources.ApplyResources(this.exit, "exit");
+            this.exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.exit.ForeColor = System.Drawing.SystemColors.Highlight;
             this.exit.Name = "exit";
             this.exit.UseVisualStyleBackColor = true;
@@ -138,6 +141,7 @@
             // 
             // UpPanel
             // 
+            this.UpPanel.BackColor = System.Drawing.SystemColors.Menu;
             this.UpPanel.Controls.Add(this.iconified);
             this.UpPanel.Controls.Add(this.exit);
             resources.ApplyResources(this.UpPanel, "UpPanel");

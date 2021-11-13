@@ -22,17 +22,17 @@ namespace VK_Control_Panel_Bot
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-
+            pictureBox1.Focus();
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-
         }
 
         private void iconified_Click(object sender, EventArgs e)
         {
+            pictureBox1.Focus();
             this.WindowState = FormWindowState.Minimized;
         }
 
