@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VK-Bot-CRUNGE-BOT", "VK-Bot-CRUNGE-BOT.csproj", "{2622DB29-C9DE-45EA-8872-6F607D9BE2BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2622DB29-C9DE-45EA-8872-6F607D9BE2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2622DB29-C9DE-45EA-8872-6F607D9BE2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2622DB29-C9DE-45EA-8872-6F607D9BE2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2622DB29-C9DE-45EA-8872-6F607D9BE2BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E3A527B-2C5C-4D05-8C94-54363767A3BD}
+	EndGlobalSection
+EndGlobal
