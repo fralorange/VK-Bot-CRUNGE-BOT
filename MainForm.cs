@@ -24,14 +24,15 @@ namespace VK_Control_Panel_Bot
         {
             this.pictureBox1.Focus();
             this.LoginPanel.Hide();
+            Auth.Log(LoginBox.Text, PassBox.Text);
         }
 
-        private void exit_Click(object sender, EventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void iconified_Click(object sender, EventArgs e)
+        private void Iconified_Click(object sender, EventArgs e)
         {
             pictureBox1.Focus();
             this.WindowState = FormWindowState.Minimized;

@@ -81,77 +81,104 @@
     <value>1</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="iconified.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="Iconified.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="iconified.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="Iconified.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="iconified.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="Iconified.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
   </data>
-  <data name="iconified.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="Iconified.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="iconified.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Iconified.Location" type="System.Drawing.Point, System.Drawing">
     <value>550, 0</value>
   </data>
-  <data name="iconified.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Iconified.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
   </data>
-  <data name="iconified.TabIndex" type="System.Int32, mscorlib">
+  <data name="Iconified.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="iconified.Text" xml:space="preserve">
+  <data name="Iconified.Text" xml:space="preserve">
     <value>―</value>
   </data>
-  <data name="&gt;&gt;iconified.Name" xml:space="preserve">
-    <value>iconified</value>
+  <data name="&gt;&gt;Iconified.Name" xml:space="preserve">
+    <value>Iconified</value>
   </data>
-  <data name="&gt;&gt;iconified.Type" xml:space="preserve">
+  <data name="&gt;&gt;Iconified.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;iconified.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Iconified.Parent" xml:space="preserve">
     <value>UpPanel</value>
   </data>
-  <data name="&gt;&gt;iconified.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;Iconified.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="exit.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="Exit.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="exit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="Exit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="exit.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="Exit.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
   </data>
-  <data name="exit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="Exit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="exit.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Exit.Location" type="System.Drawing.Point, System.Drawing">
     <value>590, 0</value>
   </data>
-  <data name="exit.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Exit.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
   </data>
-  <data name="exit.TabIndex" type="System.Int32, mscorlib">
+  <data name="Exit.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="exit.Text" xml:space="preserve">
+  <data name="Exit.Text" xml:space="preserve">
     <value>✖</value>
   </data>
-  <data name="&gt;&gt;exit.Name" xml:space="preserve">
-    <value>exit</value>
+  <data name="&gt;&gt;Exit.Name" xml:space="preserve">
+    <value>Exit</value>
   </data>
-  <data name="&gt;&gt;exit.Type" xml:space="preserve">
+  <data name="&gt;&gt;Exit.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;exit.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Exit.Parent" xml:space="preserve">
     <value>UpPanel</value>
   </data>
-  <data name="&gt;&gt;exit.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;Exit.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="OutputLogin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Letter Gothic Std, 11.25pt, style=Bold</value>
+  </data>
+  <data name="OutputLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="OutputLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
+  </data>
+  <data name="OutputLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="OutputLogin.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Name" xml:space="preserve">
+    <value>OutputLogin</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Parent" xml:space="preserve">
+    <value>UpPanel</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="UpPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -173,6 +200,147 @@
   </data>
   <data name="&gt;&gt;UpPanel.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;EnterButton.Name" xml:space="preserve">
+    <value>EnterButton</value>
+  </data>
+  <data name="&gt;&gt;EnterButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnterButton.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;EnterButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
+    <value>pictureBox3</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;LoginLabel.Name" xml:space="preserve">
+    <value>LoginLabel</value>
+  </data>
+  <data name="&gt;&gt;LoginLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LoginLabel.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;LoginLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;PassBox.Name" xml:space="preserve">
+    <value>PassBox</value>
+  </data>
+  <data name="&gt;&gt;PassBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PassBox.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;PassBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;LoginBox.Name" xml:space="preserve">
+    <value>LoginBox</value>
+  </data>
+  <data name="&gt;&gt;LoginBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LoginBox.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;LoginBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;TwoFactPanel.Name" xml:space="preserve">
+    <value>TwoFactPanel</value>
+  </data>
+  <data name="&gt;&gt;TwoFactPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TwoFactPanel.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;TwoFactPanel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="LoginPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 40</value>
+  </data>
+  <data name="LoginPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 550</value>
+  </data>
+  <data name="LoginPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;LoginPanel.Name" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;LoginPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LoginPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LoginPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="EnterButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -482,27 +650,6 @@
   </data>
   <data name="&gt;&gt;TwoFactPanel.ZOrder" xml:space="preserve">
     <value>9</value>
-  </data>
-  <data name="LoginPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 40</value>
-  </data>
-  <data name="LoginPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 550</value>
-  </data>
-  <data name="LoginPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;LoginPanel.Name" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;LoginPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LoginPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LoginPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="OAuthEnterButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>

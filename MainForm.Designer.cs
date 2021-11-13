@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.iconified = new System.Windows.Forms.Button();
-            this.exit = new System.Windows.Forms.Button();
+            this.Iconified = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
             this.UpPanel = new System.Windows.Forms.Panel();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.EnterButton = new System.Windows.Forms.Button();
@@ -48,6 +48,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.OAuthBox = new System.Windows.Forms.TextBox();
+            this.OutputLogin = new System.Windows.Forms.TextBox();
             this.UpPanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,30 +63,31 @@
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
-            // iconified
+            // Iconified
             // 
-            resources.ApplyResources(this.iconified, "iconified");
-            this.iconified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.iconified.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.iconified.Name = "iconified";
-            this.iconified.TabStop = false;
-            this.iconified.UseVisualStyleBackColor = true;
-            this.iconified.Click += new System.EventHandler(this.iconified_Click);
+            resources.ApplyResources(this.Iconified, "Iconified");
+            this.Iconified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Iconified.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Iconified.Name = "Iconified";
+            this.Iconified.TabStop = false;
+            this.Iconified.UseVisualStyleBackColor = true;
+            this.Iconified.Click += new System.EventHandler(this.Iconified_Click);
             // 
-            // exit
+            // Exit
             // 
-            resources.ApplyResources(this.exit, "exit");
-            this.exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.exit.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.exit.Name = "exit";
-            this.exit.UseVisualStyleBackColor = true;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
+            resources.ApplyResources(this.Exit, "Exit");
+            this.Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Exit.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Exit.Name = "Exit";
+            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // UpPanel
             // 
             this.UpPanel.BackColor = System.Drawing.SystemColors.Menu;
-            this.UpPanel.Controls.Add(this.iconified);
-            this.UpPanel.Controls.Add(this.exit);
+            this.UpPanel.Controls.Add(this.OutputLogin);
+            this.UpPanel.Controls.Add(this.Iconified);
+            this.UpPanel.Controls.Add(this.Exit);
             resources.ApplyResources(this.UpPanel, "UpPanel");
             this.UpPanel.Name = "UpPanel";
             this.UpPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpPanel_MouseDown);
@@ -213,6 +215,14 @@
             this.OAuthBox.ForeColor = System.Drawing.SystemColors.Highlight;
             this.OAuthBox.Name = "OAuthBox";
             // 
+            // OutputLogin
+            // 
+            this.OutputLogin.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.OutputLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.OutputLogin, "OutputLogin");
+            this.OutputLogin.Name = "OutputLogin";
+            this.OutputLogin.ReadOnly = true;
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -225,6 +235,7 @@
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.UpPanel.ResumeLayout(false);
+            this.UpPanel.PerformLayout();
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -237,8 +248,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button iconified;
-        private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Button Iconified;
+        private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Panel UpPanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel LoginPanel;
@@ -256,5 +267,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox OAuthBox;
+        private System.Windows.Forms.TextBox OutputLogin;
     }
 }
