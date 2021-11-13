@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VK-Bot-CRUNGE-BOT", "VK-Bot-CRUNGE-BOT.csproj", "{290E8F65-47F3-4509-B0EF-97DD1CE10716}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VK_Control_Panel_Bot", "VK_Control_Panel_Bot.csproj", "{0A5060FD-3CAA-4572-B983-F3C50C6023A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{290E8F65-47F3-4509-B0EF-97DD1CE10716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{290E8F65-47F3-4509-B0EF-97DD1CE10716}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{290E8F65-47F3-4509-B0EF-97DD1CE10716}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{290E8F65-47F3-4509-B0EF-97DD1CE10716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A5060FD-3CAA-4572-B983-F3C50C6023A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5060FD-3CAA-4572-B983-F3C50C6023A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5060FD-3CAA-4572-B983-F3C50C6023A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5060FD-3CAA-4572-B983-F3C50C6023A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {689CA65F-E171-44E5-AA38-F54480FB0256}
+		SolutionGuid = {8FFEBBB3-1C1C-49CA-A92F-34C1CE06F7E3}
 	EndGlobalSection
 EndGlobal

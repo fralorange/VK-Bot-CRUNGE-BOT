@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VK_Bot_CRUNGE_BOT
+namespace VK_Control_Panel_Bot
 {
     internal static class Program
     {
@@ -17,7 +17,7 @@ namespace VK_Bot_CRUNGE_BOT
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new Form1());
         }
     }
 }
