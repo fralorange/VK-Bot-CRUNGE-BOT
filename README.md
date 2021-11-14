@@ -4,6 +4,6 @@ Control panel bot which gives user full control on his account and vk conversati
 - Light/dark mode toggle
 - Troll functions like flooder, auto-responder and more.
 - Better UI
-- Information about other user by their id without violation VK TOS.
+- Information about other user by their id without violating VK TOS.
 
 
