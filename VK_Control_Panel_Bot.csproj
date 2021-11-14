@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="VkNet" Version="1.67.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="ClassLibrary1">
       <HintPath>C:\Users\fralorange\Downloads\DragAssembly.dll</HintPath>
     </Reference>
