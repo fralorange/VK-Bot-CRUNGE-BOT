@@ -153,21 +153,6 @@
   <data name="&gt;&gt;Exit.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="OutputLogin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Letter Gothic Std, 11.25pt, style=Bold</value>
-  </data>
-  <data name="OutputLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="OutputLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 18</value>
-  </data>
-  <data name="OutputLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="OutputLogin.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
   <data name="&gt;&gt;OutputLogin.Name" xml:space="preserve">
     <value>OutputLogin</value>
   </data>
@@ -201,145 +186,166 @@
   <data name="&gt;&gt;UpPanel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;EnterButton.Name" xml:space="preserve">
-    <value>EnterButton</value>
+  <data name="OutputLogin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Letter Gothic Std, 11.25pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;EnterButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="OutputLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
-  <data name="&gt;&gt;EnterButton.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
+  <data name="OutputLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
   </data>
-  <data name="&gt;&gt;EnterButton.ZOrder" xml:space="preserve">
+  <data name="OutputLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="OutputLogin.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Name" xml:space="preserve">
+    <value>OutputLogin</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Parent" xml:space="preserve">
+    <value>UpPanel</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
+  <data name="OAuthEnter.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="OAuthEnter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Letter Gothic Std, 26.25pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
+  <data name="OAuthEnter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+  <data name="OAuthEnter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 361</value>
+  </data>
+  <data name="OAuthEnter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 50</value>
+  </data>
+  <data name="OAuthEnter.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="OAuthEnter.Text" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="&gt;&gt;OAuthEnter.Name" xml:space="preserve">
+    <value>OAuthEnter</value>
+  </data>
+  <data name="&gt;&gt;OAuthEnter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OAuthEnter.Parent" xml:space="preserve">
+    <value>OAuthPanel</value>
+  </data>
+  <data name="&gt;&gt;OAuthEnter.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 324</value>
+  </data>
+  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 2</value>
+  </data>
+  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>OAuthPanel</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
+  <data name="OAuth.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="OAuth.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Letter Gothic Std, 36pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
+  <data name="OAuth.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="OAuth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 188</value>
   </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
+  <data name="OAuth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 61</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;LoginLabel.Name" xml:space="preserve">
-    <value>LoginLabel</value>
-  </data>
-  <data name="&gt;&gt;LoginLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LoginLabel.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;LoginLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;PassBox.Name" xml:space="preserve">
-    <value>PassBox</value>
-  </data>
-  <data name="&gt;&gt;PassBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PassBox.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;PassBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;LoginBox.Name" xml:space="preserve">
-    <value>LoginBox</value>
-  </data>
-  <data name="&gt;&gt;LoginBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LoginBox.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;LoginBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;TwoFactPanel.Name" xml:space="preserve">
-    <value>TwoFactPanel</value>
-  </data>
-  <data name="&gt;&gt;TwoFactPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TwoFactPanel.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;TwoFactPanel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="LoginPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 40</value>
-  </data>
-  <data name="LoginPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 550</value>
-  </data>
-  <data name="LoginPanel.TabIndex" type="System.Int32, mscorlib">
+  <data name="OAuth.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;LoginPanel.Name" xml:space="preserve">
-    <value>LoginPanel</value>
+  <data name="OAuth.Text" xml:space="preserve">
+    <value>OAuth</value>
   </data>
-  <data name="&gt;&gt;LoginPanel.Type" xml:space="preserve">
+  <data name="&gt;&gt;OAuth.Name" xml:space="preserve">
+    <value>OAuth</value>
+  </data>
+  <data name="&gt;&gt;OAuth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OAuth.Parent" xml:space="preserve">
+    <value>OAuthPanel</value>
+  </data>
+  <data name="&gt;&gt;OAuth.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="OAuthTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Letter Gothic Std, 14.25pt, style=Bold</value>
+  </data>
+  <data name="OAuthTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 300</value>
+  </data>
+  <data name="OAuthTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 23</value>
+  </data>
+  <data name="OAuthTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;OAuthTextBox.Name" xml:space="preserve">
+    <value>OAuthTextBox</value>
+  </data>
+  <data name="&gt;&gt;OAuthTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OAuthTextBox.Parent" xml:space="preserve">
+    <value>OAuthPanel</value>
+  </data>
+  <data name="&gt;&gt;OAuthTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="OAuthPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="OAuthPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 550</value>
+  </data>
+  <data name="OAuthPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="OAuthPanel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;OAuthPanel.Name" xml:space="preserve">
+    <value>OAuthPanel</value>
+  </data>
+  <data name="&gt;&gt;OAuthPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LoginPanel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;OAuthPanel.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
   </data>
-  <data name="&gt;&gt;LoginPanel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;OAuthPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="EnterButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -373,7 +379,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;EnterButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -400,7 +406,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -427,7 +433,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 442</value>
@@ -448,7 +454,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 324</value>
@@ -469,7 +475,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="LoginLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -502,7 +508,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;LoginLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -529,7 +535,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="PassBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Letter Gothic Std, 14.25pt, style=Bold</value>
@@ -553,7 +559,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;PassBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="LoginBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Letter Gothic Std, 14.25pt, style=Bold</value>
@@ -577,190 +583,28 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;LoginBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;OAuthEnterButton.Name" xml:space="preserve">
-    <value>OAuthEnterButton</value>
-  </data>
-  <data name="&gt;&gt;OAuthEnterButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OAuthEnterButton.Parent" xml:space="preserve">
-    <value>TwoFactPanel</value>
-  </data>
-  <data name="&gt;&gt;OAuthEnterButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>TwoFactPanel</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>TwoFactPanel</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;OAuthBox.Name" xml:space="preserve">
-    <value>OAuthBox</value>
-  </data>
-  <data name="&gt;&gt;OAuthBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OAuthBox.Parent" xml:space="preserve">
-    <value>TwoFactPanel</value>
-  </data>
-  <data name="&gt;&gt;OAuthBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TwoFactPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TwoFactPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 550</value>
-  </data>
-  <data name="TwoFactPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="TwoFactPanel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;TwoFactPanel.Name" xml:space="preserve">
-    <value>TwoFactPanel</value>
-  </data>
-  <data name="&gt;&gt;TwoFactPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TwoFactPanel.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;TwoFactPanel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="OAuthEnterButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="LoginPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 40</value>
   </data>
-  <data name="OAuthEnterButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Letter Gothic Std, 26.25pt, style=Bold</value>
+  <data name="LoginPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 550</value>
   </data>
-  <data name="OAuthEnterButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="LoginPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="OAuthEnterButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 390</value>
+  <data name="&gt;&gt;LoginPanel.Name" xml:space="preserve">
+    <value>LoginPanel</value>
   </data>
-  <data name="OAuthEnterButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 50</value>
-  </data>
-  <data name="OAuthEnterButton.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="OAuthEnterButton.Text" xml:space="preserve">
-    <value>Enter</value>
-  </data>
-  <data name="&gt;&gt;OAuthEnterButton.Name" xml:space="preserve">
-    <value>OAuthEnterButton</value>
-  </data>
-  <data name="&gt;&gt;OAuthEnterButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OAuthEnterButton.Parent" xml:space="preserve">
-    <value>TwoFactPanel</value>
-  </data>
-  <data name="&gt;&gt;OAuthEnterButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 365</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 2</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;LoginPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>TwoFactPanel</value>
+  <data name="&gt;&gt;LoginPanel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Letter Gothic Std, 36pt, style=Bold</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 108</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 61</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>OAuth2</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>TwoFactPanel</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="OAuthBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Letter Gothic Std, 14.25pt, style=Bold</value>
-  </data>
-  <data name="OAuthBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 341</value>
-  </data>
-  <data name="OAuthBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 23</value>
-  </data>
-  <data name="OAuthBox.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;OAuthBox.Name" xml:space="preserve">
-    <value>OAuthBox</value>
-  </data>
-  <data name="&gt;&gt;OAuthBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OAuthBox.Parent" xml:space="preserve">
-    <value>TwoFactPanel</value>
-  </data>
-  <data name="&gt;&gt;OAuthBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;LoginPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

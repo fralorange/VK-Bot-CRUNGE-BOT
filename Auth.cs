@@ -7,6 +7,8 @@ using VkNet;
 using VkNet.Model.RequestParams;
 using VkNet.Model;
 using VkNet.Enums.Filters;
+using VkNet.AudioBypassService.Extensions;
+using System.Windows.Forms;
 
 namespace VK_Control_Panel_Bot
 {
@@ -14,7 +16,9 @@ namespace VK_Control_Panel_Bot
     {
         public static void Log(string login, string password)
         {
-            VkApi api = new();
+            var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
+            services.AddAudioBypass();
+            VkApi api = new(services);
 
             api.Authorize(new ApiAuthParams
             {
@@ -24,12 +28,12 @@ namespace VK_Control_Panel_Bot
                 Settings = Settings.All,
                 TwoFactorAuthorization = () =>
                 {
-                    return Console.ReadLine();
+                    return "0";
                 }
             });
             if (api.IsAuthorized)
             {
-                
+
             } else
             {
 

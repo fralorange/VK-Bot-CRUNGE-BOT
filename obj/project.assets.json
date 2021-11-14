@@ -59,6 +59,27 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "protobuf-net/3.0.101": {
+        "type": "package",
+        "dependencies": {
+          "protobuf-net.Core": "3.0.101"
+        },
+        "compile": {
+          "lib/net5.0/protobuf-net.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/protobuf-net.dll": {}
+        }
+      },
+      "protobuf-net.Core/3.0.101": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/protobuf-net.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/protobuf-net.Core.dll": {}
+        }
+      },
       "System.Text.Encoding.CodePages/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -91,6 +112,19 @@
         },
         "runtime": {
           "lib/net5.0/VkNet.dll": {}
+        }
+      },
+      "VkNet.AudioBypassService/1.7.1": {
+        "type": "package",
+        "dependencies": {
+          "VkNet": "1.65.0",
+          "protobuf-net": "3.0.101"
+        },
+        "compile": {
+          "lib/net5.0/VkNet.AudioBypassService.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/VkNet.AudioBypassService.dll": {}
         }
       }
     }
@@ -253,6 +287,50 @@
         "packageIcon.png"
       ]
     },
+    "protobuf-net/3.0.101": {
+      "sha512": "mLm8VGfGylp9q+rbJDp3uw0BOeNzfGENecVz/EYGlzq3ss7tfajGXHCMoZm/GxJ9vSn9pcK22UXWZnQ5GJQMjA==",
+      "type": "package",
+      "path": "protobuf-net/3.0.101",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/protobuf-net.dll",
+        "lib/net461/protobuf-net.xml",
+        "lib/net5.0/protobuf-net.dll",
+        "lib/net5.0/protobuf-net.xml",
+        "lib/netcoreapp3.1/protobuf-net.dll",
+        "lib/netcoreapp3.1/protobuf-net.xml",
+        "lib/netstandard2.0/protobuf-net.dll",
+        "lib/netstandard2.0/protobuf-net.xml",
+        "lib/netstandard2.1/protobuf-net.dll",
+        "lib/netstandard2.1/protobuf-net.xml",
+        "protobuf-net.3.0.101.nupkg.sha512",
+        "protobuf-net.nuspec",
+        "protobuf-net.png"
+      ]
+    },
+    "protobuf-net.Core/3.0.101": {
+      "sha512": "gf9QIF0RlctfjmOjbE6eOyMulkNEsH7tHncjKj/4BTu9tkuTyrH3fv5I+35GnolJqKJ6fh9kYaezvNRL3t75+Q==",
+      "type": "package",
+      "path": "protobuf-net.core/3.0.101",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/protobuf-net.Core.dll",
+        "lib/net461/protobuf-net.Core.xml",
+        "lib/net5.0/protobuf-net.Core.dll",
+        "lib/net5.0/protobuf-net.Core.xml",
+        "lib/netcoreapp3.1/protobuf-net.Core.dll",
+        "lib/netcoreapp3.1/protobuf-net.Core.xml",
+        "lib/netstandard2.0/protobuf-net.Core.dll",
+        "lib/netstandard2.0/protobuf-net.Core.xml",
+        "lib/netstandard2.1/protobuf-net.Core.dll",
+        "lib/netstandard2.1/protobuf-net.Core.xml",
+        "protobuf-net.core.3.0.101.nupkg.sha512",
+        "protobuf-net.core.nuspec",
+        "protobuf-net.png"
+      ]
+    },
     "System.Text.Encoding.CodePages/5.0.0": {
       "sha512": "NyscU59xX6Uo91qvhOs2Ccho3AR2TnZPomo1Z0K6YpyztBPM/A5VbkzOO19sy3A3i1TtEnTxA7bCe3Us+r5MWg==",
       "type": "package",
@@ -310,11 +388,25 @@
         "vknet.1.67.0.nupkg.sha512",
         "vknet.nuspec"
       ]
+    },
+    "VkNet.AudioBypassService/1.7.1": {
+      "sha512": "tApsN7BgPu4vucjuZLpeSs3B9lXzlpeH0+N1GX0XV2SbbbXZ41kcDASwavo/bGbu1FYuihZzSq/lNmS26lf5tA==",
+      "type": "package",
+      "path": "vknet.audiobypassservice/1.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/VkNet.AudioBypassService.dll",
+        "lib/netstandard2.0/VkNet.AudioBypassService.dll",
+        "vknet.audiobypassservice.1.7.1.nupkg.sha512",
+        "vknet.audiobypassservice.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "VkNet >= 1.67.0"
+      "VkNet >= 1.67.0",
+      "VkNet.AudioBypassService >= 1.7.1"
     ]
   },
   "packageFolders": {
@@ -359,6 +451,10 @@
           "VkNet": {
             "target": "Package",
             "version": "[1.67.0, )"
+          },
+          "VkNet.AudioBypassService": {
+            "target": "Package",
+            "version": "[1.7.1, )"
           }
         },
         "imports": [

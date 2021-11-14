@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,9 +13,10 @@ namespace VK_Control_Panel_Bot
 {
     public partial class MainForm : Form
     {
+        //UI settings//
         private bool _dragging = false;
         private Point _start_point = new(0,0);
-
+        //
         public MainForm()
         {
             InitializeComponent();
@@ -24,7 +26,9 @@ namespace VK_Control_Panel_Bot
         {
             this.pictureBox1.Focus();
             this.LoginPanel.Hide();
-            Auth.Log(LoginBox.Text, PassBox.Text);
+            Console.WriteLine("\n" + LoginBox.Text + "\n" + PassBox.Text);
+            Thread logThread = new(() => Auth.Log(LoginBox.Text, PassBox.Text));
+            logThread.Start();
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -57,6 +61,6 @@ namespace VK_Control_Panel_Bot
         {
             _dragging = false;
         }
-
+        
     }
 }

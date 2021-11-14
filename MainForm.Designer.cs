@@ -33,6 +33,7 @@
             this.Iconified = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.UpPanel = new System.Windows.Forms.Panel();
+            this.OutputLogin = new System.Windows.Forms.TextBox();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.EnterButton = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -43,18 +44,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PassBox = new System.Windows.Forms.TextBox();
             this.LoginBox = new System.Windows.Forms.TextBox();
-            this.TwoFactPanel = new System.Windows.Forms.Panel();
-            this.OAuthEnterButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.OAuthBox = new System.Windows.Forms.TextBox();
-            this.OutputLogin = new System.Windows.Forms.TextBox();
+            this.OAuthPanel = new System.Windows.Forms.Panel();
+            this.OAuthEnter = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.OAuth = new System.Windows.Forms.Label();
+            this.OAuthTextBox = new System.Windows.Forms.TextBox();
             this.UpPanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.TwoFactPanel.SuspendLayout();
+            this.OAuthPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -94,8 +94,17 @@
             this.UpPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UpPanel_MouseMove);
             this.UpPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UpPanel_MouseUp);
             // 
+            // OutputLogin
+            // 
+            this.OutputLogin.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.OutputLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.OutputLogin, "OutputLogin");
+            this.OutputLogin.Name = "OutputLogin";
+            this.OutputLogin.ReadOnly = true;
+            // 
             // LoginPanel
             // 
+            this.LoginPanel.Controls.Add(this.OAuthPanel);
             this.LoginPanel.Controls.Add(this.EnterButton);
             this.LoginPanel.Controls.Add(this.pictureBox3);
             this.LoginPanel.Controls.Add(this.pictureBox2);
@@ -105,7 +114,6 @@
             this.LoginPanel.Controls.Add(this.pictureBox1);
             this.LoginPanel.Controls.Add(this.PassBox);
             this.LoginPanel.Controls.Add(this.LoginBox);
-            this.LoginPanel.Controls.Add(this.TwoFactPanel);
             resources.ApplyResources(this.LoginPanel, "LoginPanel");
             this.LoginPanel.Name = "LoginPanel";
             // 
@@ -176,52 +184,43 @@
             this.LoginBox.ForeColor = System.Drawing.SystemColors.Highlight;
             this.LoginBox.Name = "LoginBox";
             // 
-            // TwoFactPanel
+            // OAuthPanel
             // 
-            this.TwoFactPanel.Controls.Add(this.OAuthEnterButton);
-            this.TwoFactPanel.Controls.Add(this.panel1);
-            this.TwoFactPanel.Controls.Add(this.label1);
-            this.TwoFactPanel.Controls.Add(this.OAuthBox);
-            resources.ApplyResources(this.TwoFactPanel, "TwoFactPanel");
-            this.TwoFactPanel.Name = "TwoFactPanel";
-            this.TwoFactPanel.TabStop = true;
+            this.OAuthPanel.Controls.Add(this.OAuthEnter);
+            this.OAuthPanel.Controls.Add(this.panel6);
+            this.OAuthPanel.Controls.Add(this.OAuth);
+            this.OAuthPanel.Controls.Add(this.OAuthTextBox);
+            resources.ApplyResources(this.OAuthPanel, "OAuthPanel");
+            this.OAuthPanel.Name = "OAuthPanel";
             // 
-            // OAuthEnterButton
+            // OAuthEnter
             // 
-            resources.ApplyResources(this.OAuthEnterButton, "OAuthEnterButton");
-            this.OAuthEnterButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.OAuthEnterButton.Name = "OAuthEnterButton";
-            this.OAuthEnterButton.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.OAuthEnter, "OAuthEnter");
+            this.OAuthEnter.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.OAuthEnter.Name = "OAuthEnter";
+            this.OAuthEnter.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // panel6
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
+            this.panel6.BackColor = System.Drawing.SystemColors.Highlight;
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
             // 
-            // label1
+            // OAuth
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.OAuth, "OAuth");
+            this.OAuth.BackColor = System.Drawing.Color.Transparent;
+            this.OAuth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OAuth.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.OAuth.Name = "OAuth";
             // 
-            // OAuthBox
+            // OAuthTextBox
             // 
-            this.OAuthBox.BackColor = System.Drawing.SystemColors.Control;
-            this.OAuthBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.OAuthBox, "OAuthBox");
-            this.OAuthBox.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.OAuthBox.Name = "OAuthBox";
-            // 
-            // OutputLogin
-            // 
-            this.OutputLogin.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.OutputLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.OutputLogin, "OutputLogin");
-            this.OutputLogin.Name = "OutputLogin";
-            this.OutputLogin.ReadOnly = true;
+            this.OAuthTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.OAuthTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.OAuthTextBox, "OAuthTextBox");
+            this.OAuthTextBox.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.OAuthTextBox.Name = "OAuthTextBox";
             // 
             // MainForm
             // 
@@ -241,8 +240,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.TwoFactPanel.ResumeLayout(false);
-            this.TwoFactPanel.PerformLayout();
+            this.OAuthPanel.ResumeLayout(false);
+            this.OAuthPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -262,11 +261,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox PassBox;
         private System.Windows.Forms.TextBox LoginBox;
-        private System.Windows.Forms.Panel TwoFactPanel;
-        private System.Windows.Forms.Button OAuthEnterButton;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox OAuthBox;
         private System.Windows.Forms.TextBox OutputLogin;
+        private System.Windows.Forms.Panel OAuthPanel;
+        private System.Windows.Forms.Button OAuthEnter;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label OAuth;
+        private System.Windows.Forms.TextBox OAuthTextBox;
     }
 }
