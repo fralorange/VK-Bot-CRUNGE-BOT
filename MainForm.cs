@@ -17,9 +17,22 @@ namespace VK_Control_Panel_Bot
         private bool _dragging = false;
         private Point _start_point = new(0,0);
         //
+        private static MainForm form = null;
+
         public MainForm()
         {
             InitializeComponent();
+            form = this;
+        }
+
+        public static void UpdateOutput(string s)
+        {
+            if (form != null)
+            {
+                form.OutputLogin.Invoke((MethodInvoker)delegate {
+                    form.OutputLogin.Text = s;
+                });
+            }
         }
 
         private void EnterButton_Click(object sender, EventArgs e)

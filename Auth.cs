@@ -28,6 +28,7 @@ namespace VK_Control_Panel_Bot
                 Settings = Settings.All,
                 TwoFactorAuthorization = () =>
                 {
+                    MainForm.UpdateOutput("OAuth...");
                     return "0";
                 }
             });
