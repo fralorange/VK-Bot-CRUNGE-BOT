@@ -7,4 +7,4 @@ Control panel bot which gives user full control on his account and vk conversati
 - Information about other user by their id without violating VK TOS.
 
 ### How does it looks like RN:
-![Auth](blob:https://imgur.com/52b247ec-bd18-47b0-ac0a-9b7e6909e8ca)
+![image](https://i.imgur.com/j0mHYXQ.png)
