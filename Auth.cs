@@ -9,6 +9,7 @@ using VkNet.Model;
 using VkNet.Enums.Filters;
 using VkNet.AudioBypassService.Extensions;
 using System.Windows.Forms;
+using VkNet.Exception;
 
 namespace VK_Control_Panel_Bot
 {
@@ -19,25 +20,36 @@ namespace VK_Control_Panel_Bot
             var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
             services.AddAudioBypass();
             VkApi api = new(services);
-
-            api.Authorize(new ApiAuthParams
-            {
-                ApplicationId = 2685278,
-                Login = login,
-                Password = password,
-                Settings = Settings.All,
-                TwoFactorAuthorization = () =>
+            ulong? captcha_sid = null;
+            string? captcha_key = null;
+            try 
+            { 
+                api.Authorize(new ApiAuthParams
                 {
-                    MainForm.UpdateOutput("OAuth..."); // THIS WORKS NOW, WRITE THAT DOWN, WRITE THAT DOWN, NO I CAN IMPLEMENT OAUTH
-                    return "0";
-                }
-            });
+                    ApplicationId = 2685278,
+                    Login = login,
+                    Password = password,
+                    Settings = Settings.All,
+                    TwoFactorAuthorization = () =>
+                    {
+                        var OAuthForm = new OAuth();
+                        OAuthForm.ShowDialog();
+                        return OAuthForm.Code;
+                    }
+                });
+            } catch(CaptchaNeededException ex)
+            {
+                captcha_sid = ex.Sid;
+                var form = new CaptchaForm(ex.Img);
+                form.ShowDialog();
+                captcha_key = form.CaptchaKey;
+            }
             if (api.IsAuthorized)
             {
-
+                MainForm.UpdateOutput("Welcome");
             } else
             {
-
+                MainForm.UpdateOutput("Wrong");
             }
         }
     }

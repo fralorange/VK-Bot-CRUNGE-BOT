@@ -39,7 +39,6 @@ namespace VK_Control_Panel_Bot
         {
             this.pictureBox1.Focus();
             this.LoginPanel.Hide();
-            Console.WriteLine("\n" + LoginBox.Text + "\n" + PassBox.Text);
             Thread logThread = new(() => Auth.Log(LoginBox.Text, PassBox.Text));
             logThread.Start();
         }
