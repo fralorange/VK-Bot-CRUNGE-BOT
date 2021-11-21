@@ -48,6 +48,7 @@ namespace VK_Control_Panel_Bot
             {
                 Thread StatusThread = new(() => TextAnimations.Delaying("Welcome!"));
                 StatusThread.Start();
+                MainForm.MenuShow(true);
             } else
             {
                 Thread StatusThread = new(() => TextAnimations.Delaying("Wrong."));

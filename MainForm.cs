@@ -30,6 +30,17 @@ namespace VK_Control_Panel_Bot
             }
         }
 
+        public static void MenuShow(bool enable)
+        {
+            if (form != null)
+            {
+                form.StripMenu.Invoke((MethodInvoker)delegate
+                {
+                    form.StripMenu.Visible = enable;
+                });
+            }
+        }
+
         public static void CreateChildForm(Form child,bool dialog)
         {
             if (form != null)
@@ -87,6 +98,16 @@ namespace VK_Control_Panel_Bot
         private void EyeButton_Click(object sender, EventArgs e)
         {
             PassBox.PasswordChar = (PassBox.PasswordChar == '*') ? PassBox.PasswordChar = '\0' : PassBox.PasswordChar = '*';
+        }
+
+        private void ControlsMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

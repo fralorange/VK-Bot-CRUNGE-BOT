@@ -47,6 +47,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PassBox = new System.Windows.Forms.TextBox();
             this.LoginBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.UpPanel.SuspendLayout();
             this.StripMenu.SuspendLayout();
             this.LoginPanel.SuspendLayout();
@@ -114,6 +117,7 @@
             resources.ApplyResources(this.ControlsMenu, "ControlsMenu");
             this.ControlsMenu.ForeColor = System.Drawing.SystemColors.Highlight;
             this.ControlsMenu.Name = "ControlsMenu";
+            this.ControlsMenu.Click += new System.EventHandler(this.ControlsMenu_Click);
             // 
             // LoginPanel
             // 
@@ -207,10 +211,31 @@
             this.LoginBox.ForeColor = System.Drawing.SystemColors.Highlight;
             this.LoginBox.Name = "LoginBox";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.Highlight;
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.Highlight;
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.UpPanel);
@@ -220,6 +245,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.UpPanel.ResumeLayout(false);
             this.UpPanel.PerformLayout();
             this.StripMenu.ResumeLayout(false);
@@ -250,7 +276,10 @@
         private System.Windows.Forms.TextBox LoginBox;
         private System.Windows.Forms.TextBox OutputLogin;
         private System.Windows.Forms.Button EyeButton;
-        private System.Windows.Forms.ToolStripMenuItem ControlsMenu;
+        public System.Windows.Forms.ToolStripMenuItem ControlsMenu;
         public System.Windows.Forms.MenuStrip StripMenu;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }
