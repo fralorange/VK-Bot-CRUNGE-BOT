@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using VkNet;
 using VkNet.Model.RequestParams;
 using VkNet.Model;
@@ -26,7 +26,7 @@ namespace VK_Control_Panel_Bot
             { 
                 api.Authorize(new ApiAuthParams
                 {
-                    ApplicationId = 2685278,
+                    ApplicationId = 8000623,
                     Login = login,
                     Password = password,
                     Settings = Settings.All,
@@ -46,10 +46,12 @@ namespace VK_Control_Panel_Bot
             }
             if (api.IsAuthorized)
             {
-                MainForm.UpdateOutput("Welcome");
+                Thread StatusThread = new(() => TextAnimations.Delaying("Welcome!"));
+                StatusThread.Start();
             } else
             {
-                MainForm.UpdateOutput("Wrong");
+                Thread StatusThread = new(() => TextAnimations.Delaying("Wrong."));
+                StatusThread.Start();
             }
         }
     }

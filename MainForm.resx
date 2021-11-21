@@ -62,7 +62,7 @@
     <value>0, 38</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 2</value>
+    <value>1010, 2</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
@@ -94,7 +94,7 @@
     <value>NoControl</value>
   </data>
   <data name="Iconified.Location" type="System.Drawing.Point, System.Drawing">
-    <value>550, 0</value>
+    <value>924, 0</value>
   </data>
   <data name="Iconified.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
@@ -130,7 +130,7 @@
     <value>NoControl</value>
   </data>
   <data name="Exit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>590, 0</value>
+    <value>970, 0</value>
   </data>
   <data name="Exit.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
@@ -153,6 +153,39 @@
   <data name="&gt;&gt;Exit.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;OutputLogin.Name" xml:space="preserve">
+    <value>OutputLogin</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Parent" xml:space="preserve">
+    <value>UpPanel</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="UpPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="UpPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 40</value>
+  </data>
+  <data name="UpPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;UpPanel.Name" xml:space="preserve">
+    <value>UpPanel</value>
+  </data>
+  <data name="&gt;&gt;UpPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UpPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;UpPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="OutputLogin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Letter Gothic Std, 11.25pt, style=Bold</value>
   </data>
@@ -160,7 +193,7 @@
     <value>12, 12</value>
   </data>
   <data name="OutputLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 18</value>
+    <value>253, 18</value>
   </data>
   <data name="OutputLogin.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -180,26 +213,35 @@
   <data name="&gt;&gt;OutputLogin.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="UpPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="EyeButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
-  <data name="UpPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 40</value>
+  <data name="EyeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="UpPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="EyeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;UpPanel.Name" xml:space="preserve">
-    <value>UpPanel</value>
+  <data name="EyeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>618, 372</value>
   </data>
-  <data name="&gt;&gt;UpPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="EyeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 26</value>
   </data>
-  <data name="&gt;&gt;UpPanel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="EyeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
-  <data name="&gt;&gt;UpPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;EyeButton.Name" xml:space="preserve">
+    <value>EyeButton</value>
+  </data>
+  <data name="&gt;&gt;EyeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EyeButton.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;EyeButton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="EnterButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -211,7 +253,7 @@
     <value>NoControl</value>
   </data>
   <data name="EnterButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 467</value>
+    <value>344, 422</value>
   </data>
   <data name="EnterButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 50</value>
@@ -232,13 +274,13 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;EnterButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 417</value>
+    <value>344, 372</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 24</value>
@@ -259,13 +301,13 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 299</value>
+    <value>344, 254</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 24</value>
@@ -286,10 +328,10 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 442</value>
+    <value>344, 397</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 2</value>
@@ -307,10 +349,10 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 324</value>
+    <value>344, 279</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 2</value>
@@ -328,7 +370,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="LoginLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -340,7 +382,7 @@
     <value>NoControl</value>
   </data>
   <data name="LoginLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 188</value>
+    <value>391, 179</value>
   </data>
   <data name="LoginLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 61</value>
@@ -361,13 +403,13 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;LoginLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 33</value>
+    <value>357, 24</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>272, 152</value>
@@ -388,16 +430,19 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="PassBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Letter Gothic Std, 14.25pt, style=Bold</value>
   </data>
   <data name="PassBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 418</value>
+    <value>382, 373</value>
+  </data>
+  <data name="PassBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
   </data>
   <data name="PassBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 23</value>
+    <value>235, 23</value>
   </data>
   <data name="PassBox.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -412,13 +457,13 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;PassBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="LoginBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Letter Gothic Std, 14.25pt, style=Bold</value>
   </data>
   <data name="LoginBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 300</value>
+    <value>382, 255</value>
   </data>
   <data name="LoginBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>262, 23</value>
@@ -436,13 +481,13 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;LoginBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="LoginPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 40</value>
+    <value>12, 46</value>
   </data>
   <data name="LoginPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 550</value>
+    <value>986, 532</value>
   </data>
   <data name="LoginPanel.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -466,7 +511,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>630, 590</value>
+    <value>1010, 590</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

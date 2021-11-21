@@ -73,6 +73,10 @@ namespace VK_Control_Panel_Bot
         {
             _dragging = false;
         }
-        
+
+        private void EyeButton_Click(object sender, EventArgs e)
+        {
+            PassBox.PasswordChar = (PassBox.PasswordChar == '*') ? PassBox.PasswordChar = '\0' : PassBox.PasswordChar = '*';
+        }
     }
 }

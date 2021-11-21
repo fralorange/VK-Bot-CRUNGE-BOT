@@ -35,6 +35,7 @@
             this.UpPanel = new System.Windows.Forms.Panel();
             this.OutputLogin = new System.Windows.Forms.TextBox();
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.EyeButton = new System.Windows.Forms.Button();
             this.EnterButton = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -98,6 +99,7 @@
             // 
             // LoginPanel
             // 
+            this.LoginPanel.Controls.Add(this.EyeButton);
             this.LoginPanel.Controls.Add(this.EnterButton);
             this.LoginPanel.Controls.Add(this.pictureBox3);
             this.LoginPanel.Controls.Add(this.pictureBox2);
@@ -109,6 +111,16 @@
             this.LoginPanel.Controls.Add(this.LoginBox);
             resources.ApplyResources(this.LoginPanel, "LoginPanel");
             this.LoginPanel.Name = "LoginPanel";
+            // 
+            // EyeButton
+            // 
+            this.EyeButton.BackColor = System.Drawing.Color.Transparent;
+            this.EyeButton.BackgroundImage = global::VK_Control_Panel_Bot.Properties.Resources.eye;
+            resources.ApplyResources(this.EyeButton, "EyeButton");
+            this.EyeButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.EyeButton.Name = "EyeButton";
+            this.EyeButton.UseVisualStyleBackColor = false;
+            this.EyeButton.Click += new System.EventHandler(this.EyeButton_Click);
             // 
             // EnterButton
             // 
@@ -216,5 +228,6 @@
         private System.Windows.Forms.TextBox PassBox;
         private System.Windows.Forms.TextBox LoginBox;
         private System.Windows.Forms.TextBox OutputLogin;
+        private System.Windows.Forms.Button EyeButton;
     }
 }
