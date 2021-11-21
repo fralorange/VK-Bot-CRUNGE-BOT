@@ -33,16 +33,16 @@ namespace VK_Control_Panel_Bot
                     TwoFactorAuthorization = () =>
                     {
                         var OAuthForm = new OAuth();
-                        OAuthForm.ShowDialog();
+                        MainForm.CreateChildForm(OAuthForm, true);
                         return OAuthForm.Code;
                     }
                 });
             } catch(CaptchaNeededException ex)
             {
                 captcha_sid = ex.Sid;
-                var form = new CaptchaForm(ex.Img);
-                form.ShowDialog();
-                captcha_key = form.CaptchaKey;
+                var CaptchaForm = new CaptchaForm(ex.Img);
+                MainForm.CreateChildForm(CaptchaForm,true);
+                captcha_key = CaptchaForm.CaptchaKey;
             }
             if (api.IsAuthorized)
             {

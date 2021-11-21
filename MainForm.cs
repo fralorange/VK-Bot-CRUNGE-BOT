@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VK_Control_Panel_Bot
@@ -15,9 +9,9 @@ namespace VK_Control_Panel_Bot
     {
         //UI settings//
         private bool _dragging = false;
-        private Point _start_point = new(0,0);
+        private Point _start_point = new(0, 0);
         //
-        private static MainForm form = null;
+        private static MainForm? form = null;
 
         public MainForm()
         {
@@ -29,16 +23,32 @@ namespace VK_Control_Panel_Bot
         {
             if (form != null)
             {
-                form.OutputLogin.Invoke((MethodInvoker)delegate {
+                form.OutputLogin.Invoke((MethodInvoker)delegate
+                {
                     form.OutputLogin.Text = s;
+                });
+            }
+        }
+
+        public static void CreateChildForm(Form child,bool dialog)
+        {
+            if (form != null)
+            {
+                form.Invoke((MethodInvoker)delegate
+                {
+                    child.StartPosition = FormStartPosition.CenterParent;
+                    if (dialog)
+                        child.ShowDialog(form);
+                    else
+                        child.Show(form);
                 });
             }
         }
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            this.pictureBox1.Focus();
-            this.LoginPanel.Hide();
+            pictureBox1.Focus();
+            LoginPanel.Hide();
             Thread logThread = new(() => Auth.Log(LoginBox.Text, PassBox.Text));
             logThread.Start();
         }
@@ -51,7 +61,7 @@ namespace VK_Control_Panel_Bot
         private void Iconified_Click(object sender, EventArgs e)
         {
             pictureBox1.Focus();
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         private void UpPanel_MouseDown(object sender, MouseEventArgs e)
@@ -65,7 +75,7 @@ namespace VK_Control_Panel_Bot
             if (_dragging)
             {
                 Point p = PointToScreen(e.Location);
-                Location = new(p.X - this._start_point.X, p.Y - this._start_point.Y);
+                Location = new(p.X - _start_point.X, p.Y - _start_point.Y);
             }
         }
 

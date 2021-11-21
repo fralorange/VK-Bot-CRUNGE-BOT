@@ -34,6 +34,8 @@
             this.Exit = new System.Windows.Forms.Button();
             this.UpPanel = new System.Windows.Forms.Panel();
             this.OutputLogin = new System.Windows.Forms.TextBox();
+            this.StripMenu = new System.Windows.Forms.MenuStrip();
+            this.ControlsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.EyeButton = new System.Windows.Forms.Button();
             this.EnterButton = new System.Windows.Forms.Button();
@@ -46,6 +48,7 @@
             this.PassBox = new System.Windows.Forms.TextBox();
             this.LoginBox = new System.Windows.Forms.TextBox();
             this.UpPanel.SuspendLayout();
+            this.StripMenu.SuspendLayout();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,6 +86,7 @@
             this.UpPanel.Controls.Add(this.OutputLogin);
             this.UpPanel.Controls.Add(this.Iconified);
             this.UpPanel.Controls.Add(this.Exit);
+            this.UpPanel.Controls.Add(this.StripMenu);
             resources.ApplyResources(this.UpPanel, "UpPanel");
             this.UpPanel.Name = "UpPanel";
             this.UpPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpPanel_MouseDown);
@@ -96,6 +100,20 @@
             resources.ApplyResources(this.OutputLogin, "OutputLogin");
             this.OutputLogin.Name = "OutputLogin";
             this.OutputLogin.ReadOnly = true;
+            // 
+            // StripMenu
+            // 
+            resources.ApplyResources(this.StripMenu, "StripMenu");
+            this.StripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ControlsMenu});
+            this.StripMenu.Name = "StripMenu";
+            // 
+            // ControlsMenu
+            // 
+            this.ControlsMenu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            resources.ApplyResources(this.ControlsMenu, "ControlsMenu");
+            this.ControlsMenu.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ControlsMenu.Name = "ControlsMenu";
             // 
             // LoginPanel
             // 
@@ -198,11 +216,14 @@
             this.Controls.Add(this.UpPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.StripMenu;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.UpPanel.ResumeLayout(false);
             this.UpPanel.PerformLayout();
+            this.StripMenu.ResumeLayout(false);
+            this.StripMenu.PerformLayout();
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -229,5 +250,7 @@
         private System.Windows.Forms.TextBox LoginBox;
         private System.Windows.Forms.TextBox OutputLogin;
         private System.Windows.Forms.Button EyeButton;
+        private System.Windows.Forms.ToolStripMenuItem ControlsMenu;
+        public System.Windows.Forms.MenuStrip StripMenu;
     }
 }
