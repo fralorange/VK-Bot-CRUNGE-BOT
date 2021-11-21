@@ -32,6 +32,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.OAuthLabel = new System.Windows.Forms.Label();
             this.OAuthTextBox = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // OAuthEnter
@@ -81,11 +83,29 @@
             this.OAuthTextBox.Size = new System.Drawing.Size(300, 23);
             this.OAuthTextBox.TabIndex = 18;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(426, 2);
+            this.panel3.TabIndex = 22;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Location = new System.Drawing.Point(0, 230);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(426, 2);
+            this.panel1.TabIndex = 23;
+            // 
             // OAuth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(426, 232);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.OAuthEnter);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.OAuthLabel);
@@ -107,5 +127,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label OAuthLabel;
         private System.Windows.Forms.TextBox OAuthTextBox;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel1;
     }
 }

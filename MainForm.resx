@@ -186,6 +186,12 @@
   <data name="StripMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="messagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="messagesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Messages</value>
+  </data>
   <data name="ControlsMenu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Letter Gothic Std, 12pt, style=Bold</value>
   </data>
@@ -199,7 +205,7 @@
     <value>9, 7</value>
   </data>
   <data name="StripMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 28</value>
+    <value>279, 28</value>
   </data>
   <data name="StripMenu.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -616,6 +622,12 @@
     <value>ControlsMenu</value>
   </data>
   <data name="&gt;&gt;ControlsMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;messagesToolStripMenuItem.Name" xml:space="preserve">
+    <value>messagesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;messagesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

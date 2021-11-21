@@ -50,6 +50,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.messagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UpPanel.SuspendLayout();
             this.StripMenu.SuspendLayout();
             this.LoginPanel.SuspendLayout();
@@ -114,10 +115,11 @@
             // ControlsMenu
             // 
             this.ControlsMenu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ControlsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.messagesToolStripMenuItem});
             resources.ApplyResources(this.ControlsMenu, "ControlsMenu");
             this.ControlsMenu.ForeColor = System.Drawing.SystemColors.Highlight;
             this.ControlsMenu.Name = "ControlsMenu";
-            this.ControlsMenu.Click += new System.EventHandler(this.ControlsMenu_Click);
             // 
             // LoginPanel
             // 
@@ -229,6 +231,12 @@
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
+            // messagesToolStripMenuItem
+            // 
+            this.messagesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.messagesToolStripMenuItem.Name = "messagesToolStripMenuItem";
+            resources.ApplyResources(this.messagesToolStripMenuItem, "messagesToolStripMenuItem");
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -245,7 +253,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.UpPanel.ResumeLayout(false);
             this.UpPanel.PerformLayout();
             this.StripMenu.ResumeLayout(false);
@@ -281,5 +288,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.ToolStripMenuItem messagesToolStripMenuItem;
     }
 }

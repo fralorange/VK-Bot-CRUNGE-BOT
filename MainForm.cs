@@ -99,15 +99,5 @@ namespace VK_Control_Panel_Bot
         {
             PassBox.PasswordChar = (PassBox.PasswordChar == '*') ? PassBox.PasswordChar = '\0' : PassBox.PasswordChar = '*';
         }
-
-        private void ControlsMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
