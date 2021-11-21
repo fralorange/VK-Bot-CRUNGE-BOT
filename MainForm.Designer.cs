@@ -36,6 +36,7 @@
             this.OutputLogin = new System.Windows.Forms.TextBox();
             this.StripMenu = new System.Windows.Forms.MenuStrip();
             this.ControlsMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.messagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.EyeButton = new System.Windows.Forms.Button();
             this.EnterButton = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.messagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UpPanel.SuspendLayout();
             this.StripMenu.SuspendLayout();
             this.LoginPanel.SuspendLayout();
@@ -120,6 +120,13 @@
             resources.ApplyResources(this.ControlsMenu, "ControlsMenu");
             this.ControlsMenu.ForeColor = System.Drawing.SystemColors.Highlight;
             this.ControlsMenu.Name = "ControlsMenu";
+            // 
+            // messagesToolStripMenuItem
+            // 
+            this.messagesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.messagesToolStripMenuItem.Name = "messagesToolStripMenuItem";
+            resources.ApplyResources(this.messagesToolStripMenuItem, "messagesToolStripMenuItem");
+            this.messagesToolStripMenuItem.Click += new System.EventHandler(this.messagesToolStripMenuItem_Click);
             // 
             // LoginPanel
             // 
@@ -231,12 +238,6 @@
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
-            // messagesToolStripMenuItem
-            // 
-            this.messagesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.messagesToolStripMenuItem.Name = "messagesToolStripMenuItem";
-            resources.ApplyResources(this.messagesToolStripMenuItem, "messagesToolStripMenuItem");
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -271,7 +272,6 @@
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Panel UpPanel;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel LoginPanel;
         private System.Windows.Forms.Button EnterButton;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -289,5 +289,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ToolStripMenuItem messagesToolStripMenuItem;
+        public System.Windows.Forms.Panel LoginPanel;
     }
 }

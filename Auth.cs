@@ -10,6 +10,7 @@ using VkNet.Enums.Filters;
 using VkNet.AudioBypassService.Extensions;
 using System.Windows.Forms;
 using VkNet.Exception;
+using VkNet.AudioBypassService.Exceptions;
 
 namespace VK_Control_Panel_Bot
 {
@@ -36,14 +37,22 @@ namespace VK_Control_Panel_Bot
                         MainForm.CreateChildForm(OAuthForm, true);
                         return OAuthForm.Code;
                     }
-                });
+                }); 
             } catch(CaptchaNeededException ex)
             {
                 captcha_sid = ex.Sid;
                 var CaptchaForm = new CaptchaForm(ex.Img);
                 MainForm.CreateChildForm(CaptchaForm,true);
                 captcha_key = CaptchaForm.CaptchaKey;
+            } catch (VkAuthException)
+            {
+                MainForm.LoginShow(true);
+                MainForm.UpdateOutput("Wrong login or password");
+                return;
             }
+
+
+
             if (api.IsAuthorized)
             {
                 Thread StatusThread = new(() => TextAnimations.Delaying("Welcome!"));
@@ -51,7 +60,7 @@ namespace VK_Control_Panel_Bot
                 MainForm.MenuShow(true);
             } else
             {
-                Thread StatusThread = new(() => TextAnimations.Delaying("Wrong."));
+                Thread StatusThread = new(() => TextAnimations.Delaying("Something wrong."));
                 StatusThread.Start();
             }
         }
