@@ -16,7 +16,7 @@ namespace VK_Control_Panel_Bot.Controls
         readonly List<Panel> borderList = new();
         readonly List<Panel> panels = new();
         readonly List<Button> buttons = new();
-        private VkApi? _api;
+        private VkApi _api;
         public Messages(VkApi api)
         {
             _api = api;
