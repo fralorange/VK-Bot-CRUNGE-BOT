@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VK_Control_Panel_Bot", "VK_Control_Panel_Bot.csproj", "{0A5060FD-3CAA-4572-B983-F3C50C6023A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VK_Control_Panel_Bot", "VK_Control_Panel_Bot.csproj", "{0A5060FD-3CAA-4572-B983-F3C50C6023A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EBA11515-6D2E-4336-9B17-18DF51F3221C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using VK_Control_Panel_Bot.Controls;
@@ -115,11 +116,15 @@ namespace VK_Control_Panel_Bot
             PassBox.PasswordChar = (PassBox.PasswordChar == '*') ? PassBox.PasswordChar = '\0' : PassBox.PasswordChar = '*';
         }
 
-        private void messagesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MessagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Messages messages = new();
-            messages.MdiParent = form;
-            messages.Show();
+            if (!MdiChildren.Any())
+            {
+                Messages messages = new(api: _api);
+                messages.MdiParent = form;
+                messages.Location = new Point(12, 46);
+                messages.Show();
+            }
         }
     }
 }

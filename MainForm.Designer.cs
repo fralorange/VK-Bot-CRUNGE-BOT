@@ -126,7 +126,7 @@
             this.messagesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.messagesToolStripMenuItem.Name = "messagesToolStripMenuItem";
             resources.ApplyResources(this.messagesToolStripMenuItem, "messagesToolStripMenuItem");
-            this.messagesToolStripMenuItem.Click += new System.EventHandler(this.messagesToolStripMenuItem_Click);
+            this.messagesToolStripMenuItem.Click += new System.EventHandler(this.MessagesToolStripMenuItem_Click);
             // 
             // LoginPanel
             // 
