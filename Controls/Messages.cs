@@ -45,7 +45,7 @@ namespace VK_Control_Panel_Bot.Controls
             long[] ids = new long[] { long.Parse(UserIdTextBox.Text) };
             var p = _api.Users.Get(ids, ProfileFields.Photo200).FirstOrDefault();
 
-            var request = WebRequest.Create(p.Photo200.ToString());
+            var request = WebRequest.Create(p!.Photo200.ToString());
             using var response = request.GetResponse();
             using var stream = response.GetResponseStream();
 
