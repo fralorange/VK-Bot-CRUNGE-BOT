@@ -47,7 +47,7 @@ namespace VK_Control_Panel_Bot
             } catch (VkAuthException)
             {
                 MainForm.LoginShow(true);
-                MainForm.UpdateOutput("Wrong login or password");
+                MainForm.UpdateOutput("Wrong credentials or code");
                 return null;
             }
 

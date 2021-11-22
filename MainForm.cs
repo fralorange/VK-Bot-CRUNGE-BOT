@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using VK_Control_Panel_Bot.Controls;
 using VkNet;
 
 namespace VK_Control_Panel_Bot
@@ -116,7 +117,9 @@ namespace VK_Control_Panel_Bot
 
         private void messagesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Messages messages = new();
+            messages.MdiParent = form;
+            messages.Show();
         }
     }
 }
