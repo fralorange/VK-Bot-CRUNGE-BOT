@@ -270,7 +270,7 @@
             // AvatarPic1
             // 
             this.AvatarPic1.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
-            this.AvatarPic1.Location = new System.Drawing.Point(574, 43);
+            this.AvatarPic1.Location = new System.Drawing.Point(574, 25);
             this.AvatarPic1.Name = "AvatarPic1";
             this.AvatarPic1.Size = new System.Drawing.Size(200, 195);
             this.AvatarPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -285,7 +285,7 @@
             this.label1.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(69, 201);
+            this.label1.Location = new System.Drawing.Point(13, 196);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 24);
             this.label1.TabIndex = 27;
@@ -299,7 +299,7 @@
             this.userId1.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.userId1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.userId1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.userId1.Location = new System.Drawing.Point(80, 129);
+            this.userId1.Location = new System.Drawing.Point(24, 124);
             this.userId1.Name = "userId1";
             this.userId1.Size = new System.Drawing.Size(87, 24);
             this.userId1.TabIndex = 26;
@@ -317,13 +317,14 @@
             this.SendMessage.TabIndex = 25;
             this.SendMessage.Text = "Send";
             this.SendMessage.UseVisualStyleBackColor = true;
+            this.SendMessage.Click += new System.EventHandler(this.SendMessage_Click);
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel11.Location = new System.Drawing.Point(173, 223);
+            this.panel11.Location = new System.Drawing.Point(117, 357);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(202, 2);
+            this.panel11.Size = new System.Drawing.Size(310, 2);
             this.panel11.TabIndex = 24;
             // 
             // MessageTextBox
@@ -333,18 +334,19 @@
             this.MessageTextBox.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.MessageTextBox.ForeColor = System.Drawing.SystemColors.Highlight;
             this.MessageTextBox.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.MessageTextBox.Location = new System.Drawing.Point(173, 199);
+            this.MessageTextBox.Location = new System.Drawing.Point(117, 197);
             this.MessageTextBox.Multiline = true;
             this.MessageTextBox.Name = "MessageTextBox";
-            this.MessageTextBox.Size = new System.Drawing.Size(202, 23);
+            this.MessageTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.MessageTextBox.Size = new System.Drawing.Size(310, 162);
             this.MessageTextBox.TabIndex = 23;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel10.Location = new System.Drawing.Point(173, 153);
+            this.panel10.Location = new System.Drawing.Point(117, 148);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(202, 2);
+            this.panel10.Size = new System.Drawing.Size(310, 2);
             this.panel10.TabIndex = 22;
             // 
             // UserIdTextBox
@@ -353,9 +355,9 @@
             this.UserIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UserIdTextBox.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UserIdTextBox.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.UserIdTextBox.Location = new System.Drawing.Point(173, 126);
+            this.UserIdTextBox.Location = new System.Drawing.Point(117, 121);
             this.UserIdTextBox.Name = "UserIdTextBox";
-            this.UserIdTextBox.Size = new System.Drawing.Size(202, 23);
+            this.UserIdTextBox.Size = new System.Drawing.Size(310, 23);
             this.UserIdTextBox.TabIndex = 21;
             this.UserIdTextBox.Leave += new System.EventHandler(this.UserIdTextBox_Leave);
             // 

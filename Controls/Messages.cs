@@ -67,5 +67,16 @@ namespace VK_Control_Panel_Bot.Controls
             });
         }
 
+        private void SendMessage_Click(object sender, EventArgs e)
+        {
+            string msg = String.Join("\n", MessageTextBox.Lines);
+            _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+            {
+                RandomId = new Random().Next(),
+                UserId = long.Parse(UserIdTextBox.Text),
+                Message = msg
+            });
+            MessageTextBox.Lines = null;
+        }
     }
 }
