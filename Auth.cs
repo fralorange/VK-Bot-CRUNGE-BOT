@@ -16,7 +16,7 @@ namespace VK_Control_Panel_Bot
 {
     public class Auth
     {
-        public static void Log(string login, string password)
+        public static VkApi? Log(string login, string password)
         {
             var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
             services.AddAudioBypass();
@@ -48,21 +48,21 @@ namespace VK_Control_Panel_Bot
             {
                 MainForm.LoginShow(true);
                 MainForm.UpdateOutput("Wrong login or password");
-                return;
+                return null;
             }
-
-
 
             if (api.IsAuthorized)
             {
                 Thread StatusThread = new(() => TextAnimations.Delaying("Welcome!"));
                 StatusThread.Start();
                 MainForm.MenuShow(true);
+                return api;
             } else
             {
                 Thread StatusThread = new(() => TextAnimations.Delaying("Something wrong."));
                 StatusThread.Start();
             }
+            return null;
         }
     }
 }

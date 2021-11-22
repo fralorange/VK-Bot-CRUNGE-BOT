@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VK_Control_Panel_Bot.Controls
 {
-    public partial class Template : Form
+    public partial class Messages : Form
     {
-        public Template()
+        public Messages()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace VK_Control_Panel_Bot.Controls
 {
-    partial class Template
+    partial class Messages
     {
         /// <summary>
         /// Required designer variable.

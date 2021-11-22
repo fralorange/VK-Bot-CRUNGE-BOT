@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using VkNet;
 
 namespace VK_Control_Panel_Bot
 {
@@ -12,6 +13,8 @@ namespace VK_Control_Panel_Bot
         private Point _start_point = new(0, 0);
         //
         private static MainForm? form = null;
+        //
+        VkApi? _api;
 
         public MainForm()
         {
@@ -71,7 +74,7 @@ namespace VK_Control_Panel_Bot
         {
             pictureBox1.Focus();
             LoginPanel.Hide();
-            Thread logThread = new(() => Auth.Log(LoginBox.Text, PassBox.Text));
+            Thread logThread = new(() => _api = Auth.Log(LoginBox.Text, PassBox.Text));
             logThread.Start();
         }
 
