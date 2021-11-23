@@ -44,6 +44,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.border5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ChatBox = new System.Windows.Forms.CheckBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.AvatarPic1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.userId1 = new System.Windows.Forms.Label();
@@ -53,6 +58,13 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.UserIdTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ConfirmButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ChatIdTextBox = new System.Windows.Forms.TextBox();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.UserIdTextBox2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -60,13 +72,22 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.AvatarPic2 = new System.Windows.Forms.PictureBox();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.ChatPic1 = new System.Windows.Forms.PictureBox();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AvatarPic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChatPic1)).BeginInit();
             this.SuspendLayout();
             // 
             // border3
@@ -221,14 +242,14 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Letter Gothic Std", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.button2.Location = new System.Drawing.Point(8, 67);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(167, 53);
             this.button2.TabIndex = 19;
-            this.button2.Text = "button2";
+            this.button2.Text = "Return logged out user to chat";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.AnyButton_Clicked);
             // 
@@ -257,6 +278,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ChatBox);
             this.panel1.Controls.Add(this.panel15);
             this.panel1.Controls.Add(this.panel14);
             this.panel1.Controls.Add(this.panel13);
@@ -274,6 +296,49 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(786, 532);
             this.panel1.TabIndex = 11;
+            // 
+            // ChatBox
+            // 
+            this.ChatBox.AutoSize = true;
+            this.ChatBox.Location = new System.Drawing.Point(433, 131);
+            this.ChatBox.Name = "ChatBox";
+            this.ChatBox.Size = new System.Drawing.Size(51, 19);
+            this.ChatBox.TabIndex = 33;
+            this.ChatBox.Text = "Chat";
+            this.ChatBox.UseVisualStyleBackColor = true;
+            this.ChatBox.CheckedChanged += new System.EventHandler(this.ChatBox_CheckedChanged);
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel15.Location = new System.Drawing.Point(574, 25);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(200, 2);
+            this.panel15.TabIndex = 32;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel14.Location = new System.Drawing.Point(574, 224);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(200, 2);
+            this.panel14.TabIndex = 31;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel13.Location = new System.Drawing.Point(772, 25);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(2, 200);
+            this.panel13.TabIndex = 30;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel12.Location = new System.Drawing.Point(574, 25);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(2, 200);
+            this.panel12.TabIndex = 29;
             // 
             // AvatarPic1
             // 
@@ -307,7 +372,7 @@
             this.userId1.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.userId1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.userId1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.userId1.Location = new System.Drawing.Point(24, 124);
+            this.userId1.Location = new System.Drawing.Point(24, 126);
             this.userId1.Name = "userId1";
             this.userId1.Size = new System.Drawing.Size(87, 24);
             this.userId1.TabIndex = 26;
@@ -371,10 +436,109 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel22);
+            this.panel2.Controls.Add(this.panel23);
+            this.panel2.Controls.Add(this.panel24);
+            this.panel2.Controls.Add(this.panel25);
+            this.panel2.Controls.Add(this.ChatPic1);
+            this.panel2.Controls.Add(this.panel18);
+            this.panel2.Controls.Add(this.panel19);
+            this.panel2.Controls.Add(this.panel20);
+            this.panel2.Controls.Add(this.panel21);
+            this.panel2.Controls.Add(this.AvatarPic2);
+            this.panel2.Controls.Add(this.ConfirmButton);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.panel17);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.ChatIdTextBox);
+            this.panel2.Controls.Add(this.panel16);
+            this.panel2.Controls.Add(this.UserIdTextBox2);
             this.panel2.Location = new System.Drawing.Point(200, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(786, 532);
             this.panel2.TabIndex = 13;
+            // 
+            // ConfirmButton
+            // 
+            this.ConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConfirmButton.Font = new System.Drawing.Font("Letter Gothic Std", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ConfirmButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ConfirmButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ConfirmButton.Location = new System.Drawing.Point(474, 470);
+            this.ConfirmButton.Name = "ConfirmButton";
+            this.ConfirmButton.Size = new System.Drawing.Size(300, 50);
+            this.ConfirmButton.TabIndex = 30;
+            this.ConfirmButton.Text = "Confirm";
+            this.ConfirmButton.UseVisualStyleBackColor = true;
+            this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(173, 386);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 24);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "chatid:";
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel17.Location = new System.Drawing.Point(266, 408);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(310, 2);
+            this.panel17.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(173, 273);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 24);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "userid:";
+            // 
+            // ChatIdTextBox
+            // 
+            this.ChatIdTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ChatIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ChatIdTextBox.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChatIdTextBox.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ChatIdTextBox.Location = new System.Drawing.Point(266, 381);
+            this.ChatIdTextBox.Name = "ChatIdTextBox";
+            this.ChatIdTextBox.Size = new System.Drawing.Size(310, 23);
+            this.ChatIdTextBox.TabIndex = 27;
+            this.ChatIdTextBox.Leave += new System.EventHandler(this.ChatIdTextBox_Leave);
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel16.Location = new System.Drawing.Point(266, 295);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(310, 2);
+            this.panel16.TabIndex = 28;
+            // 
+            // UserIdTextBox2
+            // 
+            this.UserIdTextBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.UserIdTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UserIdTextBox2.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UserIdTextBox2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.UserIdTextBox2.Location = new System.Drawing.Point(266, 268);
+            this.UserIdTextBox2.Name = "UserIdTextBox2";
+            this.UserIdTextBox2.Size = new System.Drawing.Size(310, 23);
+            this.UserIdTextBox2.TabIndex = 27;
+            this.UserIdTextBox2.Leave += new System.EventHandler(this.UserIdTextBox2_Leave);
             // 
             // panel3
             // 
@@ -425,37 +589,89 @@
             this.panel9.Size = new System.Drawing.Size(786, 532);
             this.panel9.TabIndex = 20;
             // 
-            // panel12
+            // panel18
             // 
-            this.panel12.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel12.Location = new System.Drawing.Point(574, 25);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(2, 200);
-            this.panel12.TabIndex = 29;
+            this.panel18.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel18.Location = new System.Drawing.Point(24, 8);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(200, 2);
+            this.panel18.TabIndex = 37;
             // 
-            // panel13
+            // panel19
             // 
-            this.panel13.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel13.Location = new System.Drawing.Point(772, 25);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(2, 200);
-            this.panel13.TabIndex = 30;
+            this.panel19.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel19.Location = new System.Drawing.Point(24, 207);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(200, 2);
+            this.panel19.TabIndex = 36;
             // 
-            // panel14
+            // panel20
             // 
-            this.panel14.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel14.Location = new System.Drawing.Point(574, 224);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(200, 2);
-            this.panel14.TabIndex = 31;
+            this.panel20.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel20.Location = new System.Drawing.Point(222, 8);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(2, 200);
+            this.panel20.TabIndex = 35;
             // 
-            // panel15
+            // panel21
             // 
-            this.panel15.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel15.Location = new System.Drawing.Point(574, 25);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(200, 2);
-            this.panel15.TabIndex = 32;
+            this.panel21.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel21.Location = new System.Drawing.Point(24, 8);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(2, 200);
+            this.panel21.TabIndex = 34;
+            // 
+            // AvatarPic2
+            // 
+            this.AvatarPic2.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
+            this.AvatarPic2.Location = new System.Drawing.Point(24, 8);
+            this.AvatarPic2.Name = "AvatarPic2";
+            this.AvatarPic2.Size = new System.Drawing.Size(200, 200);
+            this.AvatarPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AvatarPic2.TabIndex = 33;
+            this.AvatarPic2.TabStop = false;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel22.Location = new System.Drawing.Point(566, 8);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(200, 2);
+            this.panel22.TabIndex = 42;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel23.Location = new System.Drawing.Point(566, 207);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(200, 2);
+            this.panel23.TabIndex = 41;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel24.Location = new System.Drawing.Point(764, 8);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(2, 200);
+            this.panel24.TabIndex = 40;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel25.Location = new System.Drawing.Point(566, 8);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(2, 200);
+            this.panel25.TabIndex = 39;
+            // 
+            // ChatPic1
+            // 
+            this.ChatPic1.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
+            this.ChatPic1.Location = new System.Drawing.Point(566, 8);
+            this.ChatPic1.Name = "ChatPic1";
+            this.ChatPic1.Size = new System.Drawing.Size(200, 200);
+            this.ChatPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ChatPic1.TabIndex = 38;
+            this.ChatPic1.TabStop = false;
             // 
             // Messages
             // 
@@ -468,7 +684,6 @@
             this.Controls.Add(this.border4);
             this.Controls.Add(this.border3);
             this.Controls.Add(this.ButtonsPanel);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
@@ -477,6 +692,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -489,6 +705,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AvatarPic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChatPic1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -531,5 +751,23 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.CheckBox ChatBox;
+        private System.Windows.Forms.Button ConfirmButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox ChatIdTextBox;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.TextBox UserIdTextBox2;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.PictureBox ChatPic1;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.PictureBox AvatarPic2;
     }
 }
