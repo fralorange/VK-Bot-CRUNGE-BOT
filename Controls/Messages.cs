@@ -42,7 +42,7 @@ namespace VK_Control_Panel_Bot.Controls
 
         private void UserIdTextBox_Leave(object sender, EventArgs e)
         {
-            if (long.TryParse(UserIdTextBox.Text, out long id))
+            if (long.TryParse(UserIdTextBox.Text, out long id) && !UserIdTextBox.Text.Contains("-") && !UserIdTextBox.Text.Equals("0") && !UserIdTextBox.Text.StartsWith("0"))
             {
                 long[] ids = new long[] { id };
                 var p = _api.Users.Get(ids, ProfileFields.Photo200).FirstOrDefault();
@@ -52,7 +52,8 @@ namespace VK_Control_Panel_Bot.Controls
                 using var stream = response.GetResponseStream();
 
                 AvatarPic1.Image = Image.FromStream(stream);
-            } else
+            }
+            else
             {
                 UserIdTextBox.Text = "";
                 MainForm.UpdateOutput("Wrong userId format");
