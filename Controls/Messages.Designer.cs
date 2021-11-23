@@ -60,6 +60,10 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -253,6 +257,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel15);
+            this.panel1.Controls.Add(this.panel14);
+            this.panel1.Controls.Add(this.panel13);
+            this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.AvatarPic1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.userId1);
@@ -272,7 +280,7 @@
             this.AvatarPic1.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
             this.AvatarPic1.Location = new System.Drawing.Point(574, 25);
             this.AvatarPic1.Name = "AvatarPic1";
-            this.AvatarPic1.Size = new System.Drawing.Size(200, 195);
+            this.AvatarPic1.Size = new System.Drawing.Size(200, 200);
             this.AvatarPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AvatarPic1.TabIndex = 28;
             this.AvatarPic1.TabStop = false;
@@ -417,6 +425,38 @@
             this.panel9.Size = new System.Drawing.Size(786, 532);
             this.panel9.TabIndex = 20;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel12.Location = new System.Drawing.Point(574, 25);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(2, 200);
+            this.panel12.TabIndex = 29;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel13.Location = new System.Drawing.Point(772, 25);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(2, 200);
+            this.panel13.TabIndex = 30;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel14.Location = new System.Drawing.Point(574, 224);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(200, 2);
+            this.panel14.TabIndex = 31;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel15.Location = new System.Drawing.Point(574, 25);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(200, 2);
+            this.panel15.TabIndex = 32;
+            // 
             // Messages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -487,5 +527,9 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
     }
 }
