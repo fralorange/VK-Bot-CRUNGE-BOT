@@ -42,23 +42,30 @@ namespace VK_Control_Panel_Bot.Controls
 
         private void UserIdTextBox_Leave(object sender, EventArgs e)
         {
-            long[] ids = new long[] { long.Parse(UserIdTextBox.Text) };
-            var p = _api.Users.Get(ids, ProfileFields.Photo200).FirstOrDefault();
+            if (long.TryParse(UserIdTextBox.Text, out long id))
+            {
+                long[] ids = new long[] { id };
+                var p = _api.Users.Get(ids, ProfileFields.Photo200).FirstOrDefault();
 
-            var request = WebRequest.Create(p!.Photo200.ToString());
-            using var response = request.GetResponse();
-            using var stream = response.GetResponseStream();
+                var request = WebRequest.Create(p!.Photo200.ToString());
+                using var response = request.GetResponse();
+                using var stream = response.GetResponseStream();
 
-            AvatarPic1.Image = Image.FromStream(stream);
+                AvatarPic1.Image = Image.FromStream(stream);
+            } else
+            {
+                UserIdTextBox.Text = "";
+                MainForm.UpdateOutput("Wrong userId format");
+            }
         }
 
         private void AnyButton_Clicked(object sender, EventArgs e)
         {
             var button = (Button)sender;
-            String numbersOnlyButton = Regex.Replace(button.Name, @"[^\d]", String.Empty);
+            string numbersOnlyButton = Regex.Replace(button.Name, @"[^\d]", string.Empty);
             panels.ForEach(delegate (Panel p)
             {
-                String numbersOnlyPanel = Regex.Replace(p.Name, @"[^\d]", String.Empty);
+                string numbersOnlyPanel = Regex.Replace(p.Name, @"[^\d]", string.Empty);
                 if (numbersOnlyButton.Equals(numbersOnlyPanel))
                 {
                     p.BringToFront();
@@ -76,6 +83,7 @@ namespace VK_Control_Panel_Bot.Controls
                 UserId = long.Parse(UserIdTextBox.Text),
                 Message = msg
             });
+            MainForm.UpdateOutput("Message sent");
             MessageTextBox.Lines = null;
         }
     }
