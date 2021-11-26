@@ -9,6 +9,9 @@ using VkNet.Exception;
 using VkNet.Enums.Filters;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Net;
+using System.Text;
+using System.IO;
 
 namespace VK_Control_Panel_Bot.Controls
 {
@@ -205,7 +208,7 @@ namespace VK_Control_Panel_Bot.Controls
         {
             if (long.TryParse(ChatIdTextBox2.Text, out long id) && !ChatIdTextBox2.Text.Contains("-") && !ChatIdTextBox2.Text.StartsWith("0")) {
                 startflood = !startflood;
-                StartButton2.Text = (startflood) ? "Start" : "Stop";
+                StartButton2.Text = (!startflood) ? "Start" : "Stop";
                 ChatIdTextBox2.ReadOnly = startflood;
                 await Task.Run(() =>
                 {
@@ -234,6 +237,43 @@ namespace VK_Control_Panel_Bot.Controls
                     }
                 });
             } else
+            {
+                MainForm.UpdateOutput("Wrong chatId format");
+            }
+        }
+
+        private void ThirdFlooder_Click(object sender, EventArgs e)
+        {
+            ThirdFlooderPanel.BringToFront();
+        }
+        private bool startflood2 = false;
+        private async void StartButton3_Click(object sender, EventArgs e)
+        {
+            if (long.TryParse(ChatIdTextBox3.Text, out long id) && !ChatIdTextBox2.Text.Contains("-") && !ChatIdTextBox2.Text.StartsWith("0"))
+            {
+                startflood2 = !startflood2;
+                StartButton3.Text = (!startflood2) ? "Start" : "Stop";
+                ChatIdTextBox3.ReadOnly = startflood2;
+                var p = _api.Messages.GetChat(id);
+                var wc = new WebClient();
+                wc.DownloadFile(p.Photo200, "avatar1.jpg");
+                await Task.Run(() =>
+                {
+                    while (startflood2)
+                    { 
+                        var UplServer = _api.Photo.GetChatUploadServer((ulong)id);
+                        var UplFile = Encoding.ASCII.GetString(wc.UploadFile(UplServer.UploadUrl, @"avatar1.jpg"));
+                        _api.Messages.SetChatPhotoAsync(UplFile);
+                        if (!startflood2)
+                        {
+                            File.Delete(@"avatar1.jpg");
+                            break;
+                        }    
+                            
+                    }
+                });
+            }
+            else
             {
                 MainForm.UpdateOutput("Wrong chatId format");
             }

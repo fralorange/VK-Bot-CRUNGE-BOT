@@ -89,6 +89,7 @@
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.ThirdFlooder = new System.Windows.Forms.Button();
             this.SecondFlooder = new System.Windows.Forms.Button();
             this.FirstFlooder = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -98,6 +99,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.FirstFlooderPanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel38 = new System.Windows.Forms.Panel();
             this.panel36 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
@@ -110,6 +112,18 @@
             this.FlooderBack = new System.Windows.Forms.Button();
             this.SecondFlooderPanel = new System.Windows.Forms.Panel();
             this.FlooderBack2 = new System.Windows.Forms.Button();
+            this.ThirdFlooderPanel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.ChatPic3 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.StartButton3 = new System.Windows.Forms.Button();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.ChatIdTextBox3 = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -122,6 +136,8 @@
             this.FirstFlooderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic2)).BeginInit();
             this.SecondFlooderPanel.SuspendLayout();
+            this.ThirdFlooderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ChatPic3)).BeginInit();
             this.SuspendLayout();
             // 
             // border3
@@ -661,6 +677,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.FirstFlooderAttentionPanel);
+            this.panel3.Controls.Add(this.ThirdFlooder);
             this.panel3.Controls.Add(this.SecondFlooder);
             this.panel3.Controls.Add(this.FirstFlooder);
             this.panel3.Location = new System.Drawing.Point(200, 0);
@@ -804,13 +821,27 @@
             this.panel27.Size = new System.Drawing.Size(2, 227);
             this.panel27.TabIndex = 10;
             // 
+            // ThirdFlooder
+            // 
+            this.ThirdFlooder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ThirdFlooder.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ThirdFlooder.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ThirdFlooder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ThirdFlooder.Location = new System.Drawing.Point(258, 280);
+            this.ThirdFlooder.Name = "ThirdFlooder";
+            this.ThirdFlooder.Size = new System.Drawing.Size(296, 84);
+            this.ThirdFlooder.TabIndex = 25;
+            this.ThirdFlooder.Text = "Flood by reassigning the chat avatar";
+            this.ThirdFlooder.UseVisualStyleBackColor = true;
+            this.ThirdFlooder.Click += new System.EventHandler(this.ThirdFlooder_Click);
+            // 
             // SecondFlooder
             // 
             this.SecondFlooder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SecondFlooder.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SecondFlooder.ForeColor = System.Drawing.SystemColors.Highlight;
             this.SecondFlooder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.SecondFlooder.Location = new System.Drawing.Point(462, 207);
+            this.SecondFlooder.Location = new System.Drawing.Point(462, 98);
             this.SecondFlooder.Name = "SecondFlooder";
             this.SecondFlooder.Size = new System.Drawing.Size(296, 84);
             this.SecondFlooder.TabIndex = 23;
@@ -823,7 +854,7 @@
             this.FirstFlooder.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FirstFlooder.ForeColor = System.Drawing.SystemColors.Highlight;
             this.FirstFlooder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.FirstFlooder.Location = new System.Drawing.Point(47, 207);
+            this.FirstFlooder.Location = new System.Drawing.Point(47, 98);
             this.FirstFlooder.Name = "FirstFlooder";
             this.FirstFlooder.Size = new System.Drawing.Size(296, 84);
             this.FirstFlooder.TabIndex = 22;
@@ -875,6 +906,7 @@
             // 
             // FirstFlooderPanel
             // 
+            this.FirstFlooderPanel.Controls.Add(this.label5);
             this.FirstFlooderPanel.Controls.Add(this.panel38);
             this.FirstFlooderPanel.Controls.Add(this.panel36);
             this.FirstFlooderPanel.Controls.Add(this.panel26);
@@ -890,10 +922,24 @@
             this.FirstFlooderPanel.Size = new System.Drawing.Size(786, 532);
             this.FirstFlooderPanel.TabIndex = 21;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(156, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(516, 24);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Flood by logging out and logging into the chat";
+            // 
             // panel38
             // 
             this.panel38.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel38.Location = new System.Drawing.Point(507, 13);
+            this.panel38.Location = new System.Drawing.Point(507, 38);
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(2, 200);
             this.panel38.TabIndex = 45;
@@ -901,7 +947,7 @@
             // panel36
             // 
             this.panel36.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel36.Location = new System.Drawing.Point(309, 11);
+            this.panel36.Location = new System.Drawing.Point(309, 36);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(200, 2);
             this.panel36.TabIndex = 44;
@@ -909,7 +955,7 @@
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel26.Location = new System.Drawing.Point(309, 211);
+            this.panel26.Location = new System.Drawing.Point(309, 236);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(200, 2);
             this.panel26.TabIndex = 43;
@@ -917,7 +963,7 @@
             // panel35
             // 
             this.panel35.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel35.Location = new System.Drawing.Point(309, 12);
+            this.panel35.Location = new System.Drawing.Point(309, 37);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(2, 200);
             this.panel35.TabIndex = 42;
@@ -925,7 +971,7 @@
             // ChatPic2
             // 
             this.ChatPic2.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
-            this.ChatPic2.Location = new System.Drawing.Point(309, 12);
+            this.ChatPic2.Location = new System.Drawing.Point(309, 37);
             this.ChatPic2.Name = "ChatPic2";
             this.ChatPic2.Size = new System.Drawing.Size(200, 200);
             this.ChatPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1016,6 +1062,142 @@
             this.FlooderBack2.UseVisualStyleBackColor = true;
             this.FlooderBack2.Click += new System.EventHandler(this.FlooderBack_Click);
             // 
+            // ThirdFlooderPanel
+            // 
+            this.ThirdFlooderPanel.Controls.Add(this.label7);
+            this.ThirdFlooderPanel.Controls.Add(this.panel40);
+            this.ThirdFlooderPanel.Controls.Add(this.panel41);
+            this.ThirdFlooderPanel.Controls.Add(this.panel42);
+            this.ThirdFlooderPanel.Controls.Add(this.panel43);
+            this.ThirdFlooderPanel.Controls.Add(this.ChatPic3);
+            this.ThirdFlooderPanel.Controls.Add(this.label8);
+            this.ThirdFlooderPanel.Controls.Add(this.StartButton3);
+            this.ThirdFlooderPanel.Controls.Add(this.panel44);
+            this.ThirdFlooderPanel.Controls.Add(this.ChatIdTextBox3);
+            this.ThirdFlooderPanel.Controls.Add(this.button11);
+            this.ThirdFlooderPanel.Location = new System.Drawing.Point(200, 0);
+            this.ThirdFlooderPanel.Name = "ThirdFlooderPanel";
+            this.ThirdFlooderPanel.Size = new System.Drawing.Size(786, 532);
+            this.ThirdFlooderPanel.TabIndex = 23;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(204, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(406, 24);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Flood by reassigning the chat avatar";
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel40.Location = new System.Drawing.Point(507, 38);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(2, 200);
+            this.panel40.TabIndex = 45;
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel41.Location = new System.Drawing.Point(309, 36);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(200, 2);
+            this.panel41.TabIndex = 44;
+            // 
+            // panel42
+            // 
+            this.panel42.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel42.Location = new System.Drawing.Point(309, 236);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(200, 2);
+            this.panel42.TabIndex = 43;
+            // 
+            // panel43
+            // 
+            this.panel43.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel43.Location = new System.Drawing.Point(309, 37);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(2, 200);
+            this.panel43.TabIndex = 42;
+            // 
+            // ChatPic3
+            // 
+            this.ChatPic3.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
+            this.ChatPic3.Location = new System.Drawing.Point(309, 37);
+            this.ChatPic3.Name = "ChatPic3";
+            this.ChatPic3.Size = new System.Drawing.Size(200, 200);
+            this.ChatPic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ChatPic3.TabIndex = 41;
+            this.ChatPic3.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label8.Location = new System.Drawing.Point(165, 297);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 24);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "chatid:";
+            // 
+            // StartButton3
+            // 
+            this.StartButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartButton3.Font = new System.Drawing.Font("Letter Gothic Std", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.StartButton3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.StartButton3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.StartButton3.Location = new System.Drawing.Point(258, 455);
+            this.StartButton3.Name = "StartButton3";
+            this.StartButton3.Size = new System.Drawing.Size(300, 50);
+            this.StartButton3.TabIndex = 38;
+            this.StartButton3.Text = "Start";
+            this.StartButton3.UseVisualStyleBackColor = true;
+            this.StartButton3.Click += new System.EventHandler(this.StartButton3_Click);
+            // 
+            // panel44
+            // 
+            this.panel44.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel44.Location = new System.Drawing.Point(258, 319);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(310, 2);
+            this.panel44.TabIndex = 35;
+            // 
+            // ChatIdTextBox3
+            // 
+            this.ChatIdTextBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.ChatIdTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ChatIdTextBox3.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChatIdTextBox3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ChatIdTextBox3.Location = new System.Drawing.Point(258, 292);
+            this.ChatIdTextBox3.Name = "ChatIdTextBox3";
+            this.ChatIdTextBox3.Size = new System.Drawing.Size(310, 23);
+            this.ChatIdTextBox3.TabIndex = 34;
+            this.ChatIdTextBox3.Leave += new System.EventHandler(this.ChatIdTextBox_Leave);
+            // 
+            // button11
+            // 
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button11.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button11.Location = new System.Drawing.Point(18, 16);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(108, 26);
+            this.button11.TabIndex = 22;
+            this.button11.Text = "Back";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.FlooderBack_Click);
+            // 
             // Messages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1027,6 +1209,7 @@
             this.Controls.Add(this.border4);
             this.Controls.Add(this.border3);
             this.Controls.Add(this.ButtonsPanel);
+            this.Controls.Add(this.ThirdFlooderPanel);
             this.Controls.Add(this.FirstFlooderPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -1062,6 +1245,9 @@
             this.FirstFlooderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic2)).EndInit();
             this.SecondFlooderPanel.ResumeLayout(false);
+            this.ThirdFlooderPanel.ResumeLayout(false);
+            this.ThirdFlooderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ChatPic3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1150,5 +1336,19 @@
         private System.Windows.Forms.Button StartButton2;
         private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.TextBox ChatIdTextBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button ThirdFlooder;
+        private System.Windows.Forms.Panel ThirdFlooderPanel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.PictureBox ChatPic3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button StartButton3;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.TextBox ChatIdTextBox3;
+        private System.Windows.Forms.Button button11;
     }
 }
