@@ -58,6 +58,16 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.UserIdTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.ChatPic1 = new System.Windows.Forms.PictureBox();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.AvatarPic2 = new System.Windows.Forms.PictureBox();
             this.ConfirmButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -66,28 +76,52 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.UserIdTextBox2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.FirstFlooderAttentionPanel = new System.Windows.Forms.Panel();
+            this.FirstFlooderNoOption = new System.Windows.Forms.Button();
+            this.FirstFlooderYesOption = new System.Windows.Forms.Button();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.AttentionLabel = new System.Windows.Forms.Label();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.SecondFlooder = new System.Windows.Forms.Button();
+            this.FirstFlooder = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.AvatarPic2 = new System.Windows.Forms.PictureBox();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.ChatPic1 = new System.Windows.Forms.PictureBox();
+            this.FirstFlooderPanel = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.ChatPic2 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.StartButton2 = new System.Windows.Forms.Button();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.ChatIdTextBox2 = new System.Windows.Forms.TextBox();
+            this.FlooderBack = new System.Windows.Forms.Button();
+            this.SecondFlooderPanel = new System.Windows.Forms.Panel();
+            this.FlooderBack2 = new System.Windows.Forms.Button();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AvatarPic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvatarPic2)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.FirstFlooderAttentionPanel.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.FirstFlooderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ChatPic2)).BeginInit();
+            this.SecondFlooderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // border3
@@ -235,7 +269,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(167, 53);
             this.button3.TabIndex = 20;
-            this.button3.Text = "button3";
+            this.button3.Text = "Flooder";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.AnyButton_Clicked);
             // 
@@ -458,6 +492,90 @@
             this.panel2.Size = new System.Drawing.Size(786, 532);
             this.panel2.TabIndex = 13;
             // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel22.Location = new System.Drawing.Point(566, 8);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(200, 2);
+            this.panel22.TabIndex = 42;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel23.Location = new System.Drawing.Point(566, 207);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(200, 2);
+            this.panel23.TabIndex = 41;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel24.Location = new System.Drawing.Point(764, 8);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(2, 200);
+            this.panel24.TabIndex = 40;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel25.Location = new System.Drawing.Point(566, 8);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(2, 200);
+            this.panel25.TabIndex = 39;
+            // 
+            // ChatPic1
+            // 
+            this.ChatPic1.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
+            this.ChatPic1.Location = new System.Drawing.Point(566, 8);
+            this.ChatPic1.Name = "ChatPic1";
+            this.ChatPic1.Size = new System.Drawing.Size(200, 200);
+            this.ChatPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ChatPic1.TabIndex = 38;
+            this.ChatPic1.TabStop = false;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel18.Location = new System.Drawing.Point(24, 8);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(200, 2);
+            this.panel18.TabIndex = 37;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel19.Location = new System.Drawing.Point(24, 207);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(200, 2);
+            this.panel19.TabIndex = 36;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel20.Location = new System.Drawing.Point(222, 8);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(2, 200);
+            this.panel20.TabIndex = 35;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel21.Location = new System.Drawing.Point(24, 8);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(2, 200);
+            this.panel21.TabIndex = 34;
+            // 
+            // AvatarPic2
+            // 
+            this.AvatarPic2.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
+            this.AvatarPic2.Location = new System.Drawing.Point(24, 8);
+            this.AvatarPic2.Name = "AvatarPic2";
+            this.AvatarPic2.Size = new System.Drawing.Size(200, 200);
+            this.AvatarPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AvatarPic2.TabIndex = 33;
+            this.AvatarPic2.TabStop = false;
+            // 
             // ConfirmButton
             // 
             this.ConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -542,10 +660,176 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.FirstFlooderAttentionPanel);
+            this.panel3.Controls.Add(this.SecondFlooder);
+            this.panel3.Controls.Add(this.FirstFlooder);
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(786, 532);
             this.panel3.TabIndex = 14;
+            // 
+            // FirstFlooderAttentionPanel
+            // 
+            this.FirstFlooderAttentionPanel.Controls.Add(this.FirstFlooderNoOption);
+            this.FirstFlooderAttentionPanel.Controls.Add(this.FirstFlooderYesOption);
+            this.FirstFlooderAttentionPanel.Controls.Add(this.panel34);
+            this.FirstFlooderAttentionPanel.Controls.Add(this.panel33);
+            this.FirstFlooderAttentionPanel.Controls.Add(this.panel32);
+            this.FirstFlooderAttentionPanel.Controls.Add(this.label4);
+            this.FirstFlooderAttentionPanel.Controls.Add(this.AttentionLabel);
+            this.FirstFlooderAttentionPanel.Controls.Add(this.panel31);
+            this.FirstFlooderAttentionPanel.Controls.Add(this.panel29);
+            this.FirstFlooderAttentionPanel.Controls.Add(this.panel28);
+            this.FirstFlooderAttentionPanel.Controls.Add(this.panel27);
+            this.FirstFlooderAttentionPanel.Location = new System.Drawing.Point(214, 148);
+            this.FirstFlooderAttentionPanel.Name = "FirstFlooderAttentionPanel";
+            this.FirstFlooderAttentionPanel.Size = new System.Drawing.Size(351, 227);
+            this.FirstFlooderAttentionPanel.TabIndex = 24;
+            this.FirstFlooderAttentionPanel.Visible = false;
+            // 
+            // FirstFlooderNoOption
+            // 
+            this.FirstFlooderNoOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FirstFlooderNoOption.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FirstFlooderNoOption.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.FirstFlooderNoOption.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.FirstFlooderNoOption.Location = new System.Drawing.Point(218, 189);
+            this.FirstFlooderNoOption.Name = "FirstFlooderNoOption";
+            this.FirstFlooderNoOption.Size = new System.Drawing.Size(109, 26);
+            this.FirstFlooderNoOption.TabIndex = 22;
+            this.FirstFlooderNoOption.Text = "No";
+            this.FirstFlooderNoOption.UseVisualStyleBackColor = true;
+            this.FirstFlooderNoOption.Click += new System.EventHandler(this.FirstFlooderNoOption_Click);
+            // 
+            // FirstFlooderYesOption
+            // 
+            this.FirstFlooderYesOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FirstFlooderYesOption.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FirstFlooderYesOption.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.FirstFlooderYesOption.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.FirstFlooderYesOption.Location = new System.Drawing.Point(28, 189);
+            this.FirstFlooderYesOption.Name = "FirstFlooderYesOption";
+            this.FirstFlooderYesOption.Size = new System.Drawing.Size(109, 26);
+            this.FirstFlooderYesOption.TabIndex = 21;
+            this.FirstFlooderYesOption.Text = "Yes";
+            this.FirstFlooderYesOption.UseVisualStyleBackColor = true;
+            this.FirstFlooderYesOption.Click += new System.EventHandler(this.FirstFlooderYesOption_Click);
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel34.Location = new System.Drawing.Point(174, 181);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(2, 46);
+            this.panel34.TabIndex = 18;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel33.Location = new System.Drawing.Point(0, 225);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(351, 2);
+            this.panel33.TabIndex = 17;
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel32.Location = new System.Drawing.Point(0, 40);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(351, 2);
+            this.panel32.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(28, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(299, 120);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "This method will lead to the \r\nloss of all permissions in \r\nthe chat, starting wi" +
+    "th the \r\nchat admin rights and ending \r\nwith the chatbot rights, \r\ndo you wish t" +
+    "o continue?";
+            // 
+            // AttentionLabel
+            // 
+            this.AttentionLabel.AutoSize = true;
+            this.AttentionLabel.Font = new System.Drawing.Font("Letter Gothic Std", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AttentionLabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.AttentionLabel.Location = new System.Drawing.Point(86, 5);
+            this.AttentionLabel.Name = "AttentionLabel";
+            this.AttentionLabel.Size = new System.Drawing.Size(170, 37);
+            this.AttentionLabel.TabIndex = 14;
+            this.AttentionLabel.Text = "Attention";
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel31.Location = new System.Drawing.Point(0, 179);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(351, 2);
+            this.panel31.TabIndex = 13;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel29.Location = new System.Drawing.Point(0, 0);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(351, 2);
+            this.panel29.TabIndex = 12;
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel28.Controls.Add(this.panel30);
+            this.panel28.Location = new System.Drawing.Point(0, 0);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(2, 227);
+            this.panel28.TabIndex = 11;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel30.Location = new System.Drawing.Point(0, 0);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(351, 2);
+            this.panel30.TabIndex = 12;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel27.Location = new System.Drawing.Point(349, 0);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(2, 227);
+            this.panel27.TabIndex = 10;
+            // 
+            // SecondFlooder
+            // 
+            this.SecondFlooder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SecondFlooder.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SecondFlooder.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.SecondFlooder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.SecondFlooder.Location = new System.Drawing.Point(462, 207);
+            this.SecondFlooder.Name = "SecondFlooder";
+            this.SecondFlooder.Size = new System.Drawing.Size(296, 84);
+            this.SecondFlooder.TabIndex = 23;
+            this.SecondFlooder.Text = "Flood by sending messages";
+            this.SecondFlooder.UseVisualStyleBackColor = true;
+            // 
+            // FirstFlooder
+            // 
+            this.FirstFlooder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FirstFlooder.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FirstFlooder.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.FirstFlooder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.FirstFlooder.Location = new System.Drawing.Point(47, 207);
+            this.FirstFlooder.Name = "FirstFlooder";
+            this.FirstFlooder.Size = new System.Drawing.Size(296, 84);
+            this.FirstFlooder.TabIndex = 22;
+            this.FirstFlooder.Text = "Flood by logging out and logging into the chat";
+            this.FirstFlooder.UseVisualStyleBackColor = true;
+            this.FirstFlooder.Click += new System.EventHandler(this.FirstFlooder_Click);
             // 
             // panel4
             // 
@@ -589,89 +873,148 @@
             this.panel9.Size = new System.Drawing.Size(786, 532);
             this.panel9.TabIndex = 20;
             // 
-            // panel18
+            // FirstFlooderPanel
             // 
-            this.panel18.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel18.Location = new System.Drawing.Point(24, 8);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(200, 2);
-            this.panel18.TabIndex = 37;
+            this.FirstFlooderPanel.Controls.Add(this.panel38);
+            this.FirstFlooderPanel.Controls.Add(this.panel36);
+            this.FirstFlooderPanel.Controls.Add(this.panel26);
+            this.FirstFlooderPanel.Controls.Add(this.panel35);
+            this.FirstFlooderPanel.Controls.Add(this.ChatPic2);
+            this.FirstFlooderPanel.Controls.Add(this.label6);
+            this.FirstFlooderPanel.Controls.Add(this.StartButton2);
+            this.FirstFlooderPanel.Controls.Add(this.panel37);
+            this.FirstFlooderPanel.Controls.Add(this.ChatIdTextBox2);
+            this.FirstFlooderPanel.Controls.Add(this.FlooderBack);
+            this.FirstFlooderPanel.Location = new System.Drawing.Point(200, 0);
+            this.FirstFlooderPanel.Name = "FirstFlooderPanel";
+            this.FirstFlooderPanel.Size = new System.Drawing.Size(786, 532);
+            this.FirstFlooderPanel.TabIndex = 21;
             // 
-            // panel19
+            // panel38
             // 
-            this.panel19.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel19.Location = new System.Drawing.Point(24, 207);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(200, 2);
-            this.panel19.TabIndex = 36;
+            this.panel38.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel38.Location = new System.Drawing.Point(507, 13);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(2, 200);
+            this.panel38.TabIndex = 45;
             // 
-            // panel20
+            // panel36
             // 
-            this.panel20.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel20.Location = new System.Drawing.Point(222, 8);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(2, 200);
-            this.panel20.TabIndex = 35;
+            this.panel36.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel36.Location = new System.Drawing.Point(309, 11);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(200, 2);
+            this.panel36.TabIndex = 44;
             // 
-            // panel21
+            // panel26
             // 
-            this.panel21.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel21.Location = new System.Drawing.Point(24, 8);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(2, 200);
-            this.panel21.TabIndex = 34;
+            this.panel26.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel26.Location = new System.Drawing.Point(309, 211);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(200, 2);
+            this.panel26.TabIndex = 43;
             // 
-            // AvatarPic2
+            // panel35
             // 
-            this.AvatarPic2.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
-            this.AvatarPic2.Location = new System.Drawing.Point(24, 8);
-            this.AvatarPic2.Name = "AvatarPic2";
-            this.AvatarPic2.Size = new System.Drawing.Size(200, 200);
-            this.AvatarPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AvatarPic2.TabIndex = 33;
-            this.AvatarPic2.TabStop = false;
+            this.panel35.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel35.Location = new System.Drawing.Point(309, 12);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(2, 200);
+            this.panel35.TabIndex = 42;
             // 
-            // panel22
+            // ChatPic2
             // 
-            this.panel22.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel22.Location = new System.Drawing.Point(566, 8);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(200, 2);
-            this.panel22.TabIndex = 42;
+            this.ChatPic2.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
+            this.ChatPic2.Location = new System.Drawing.Point(309, 12);
+            this.ChatPic2.Name = "ChatPic2";
+            this.ChatPic2.Size = new System.Drawing.Size(200, 200);
+            this.ChatPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ChatPic2.TabIndex = 41;
+            this.ChatPic2.TabStop = false;
             // 
-            // panel23
+            // label6
             // 
-            this.panel23.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel23.Location = new System.Drawing.Point(566, 207);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(200, 2);
-            this.panel23.TabIndex = 41;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label6.Location = new System.Drawing.Point(165, 297);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 24);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "chatid:";
             // 
-            // panel24
+            // StartButton2
             // 
-            this.panel24.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel24.Location = new System.Drawing.Point(764, 8);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(2, 200);
-            this.panel24.TabIndex = 40;
+            this.StartButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartButton2.Font = new System.Drawing.Font("Letter Gothic Std", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.StartButton2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.StartButton2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.StartButton2.Location = new System.Drawing.Point(258, 455);
+            this.StartButton2.Name = "StartButton2";
+            this.StartButton2.Size = new System.Drawing.Size(300, 50);
+            this.StartButton2.TabIndex = 38;
+            this.StartButton2.Text = "Start";
+            this.StartButton2.UseVisualStyleBackColor = true;
+            this.StartButton2.Click += new System.EventHandler(this.StartButton2_Click);
             // 
-            // panel25
+            // panel37
             // 
-            this.panel25.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel25.Location = new System.Drawing.Point(566, 8);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(2, 200);
-            this.panel25.TabIndex = 39;
+            this.panel37.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel37.Location = new System.Drawing.Point(258, 319);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(310, 2);
+            this.panel37.TabIndex = 35;
             // 
-            // ChatPic1
+            // ChatIdTextBox2
             // 
-            this.ChatPic1.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
-            this.ChatPic1.Location = new System.Drawing.Point(566, 8);
-            this.ChatPic1.Name = "ChatPic1";
-            this.ChatPic1.Size = new System.Drawing.Size(200, 200);
-            this.ChatPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ChatPic1.TabIndex = 38;
-            this.ChatPic1.TabStop = false;
+            this.ChatIdTextBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.ChatIdTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ChatIdTextBox2.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChatIdTextBox2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ChatIdTextBox2.Location = new System.Drawing.Point(258, 292);
+            this.ChatIdTextBox2.Name = "ChatIdTextBox2";
+            this.ChatIdTextBox2.Size = new System.Drawing.Size(310, 23);
+            this.ChatIdTextBox2.TabIndex = 34;
+            this.ChatIdTextBox2.Leave += new System.EventHandler(this.ChatIdTextBox_Leave);
+            // 
+            // FlooderBack
+            // 
+            this.FlooderBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FlooderBack.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FlooderBack.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.FlooderBack.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.FlooderBack.Location = new System.Drawing.Point(18, 16);
+            this.FlooderBack.Name = "FlooderBack";
+            this.FlooderBack.Size = new System.Drawing.Size(108, 26);
+            this.FlooderBack.TabIndex = 22;
+            this.FlooderBack.Text = "Back";
+            this.FlooderBack.UseVisualStyleBackColor = true;
+            this.FlooderBack.Click += new System.EventHandler(this.FlooderBack_Click);
+            // 
+            // SecondFlooderPanel
+            // 
+            this.SecondFlooderPanel.Controls.Add(this.FlooderBack2);
+            this.SecondFlooderPanel.Location = new System.Drawing.Point(200, 0);
+            this.SecondFlooderPanel.Name = "SecondFlooderPanel";
+            this.SecondFlooderPanel.Size = new System.Drawing.Size(786, 532);
+            this.SecondFlooderPanel.TabIndex = 22;
+            // 
+            // FlooderBack2
+            // 
+            this.FlooderBack2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FlooderBack2.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FlooderBack2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.FlooderBack2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.FlooderBack2.Location = new System.Drawing.Point(18, 16);
+            this.FlooderBack2.Name = "FlooderBack2";
+            this.FlooderBack2.Size = new System.Drawing.Size(108, 26);
+            this.FlooderBack2.TabIndex = 22;
+            this.FlooderBack2.Text = "Back";
+            this.FlooderBack2.UseVisualStyleBackColor = true;
+            this.FlooderBack2.Click += new System.EventHandler(this.FlooderBack_Click);
             // 
             // Messages
             // 
@@ -684,6 +1027,9 @@
             this.Controls.Add(this.border4);
             this.Controls.Add(this.border3);
             this.Controls.Add(this.ButtonsPanel);
+            this.Controls.Add(this.FirstFlooderPanel);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
@@ -691,8 +1037,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.SecondFlooderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -707,8 +1052,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AvatarPic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvatarPic2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.FirstFlooderAttentionPanel.ResumeLayout(false);
+            this.FirstFlooderAttentionPanel.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.FirstFlooderPanel.ResumeLayout(false);
+            this.FirstFlooderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ChatPic2)).EndInit();
+            this.SecondFlooderPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -769,5 +1122,33 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.PictureBox AvatarPic2;
+        private System.Windows.Forms.Button SecondFlooder;
+        private System.Windows.Forms.Button FirstFlooder;
+        private System.Windows.Forms.Panel FirstFlooderPanel;
+        private System.Windows.Forms.Button FlooderBack;
+        private System.Windows.Forms.Panel SecondFlooderPanel;
+        private System.Windows.Forms.Button FlooderBack2;
+        private System.Windows.Forms.Panel FirstFlooderAttentionPanel;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Label AttentionLabel;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Button FirstFlooderNoOption;
+        private System.Windows.Forms.Button FirstFlooderYesOption;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.PictureBox ChatPic2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button StartButton2;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.TextBox ChatIdTextBox2;
     }
 }
