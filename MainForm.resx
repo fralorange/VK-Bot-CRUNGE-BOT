@@ -115,7 +115,7 @@
     <value>UpPanel</value>
   </data>
   <data name="&gt;&gt;Iconified.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Exit.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -151,16 +151,37 @@
     <value>UpPanel</value>
   </data>
   <data name="&gt;&gt;Exit.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
+  </data>
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 2</value>
+  </data>
+  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>UpPanel</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="OutputLogin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Letter Gothic Std, 11.25pt, style=Bold</value>
   </data>
   <data name="OutputLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>630, 12</value>
+    <value>564, 12</value>
   </data>
   <data name="OutputLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 18</value>
+    <value>354, 18</value>
   </data>
   <data name="OutputLogin.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -178,7 +199,7 @@
     <value>UpPanel</value>
   </data>
   <data name="&gt;&gt;OutputLogin.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="StripMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -226,7 +247,7 @@
     <value>UpPanel</value>
   </data>
   <data name="&gt;&gt;StripMenu.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="UpPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -541,10 +562,10 @@
     <value>3</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1008, 39</value>
+    <value>1008, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 551</value>
+    <value>2, 590</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -562,10 +583,10 @@
     <value>2</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 39</value>
+    <value>0, 0</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 551</value>
+    <value>2, 590</value>
   </data>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>

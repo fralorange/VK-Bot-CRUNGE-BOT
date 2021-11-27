@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using VK_Control_Panel_Bot.Extensions;
 using VkNet;
-using VkNet.Exception;
 using VkNet.Enums.Filters;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Net;
-using System.Text;
-using System.IO;
+using VkNet.Exception;
 
 namespace VK_Control_Panel_Bot.Controls
 {
@@ -95,72 +94,114 @@ namespace VK_Control_Panel_Bot.Controls
                 }
             });
         }
-
-        //panel1
-
-        private void UserIdTextBox_Leave(object sender, EventArgs e)
-        {
-            if (long.TryParse(UserIdTextBox.Text, out long id) && !UserIdTextBox.Text.Contains("-") && !UserIdTextBox.Text.Equals("0") && !UserIdTextBox.Text.StartsWith("0"))
-            {
-                if (!ChatBox.Checked)
-                {
-                    long[] ids = new long[] { id };
-                    var p = _api.Users.Get(ids, ProfileFields.Photo200).FirstOrDefault();
-                    var image = Web.GetImage(p!.Photo200.ToString());
-                    AvatarPic1.Image = image;
-                }
-                else
-                {
-                    var p = _api.Messages.GetChat(long.Parse(UserIdTextBox.Text));
-                    var image = Web.GetImage(p.Photo200);
-                    AvatarPic1.Image = image;
-                }
-            }
-            else
-            {
-                UserIdTextBox.Text = "";
-                MainForm.UpdateOutput("Wrong first field format");
-            }
-        }
-
         private void SendMessage_Click(object sender, EventArgs e)
         {
-            string msg = string.Join("\n", MessageTextBox.Lines);
-            if (!ChatBox.Checked)
+            foreach (Control control in ((Button)sender).Parent.Controls)
             {
-                _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                if (control is TextBox && control.Name.StartsWith("Message"))
                 {
-                    RandomId = new Random().Next(),
-                    UserId = long.Parse(UserIdTextBox.Text),
-                    Message = msg
-                });
+                    string msg = string.Join("\n", ((TextBox)control).Lines);
+                    foreach (Control chat in ((Button)sender).Parent.Controls)
+                    {
+                        if (chat is CheckBox && chat.Name.StartsWith("Chat"))
+                        {
+                            if (!((CheckBox)chat).Checked)
+                            {
+                                foreach (Control userid in ((Button)sender).Parent.Controls)
+                                {
+                                    if (userid is TextBox && userid.Name.StartsWith("User"))
+                                    {
+                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                        {
+                                            RandomId = new Random().Next(),
+                                            UserId = long.Parse(userid.Text),
+                                            Message = msg
+                                        });
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                foreach (Control chatid in ((Button)sender).Parent.Controls)
+                                {
+                                    if (chatid is TextBox && chatid.Name.StartsWith("User"))
+                                    {
+                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                        {
+                                            RandomId = new Random().Next(),
+                                            ChatId = long.Parse(chatid.Text),
+                                            Message = msg
+                                        });
+                                    }
+                                }
+                            }
+                            MainForm.UpdateOutput("Message sent");
+                            if (((TextBox)control).ReadOnly == false) 
+                            { 
+                                ((TextBox)control).Invoke((MethodInvoker)delegate
+                                {
+                                    ((TextBox)control).Lines = null;
+                                });
+                            }
+                        }
+                    }
+                }
             }
-            else
-            {
-                _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
-                {
-                    RandomId = new Random().Next(),
-                    ChatId = long.Parse(UserIdTextBox.Text),
-                    Message = msg
-                });
-            }
-            MainForm.UpdateOutput("Message sent");
-            MessageTextBox.Lines = null;
         }
 
         private void ChatBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (ChatBox.Checked)
+            foreach (Control control in ((CheckBox)sender).Parent.Controls)
             {
-                userId1.Text = "chatid:";
-                UserIdTextBox.Text = "";
-                AvatarPic1.Image = Properties.Resources.noavatar;
+                if (((CheckBox)sender).Checked)
+                {
+                    if (control is Label && control.Name.StartsWith("user"))
+                        control.Text = "chatid:";
+                }
+                else
+                {
+                    if (control is Label && control.Name.StartsWith("user"))
+                        control.Text = "userid:";
+                }
+                if ((control is TextBox && control.Name.StartsWith("User")))
+                    control.Text = "";
+                else if (control is PictureBox && control.Name.StartsWith("Avatar"))
+                    ((PictureBox)control).Image = Properties.Resources.noavatar;
+            }
+        }
+
+        private void UserIdTextBox_Leave(object sender, EventArgs e)
+        {
+            if (long.TryParse(((TextBox)sender).Text, out long id) && !((TextBox)sender).Text.Contains("-") && !((TextBox)sender).Text.Equals("0") && !((TextBox)sender).Text.StartsWith("0"))
+            {
+                foreach (Control control in ((TextBox)sender).Parent.Controls)
+                {
+                    if (control is CheckBox && control.Name.StartsWith("Chat"))
+                    {
+                        if (!((CheckBox)control).Checked)
+                        {
+                            long[] ids = new long[] { id };
+                            var p = _api.Users.Get(ids, ProfileFields.Photo200).FirstOrDefault();
+                            var image = Web.GetImage(p!.Photo200.ToString());
+                            foreach (Control avatar in ((TextBox)sender).Parent.Controls)
+                                if (avatar is PictureBox && avatar.Name.StartsWith("Avatar"))
+                                    ((PictureBox)avatar).Image = image;
+                        }
+                        else
+                        {
+                            var p = _api.Messages.GetChat(id);
+                            var image = Web.GetImage(p.Photo200);
+                            foreach (Control avatar in ((TextBox)sender).Parent.Controls)
+                                if (avatar is PictureBox && avatar.Name.StartsWith("Avatar"))
+                                    ((PictureBox)avatar).Image = image;
+                        }
+                    }
+                }
             }
             else
             {
-                userId1.Text = "userid:";
-                UserIdTextBox.Text = "";
-                AvatarPic1.Image = Properties.Resources.noavatar;
+                ((TextBox)sender).Text = "";
+                MainForm.UpdateOutput("Wrong first field format");
             }
         }
 
@@ -174,7 +215,8 @@ namespace VK_Control_Panel_Bot.Controls
             {
                 _api.Messages.RemoveChatUser(chatId: ulong.Parse(ChatIdTextBox.Text), userId: long.Parse(UserIdTextBox2.Text));
                 _api.Messages.AddChatUser(chatId: long.Parse(ChatIdTextBox.Text), userId: long.Parse(UserIdTextBox2.Text));
-            } else
+            }
+            else
             {
                 MainForm.UpdateOutput("Wrong userId or chatId format");
             }
@@ -202,11 +244,12 @@ namespace VK_Control_Panel_Bot.Controls
         {
             FirstFlooderAttentionPanel.Visible = true;
         }
-
+        // FirstFlooder
         private bool startflood = false;
         private async void StartButton2_Click(object sender, EventArgs e)
         {
-            if (long.TryParse(ChatIdTextBox2.Text, out long id) && !ChatIdTextBox2.Text.Contains("-") && !ChatIdTextBox2.Text.StartsWith("0")) {
+            if (long.TryParse(ChatIdTextBox2.Text, out long id) && !ChatIdTextBox2.Text.Contains("-") && !ChatIdTextBox2.Text.StartsWith("0"))
+            {
                 startflood = !startflood;
                 StartButton2.Text = (!startflood) ? "Start" : "Stop";
                 ChatIdTextBox2.ReadOnly = startflood;
@@ -225,53 +268,115 @@ namespace VK_Control_Panel_Bot.Controls
                     catch (TooMuchOfTheSameTypeOfActionException)
                     {
                         startflood = false;
-                        ChatIdTextBox2.Invoke((MethodInvoker) delegate
-                        {
-                            ChatIdTextBox2.ReadOnly = startflood;
-                        });
-                        StartButton2.Invoke((MethodInvoker) delegate
-                        {
-                            StartButton2.Text = "Start";
-                        });
+                        ChatIdTextBox2.Invoke((MethodInvoker)delegate
+                       {
+                           ChatIdTextBox2.ReadOnly = this.startflood;
+                       });
+                        StartButton2.Invoke((MethodInvoker)delegate
+                       {
+                           StartButton2.Text = "Start";
+                       });
                         MainForm.UpdateOutput("Flood control");
                     }
                 });
-            } else
+            }
+            else
             {
                 MainForm.UpdateOutput("Wrong chatId format");
             }
         }
 
+        //Third Flooder
         private void ThirdFlooder_Click(object sender, EventArgs e)
         {
             ThirdFlooderPanel.BringToFront();
         }
-        private bool startflood2 = false;
         private async void StartButton3_Click(object sender, EventArgs e)
         {
             if (long.TryParse(ChatIdTextBox3.Text, out long id) && !ChatIdTextBox2.Text.Contains("-") && !ChatIdTextBox2.Text.StartsWith("0"))
             {
-                startflood2 = !startflood2;
-                StartButton3.Text = (!startflood2) ? "Start" : "Stop";
-                ChatIdTextBox3.ReadOnly = startflood2;
+                startflood = !startflood;
+                StartButton3.Text = (!startflood) ? "Start" : "Stop";
+                ChatIdTextBox3.ReadOnly = startflood;
                 long[] ids = { (2000000000 + id) };
                 var conversationResult = _api.Messages.GetConversationsById(ids);
                 var wc = new WebClient();
-                Console.Write(conversationResult.Items.FirstOrDefault()!.ChatSettings.Photo.BigPhotoSrc.AbsoluteUri);
-                wc.DownloadFile(conversationResult.Profiles.FirstOrDefault()!.PhotoMax, "avatar1.jpg");
+                wc.DownloadFile(conversationResult.Items.FirstOrDefault()!.ChatSettings.Photo.Photo200.ToString(), "avatar1.jpg");
                 await Task.Run(() =>
                 {
-                    while (startflood2)
-                    { 
+                    while (startflood)
+                    {
                         var UplServer = _api.Photo.GetChatUploadServer((ulong)id);
                         var UplFile = Encoding.ASCII.GetString(wc.UploadFile(UplServer.UploadUrl, @"avatar1.jpg"));
                         _api.Messages.SetChatPhotoAsync(UplFile);
-                        if (!startflood2)
+                        if (!startflood)
                         {
-                            File.Delete(@"avatar1.jpg");
                             break;
-                        }    
-                            
+                        }
+
+                    }
+                    File.Delete(@"avatar1.jpg");
+                });
+            }
+            else
+            {
+                MainForm.UpdateOutput("Wrong chatId format");
+            }
+        }
+
+        //Second Flooder
+        private void SecondFlooder_Click(object sender, EventArgs e)
+        {
+            SecondFlooderPanel.BringToFront();
+        }
+
+        private async void StartButton4_Click(object sender, EventArgs e)
+        {
+            if (long.TryParse(UserIdTextBox3.Text, out long id) && !UserIdTextBox3.Text.Contains("-") && !UserIdTextBox3.Text.StartsWith("0") && UserIdTextBox3.Text.Length != 0)
+            {
+                ulong? captcha_sid = null;
+                string? captcha_key = null;
+                startflood = !startflood;
+                StartButton4.Text = (!startflood) ? "Start" : "Stop";
+                UserIdTextBox3.ReadOnly = startflood;
+                MessageTextBoxFlood.ReadOnly = startflood;
+                DelayBar1.ReadOnly = startflood;
+                await Task.Run(() =>
+                {
+                    try
+                    {
+                        while (startflood)
+                        {
+                            SendMessage_Click(sender, e);
+                            System.Threading.Thread.Sleep((int)(DelayBar1.Value * 1000));
+                            if (!startflood)
+                                break;
+                        }
+                    }
+                    catch (CaptchaNeededException ex)
+                    {
+                        startflood = false;
+                        UserIdTextBox3.Invoke((MethodInvoker)delegate
+                        {
+                            UserIdTextBox3.ReadOnly = startflood;
+                        });
+                        MessageTextBoxFlood.Invoke((MethodInvoker)delegate
+                        {
+                            MessageTextBoxFlood.ReadOnly = startflood;
+                        });
+                        DelayBar1.Invoke((MethodInvoker)delegate
+                        {
+                            DelayBar1.ReadOnly = startflood;
+                        });
+                        StartButton4.Invoke((MethodInvoker)delegate
+                        {
+                            StartButton4.Text = "Start";
+                        });
+                        MainForm.UpdateOutput("Captcha appeared due to a small delay");
+                        captcha_sid = ex.Sid;
+                        var CaptchaForm = new CaptchaForm(ex.Img);
+                        MainForm.CreateChildForm(CaptchaForm, true);
+                        captcha_key = CaptchaForm.CaptchaKey;
                     }
                 });
             }

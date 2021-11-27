@@ -34,6 +34,8 @@
             this.CaptchaConfirm = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.CaptchaPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,11 +99,29 @@
             this.panel1.Size = new System.Drawing.Size(420, 2);
             this.panel1.TabIndex = 25;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(2, 382);
+            this.panel2.TabIndex = 26;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel4.Location = new System.Drawing.Point(418, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(2, 382);
+            this.panel4.TabIndex = 27;
+            // 
             // CaptchaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 382);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.CaptchaConfirm);
@@ -128,5 +148,7 @@
         private System.Windows.Forms.Button CaptchaConfirm;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

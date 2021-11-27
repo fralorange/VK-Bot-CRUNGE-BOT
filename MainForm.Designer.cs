@@ -51,6 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.UpPanel.SuspendLayout();
             this.StripMenu.SuspendLayout();
             this.LoginPanel.SuspendLayout();
@@ -87,6 +88,7 @@
             // UpPanel
             // 
             this.UpPanel.BackColor = System.Drawing.SystemColors.Menu;
+            this.UpPanel.Controls.Add(this.panel7);
             this.UpPanel.Controls.Add(this.OutputLogin);
             this.UpPanel.Controls.Add(this.Iconified);
             this.UpPanel.Controls.Add(this.Exit);
@@ -142,6 +144,7 @@
             this.LoginPanel.Controls.Add(this.LoginBox);
             resources.ApplyResources(this.LoginPanel, "LoginPanel");
             this.LoginPanel.Name = "LoginPanel";
+            this.LoginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.LoginPanel_Paint);
             // 
             // EyeButton
             // 
@@ -238,6 +241,12 @@
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.Highlight;
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -290,5 +299,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ToolStripMenuItem messagesToolStripMenuItem;
         public System.Windows.Forms.Panel LoginPanel;
+        private System.Windows.Forms.Panel panel7;
     }
 }

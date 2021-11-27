@@ -126,5 +126,10 @@ namespace VK_Control_Panel_Bot
                 messages.Show();
             }
         }
+
+        private void LoginPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

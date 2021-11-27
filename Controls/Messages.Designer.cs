@@ -111,6 +111,27 @@
             this.ChatIdTextBox2 = new System.Windows.Forms.TextBox();
             this.FlooderBack = new System.Windows.Forms.Button();
             this.SecondFlooderPanel = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ChatBox2 = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel53 = new System.Windows.Forms.Panel();
+            this.MessageTextBoxFlood = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel52 = new System.Windows.Forms.Panel();
+            this.panel51 = new System.Windows.Forms.Panel();
+            this.panel50 = new System.Windows.Forms.Panel();
+            this.panel49 = new System.Windows.Forms.Panel();
+            this.DelayBar1 = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.AvatarPic3 = new System.Windows.Forms.PictureBox();
+            this.userId2 = new System.Windows.Forms.Label();
+            this.StartButton4 = new System.Windows.Forms.Button();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.UserIdTextBox3 = new System.Windows.Forms.TextBox();
             this.FlooderBack2 = new System.Windows.Forms.Button();
             this.ThirdFlooderPanel = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -136,6 +157,8 @@
             this.FirstFlooderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic2)).BeginInit();
             this.SecondFlooderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DelayBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvatarPic3)).BeginInit();
             this.ThirdFlooderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic3)).BeginInit();
             this.SuspendLayout();
@@ -847,6 +870,7 @@
             this.SecondFlooder.TabIndex = 23;
             this.SecondFlooder.Text = "Flood by sending messages";
             this.SecondFlooder.UseVisualStyleBackColor = true;
+            this.SecondFlooder.Click += new System.EventHandler(this.SecondFlooder_Click);
             // 
             // FirstFlooder
             // 
@@ -1042,11 +1066,273 @@
             // 
             // SecondFlooderPanel
             // 
+            this.SecondFlooderPanel.Controls.Add(this.label10);
+            this.SecondFlooderPanel.Controls.Add(this.ChatBox2);
+            this.SecondFlooderPanel.Controls.Add(this.label12);
+            this.SecondFlooderPanel.Controls.Add(this.panel53);
+            this.SecondFlooderPanel.Controls.Add(this.MessageTextBoxFlood);
+            this.SecondFlooderPanel.Controls.Add(this.label11);
+            this.SecondFlooderPanel.Controls.Add(this.panel52);
+            this.SecondFlooderPanel.Controls.Add(this.panel51);
+            this.SecondFlooderPanel.Controls.Add(this.panel50);
+            this.SecondFlooderPanel.Controls.Add(this.panel49);
+            this.SecondFlooderPanel.Controls.Add(this.DelayBar1);
+            this.SecondFlooderPanel.Controls.Add(this.label9);
+            this.SecondFlooderPanel.Controls.Add(this.panel39);
+            this.SecondFlooderPanel.Controls.Add(this.panel45);
+            this.SecondFlooderPanel.Controls.Add(this.panel46);
+            this.SecondFlooderPanel.Controls.Add(this.panel47);
+            this.SecondFlooderPanel.Controls.Add(this.AvatarPic3);
+            this.SecondFlooderPanel.Controls.Add(this.userId2);
+            this.SecondFlooderPanel.Controls.Add(this.StartButton4);
+            this.SecondFlooderPanel.Controls.Add(this.panel48);
+            this.SecondFlooderPanel.Controls.Add(this.UserIdTextBox3);
             this.SecondFlooderPanel.Controls.Add(this.FlooderBack2);
             this.SecondFlooderPanel.Location = new System.Drawing.Point(200, 0);
             this.SecondFlooderPanel.Name = "SecondFlooderPanel";
             this.SecondFlooderPanel.Size = new System.Drawing.Size(786, 532);
             this.SecondFlooderPanel.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Letter Gothic Std", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(387, 452);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(140, 14);
+            this.label10.TabIndex = 67;
+            this.label10.Text = "(2,5 - recommended)";
+            // 
+            // ChatBox2
+            // 
+            this.ChatBox2.AutoSize = true;
+            this.ChatBox2.Location = new System.Drawing.Point(563, 268);
+            this.ChatBox2.Name = "ChatBox2";
+            this.ChatBox2.Size = new System.Drawing.Size(51, 19);
+            this.ChatBox2.TabIndex = 66;
+            this.ChatBox2.Text = "Chat";
+            this.ChatBox2.UseVisualStyleBackColor = true;
+            this.ChatBox2.CheckedChanged += new System.EventHandler(this.ChatBox_CheckedChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label12.Location = new System.Drawing.Point(133, 300);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(98, 24);
+            this.label12.TabIndex = 65;
+            this.label12.Text = "message:";
+            // 
+            // panel53
+            // 
+            this.panel53.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel53.Location = new System.Drawing.Point(237, 414);
+            this.panel53.Name = "panel53";
+            this.panel53.Size = new System.Drawing.Size(310, 2);
+            this.panel53.TabIndex = 64;
+            // 
+            // MessageTextBoxFlood
+            // 
+            this.MessageTextBoxFlood.BackColor = System.Drawing.SystemColors.Control;
+            this.MessageTextBoxFlood.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MessageTextBoxFlood.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MessageTextBoxFlood.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.MessageTextBoxFlood.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.MessageTextBoxFlood.Location = new System.Drawing.Point(237, 298);
+            this.MessageTextBoxFlood.Multiline = true;
+            this.MessageTextBoxFlood.Name = "MessageTextBoxFlood";
+            this.MessageTextBoxFlood.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.MessageTextBoxFlood.Size = new System.Drawing.Size(310, 112);
+            this.MessageTextBoxFlood.TabIndex = 63;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label11.Location = new System.Drawing.Point(141, 425);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(208, 24);
+            this.label11.TabIndex = 62;
+            this.label11.Text = "delay(in seconds):";
+            // 
+            // panel52
+            // 
+            this.panel52.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel52.Location = new System.Drawing.Point(550, 430);
+            this.panel52.Name = "panel52";
+            this.panel52.Size = new System.Drawing.Size(2, 19);
+            this.panel52.TabIndex = 61;
+            // 
+            // panel51
+            // 
+            this.panel51.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel51.Location = new System.Drawing.Point(350, 430);
+            this.panel51.Name = "panel51";
+            this.panel51.Size = new System.Drawing.Size(2, 19);
+            this.panel51.TabIndex = 60;
+            // 
+            // panel50
+            // 
+            this.panel50.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel50.Location = new System.Drawing.Point(350, 428);
+            this.panel50.Name = "panel50";
+            this.panel50.Size = new System.Drawing.Size(202, 2);
+            this.panel50.TabIndex = 59;
+            // 
+            // panel49
+            // 
+            this.panel49.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel49.Location = new System.Drawing.Point(350, 449);
+            this.panel49.Name = "panel49";
+            this.panel49.Size = new System.Drawing.Size(202, 2);
+            this.panel49.TabIndex = 58;
+            // 
+            // DelayBar1
+            // 
+            this.DelayBar1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DelayBar1.DecimalPlaces = 1;
+            this.DelayBar1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.DelayBar1.Location = new System.Drawing.Point(352, 430);
+            this.DelayBar1.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.DelayBar1.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.DelayBar1.Name = "DelayBar1";
+            this.DelayBar1.Size = new System.Drawing.Size(200, 19);
+            this.DelayBar1.TabIndex = 57;
+            this.DelayBar1.ThousandsSeparator = true;
+            this.DelayBar1.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            65536});
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label9.Location = new System.Drawing.Point(242, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(285, 24);
+            this.label9.TabIndex = 56;
+            this.label9.Text = "Flood by sending messages";
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel39.Location = new System.Drawing.Point(486, 48);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(2, 200);
+            this.panel39.TabIndex = 55;
+            // 
+            // panel45
+            // 
+            this.panel45.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel45.Location = new System.Drawing.Point(288, 46);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(200, 2);
+            this.panel45.TabIndex = 54;
+            // 
+            // panel46
+            // 
+            this.panel46.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel46.Location = new System.Drawing.Point(288, 246);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(200, 2);
+            this.panel46.TabIndex = 53;
+            // 
+            // panel47
+            // 
+            this.panel47.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel47.Location = new System.Drawing.Point(288, 47);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(2, 200);
+            this.panel47.TabIndex = 52;
+            // 
+            // AvatarPic3
+            // 
+            this.AvatarPic3.Image = global::VK_Control_Panel_Bot.Properties.Resources.noavatar;
+            this.AvatarPic3.Location = new System.Drawing.Point(288, 47);
+            this.AvatarPic3.Name = "AvatarPic3";
+            this.AvatarPic3.Size = new System.Drawing.Size(200, 200);
+            this.AvatarPic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AvatarPic3.TabIndex = 51;
+            this.AvatarPic3.TabStop = false;
+            // 
+            // userId2
+            // 
+            this.userId2.AutoSize = true;
+            this.userId2.BackColor = System.Drawing.Color.Transparent;
+            this.userId2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userId2.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.userId2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.userId2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.userId2.Location = new System.Drawing.Point(144, 265);
+            this.userId2.Name = "userId2";
+            this.userId2.Size = new System.Drawing.Size(87, 24);
+            this.userId2.TabIndex = 50;
+            this.userId2.Text = "userid:";
+            // 
+            // StartButton4
+            // 
+            this.StartButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartButton4.Font = new System.Drawing.Font("Letter Gothic Std", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.StartButton4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.StartButton4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.StartButton4.Location = new System.Drawing.Point(242, 470);
+            this.StartButton4.Name = "StartButton4";
+            this.StartButton4.Size = new System.Drawing.Size(300, 50);
+            this.StartButton4.TabIndex = 49;
+            this.StartButton4.Text = "Start";
+            this.StartButton4.UseVisualStyleBackColor = true;
+            this.StartButton4.Click += new System.EventHandler(this.StartButton4_Click);
+            // 
+            // panel48
+            // 
+            this.panel48.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel48.Location = new System.Drawing.Point(237, 287);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(310, 2);
+            this.panel48.TabIndex = 48;
+            // 
+            // UserIdTextBox3
+            // 
+            this.UserIdTextBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.UserIdTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UserIdTextBox3.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UserIdTextBox3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.UserIdTextBox3.Location = new System.Drawing.Point(237, 260);
+            this.UserIdTextBox3.Name = "UserIdTextBox3";
+            this.UserIdTextBox3.Size = new System.Drawing.Size(310, 23);
+            this.UserIdTextBox3.TabIndex = 47;
+            this.UserIdTextBox3.Leave += new System.EventHandler(this.UserIdTextBox_Leave);
             // 
             // FlooderBack2
             // 
@@ -1209,6 +1495,7 @@
             this.Controls.Add(this.border4);
             this.Controls.Add(this.border3);
             this.Controls.Add(this.ButtonsPanel);
+            this.Controls.Add(this.SecondFlooderPanel);
             this.Controls.Add(this.ThirdFlooderPanel);
             this.Controls.Add(this.FirstFlooderPanel);
             this.Controls.Add(this.panel3);
@@ -1220,7 +1507,6 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.SecondFlooderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1245,6 +1531,9 @@
             this.FirstFlooderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic2)).EndInit();
             this.SecondFlooderPanel.ResumeLayout(false);
+            this.SecondFlooderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DelayBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvatarPic3)).EndInit();
             this.ThirdFlooderPanel.ResumeLayout(false);
             this.ThirdFlooderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic3)).EndInit();
@@ -1350,5 +1639,26 @@
         private System.Windows.Forms.Panel panel44;
         private System.Windows.Forms.TextBox ChatIdTextBox3;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Panel panel52;
+        private System.Windows.Forms.Panel panel51;
+        private System.Windows.Forms.Panel panel50;
+        private System.Windows.Forms.Panel panel49;
+        private System.Windows.Forms.NumericUpDown DelayBar1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.Panel panel45;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.Panel panel47;
+        private System.Windows.Forms.PictureBox AvatarPic3;
+        private System.Windows.Forms.Label userId2;
+        private System.Windows.Forms.Button StartButton4;
+        private System.Windows.Forms.Panel panel48;
+        private System.Windows.Forms.TextBox UserIdTextBox3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel53;
+        private System.Windows.Forms.TextBox MessageTextBoxFlood;
+        private System.Windows.Forms.CheckBox ChatBox2;
+        private System.Windows.Forms.Label label10;
     }
 }
