@@ -55,8 +55,8 @@ namespace VK_Control_Panel_Bot
             {
                 Thread StatusThread = new(() => TextAnimations.Delaying("Something wrong."));
                 StatusThread.Start();
+                return null;
             }
-            return null;
         }
     }
 }

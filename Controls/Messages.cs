@@ -254,9 +254,11 @@ namespace VK_Control_Panel_Bot.Controls
                 startflood2 = !startflood2;
                 StartButton3.Text = (!startflood2) ? "Start" : "Stop";
                 ChatIdTextBox3.ReadOnly = startflood2;
-                var p = _api.Messages.GetChat(id);
+                long[] ids = { (2000000000 + id) };
+                var conversationResult = _api.Messages.GetConversationsById(ids);
                 var wc = new WebClient();
-                wc.DownloadFile(p.Photo200, "avatar1.jpg");
+                Console.Write(conversationResult.Items.FirstOrDefault()!.ChatSettings.Photo.BigPhotoSrc.AbsoluteUri);
+                wc.DownloadFile(conversationResult.Profiles.FirstOrDefault()!.PhotoMax, "avatar1.jpg");
                 await Task.Run(() =>
                 {
                     while (startflood2)
