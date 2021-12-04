@@ -145,6 +145,11 @@
             this.panel44 = new System.Windows.Forms.Panel();
             this.ChatIdTextBox3 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel54 = new System.Windows.Forms.Panel();
+            this.LocalPathBox = new System.Windows.Forms.TextBox();
+            this.LoadFile = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -351,6 +356,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.LoadFile);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.panel54);
+            this.panel1.Controls.Add(this.LocalPathBox);
             this.panel1.Controls.Add(this.ChatBox);
             this.panel1.Controls.Add(this.panel15);
             this.panel1.Controls.Add(this.panel14);
@@ -373,7 +382,7 @@
             // ChatBox
             // 
             this.ChatBox.AutoSize = true;
-            this.ChatBox.Location = new System.Drawing.Point(433, 131);
+            this.ChatBox.Location = new System.Drawing.Point(462, 132);
             this.ChatBox.Name = "ChatBox";
             this.ChatBox.Size = new System.Drawing.Size(51, 19);
             this.ChatBox.TabIndex = 33;
@@ -431,7 +440,7 @@
             this.label1.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(13, 196);
+            this.label1.Location = new System.Drawing.Point(42, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 24);
             this.label1.TabIndex = 27;
@@ -445,7 +454,7 @@
             this.userId1.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.userId1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.userId1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.userId1.Location = new System.Drawing.Point(24, 126);
+            this.userId1.Location = new System.Drawing.Point(53, 127);
             this.userId1.Name = "userId1";
             this.userId1.Size = new System.Drawing.Size(87, 24);
             this.userId1.TabIndex = 26;
@@ -468,7 +477,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel11.Location = new System.Drawing.Point(117, 357);
+            this.panel11.Location = new System.Drawing.Point(146, 358);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(310, 2);
             this.panel11.TabIndex = 24;
@@ -480,7 +489,7 @@
             this.MessageTextBox.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.MessageTextBox.ForeColor = System.Drawing.SystemColors.Highlight;
             this.MessageTextBox.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.MessageTextBox.Location = new System.Drawing.Point(117, 197);
+            this.MessageTextBox.Location = new System.Drawing.Point(146, 198);
             this.MessageTextBox.Multiline = true;
             this.MessageTextBox.Name = "MessageTextBox";
             this.MessageTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -490,7 +499,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel10.Location = new System.Drawing.Point(117, 148);
+            this.panel10.Location = new System.Drawing.Point(146, 149);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(310, 2);
             this.panel10.TabIndex = 22;
@@ -501,7 +510,7 @@
             this.UserIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UserIdTextBox.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UserIdTextBox.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.UserIdTextBox.Location = new System.Drawing.Point(117, 121);
+            this.UserIdTextBox.Location = new System.Drawing.Point(146, 122);
             this.UserIdTextBox.Name = "UserIdTextBox";
             this.UserIdTextBox.Size = new System.Drawing.Size(310, 23);
             this.UserIdTextBox.TabIndex = 21;
@@ -1484,6 +1493,59 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.FlooderBack_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label13.Location = new System.Drawing.Point(9, 401);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(131, 24);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "attachment:";
+            // 
+            // panel54
+            // 
+            this.panel54.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel54.Location = new System.Drawing.Point(146, 423);
+            this.panel54.Name = "panel54";
+            this.panel54.Size = new System.Drawing.Size(310, 2);
+            this.panel54.TabIndex = 35;
+            // 
+            // LocalPathBox
+            // 
+            this.LocalPathBox.BackColor = System.Drawing.SystemColors.Control;
+            this.LocalPathBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LocalPathBox.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LocalPathBox.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LocalPathBox.Location = new System.Drawing.Point(146, 396);
+            this.LocalPathBox.Name = "LocalPathBox";
+            this.LocalPathBox.ReadOnly = true;
+            this.LocalPathBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.LocalPathBox.Size = new System.Drawing.Size(310, 23);
+            this.LocalPathBox.TabIndex = 34;
+            // 
+            // LoadFile
+            // 
+            this.LoadFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadFile.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LoadFile.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LoadFile.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LoadFile.Location = new System.Drawing.Point(462, 398);
+            this.LoadFile.Name = "LoadFile";
+            this.LoadFile.Size = new System.Drawing.Size(25, 25);
+            this.LoadFile.TabIndex = 37;
+            this.LoadFile.Text = "▽";
+            this.LoadFile.UseVisualStyleBackColor = true;
+            this.LoadFile.Click += new System.EventHandler(this.LoadFile_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Messages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1495,10 +1557,6 @@
             this.Controls.Add(this.border4);
             this.Controls.Add(this.border3);
             this.Controls.Add(this.ButtonsPanel);
-            this.Controls.Add(this.SecondFlooderPanel);
-            this.Controls.Add(this.ThirdFlooderPanel);
-            this.Controls.Add(this.FirstFlooderPanel);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel9);
@@ -1507,6 +1565,10 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.SecondFlooderPanel);
+            this.Controls.Add(this.ThirdFlooderPanel);
+            this.Controls.Add(this.FirstFlooderPanel);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1660,5 +1722,10 @@
         private System.Windows.Forms.TextBox MessageTextBoxFlood;
         private System.Windows.Forms.CheckBox ChatBox2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel54;
+        private System.Windows.Forms.TextBox LocalPathBox;
+        private System.Windows.Forms.Button LoadFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

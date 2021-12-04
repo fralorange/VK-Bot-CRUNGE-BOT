@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -11,6 +14,7 @@ using VK_Control_Panel_Bot.Extensions;
 using VkNet;
 using VkNet.Enums.Filters;
 using VkNet.Exception;
+using VkNet.Model.Attachments;
 
 namespace VK_Control_Panel_Bot.Controls
 {
@@ -94,7 +98,24 @@ namespace VK_Control_Panel_Bot.Controls
                 }
             });
         }
-        private void SendMessage_Click(object sender, EventArgs e)
+        public async Task<string> Upload(string serverUrl, string file, string fileExtension)
+        {
+            var data = GetBytes(file);
+
+            using var client = new HttpClient();
+            var requestContent = new MultipartFormDataContent();
+            var content = new ByteArrayContent(data);
+            content.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
+            requestContent.Add(content, "file", $"file.{fileExtension}");
+
+            var response = client.PostAsync(serverUrl, requestContent).Result;
+            return Encoding.Default.GetString(await response.Content.ReadAsByteArrayAsync());
+        }
+        private byte[] GetBytes(string filePath)
+        {
+            return File.ReadAllBytes(filePath);
+        }
+        private async void SendMessage_Click(object sender, EventArgs e)
         {
             foreach (Control control in ((Button)sender).Parent.Controls)
             {
@@ -107,17 +128,56 @@ namespace VK_Control_Panel_Bot.Controls
                         {
                             if (!((CheckBox)chat).Checked)
                             {
-                                foreach (Control userid in ((Button)sender).Parent.Controls)
-                                {
-                                    if (userid is TextBox && userid.Name.StartsWith("User"))
+                                ulong? captcha_sid = null;
+                                string? captcha_key = null;
+                                try { 
+                                    foreach (Control userid in ((Button)sender).Parent.Controls)
                                     {
-                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                        if (userid is TextBox && userid.Name.StartsWith("User"))
                                         {
-                                            RandomId = new Random().Next(),
-                                            UserId = long.Parse(userid.Text),
-                                            Message = msg
-                                        });
+                                            foreach(Control attach in ((Button)sender).Parent.Controls)
+                                            {
+                                                if (attach is TextBox && attach.Name.StartsWith("Local") && !string.IsNullOrEmpty(attach.Text))
+                                                {
+                                                    var uploadServer = _api.Photo.GetMessagesUploadServer(long.Parse(userid.Text));
+                                                    var response = await Upload(uploadServer.UploadUrl, attach.Text, Path.GetExtension(attach.Text));
+                                                    IEnumerable <MediaAttachment> attachment;
+                                                    try {
+                                                        Image.FromFile(attach.Text);
+                                                        attachment = _api.Photo.SaveMessagesPhoto(response);
+                                                    } catch (OutOfMemoryException)
+                                                    {
+                                                        var title = "123";
+                                                        attachment = new List<MediaAttachment>
+                                                        {
+                                                            _api.Docs.Save(response, title, null ?? Guid.NewGuid().ToString())[0].Instance
+                                                        };
+                                                    }
+                                                    _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                    {
+                                                        RandomId = new Random().Next(),
+                                                        Attachments = attachment,
+                                                        UserId = long.Parse(userid.Text),
+                                                        Message = msg
+                                                    });;
+                                                } else
+                                                {
+                                                    _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                    {
+                                                        RandomId = new Random().Next(),
+                                                        UserId = long.Parse(userid.Text),
+                                                        Message = msg
+                                                    });
+                                                }
+                                            }
+                                        }
                                     }
+                                } catch (CaptchaNeededException ex)
+                                {
+                                    captcha_sid = ex.Sid;
+                                    var CaptchaForm = new CaptchaForm(ex.Img);
+                                    MainForm.CreateChildForm(CaptchaForm, true);
+                                    captcha_key = CaptchaForm.CaptchaKey;
                                 }
                             }
                             else
@@ -203,6 +263,13 @@ namespace VK_Control_Panel_Bot.Controls
                 ((TextBox)sender).Text = "";
                 MainForm.UpdateOutput("Wrong first field format");
             }
+        }
+        //panel1
+
+        private void LoadFile_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                LocalPathBox.Text = openFileDialog1.FileName;
         }
 
         //panel2
