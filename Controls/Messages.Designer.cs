@@ -44,6 +44,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.border5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LoadFile = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel54 = new System.Windows.Forms.Panel();
+            this.LocalPathBox = new System.Windows.Forms.TextBox();
             this.ChatBox = new System.Windows.Forms.CheckBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -145,11 +149,8 @@
             this.panel44 = new System.Windows.Forms.Panel();
             this.ChatIdTextBox3 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel54 = new System.Windows.Forms.Panel();
-            this.LocalPathBox = new System.Windows.Forms.TextBox();
-            this.LoadFile = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ClearButton1 = new System.Windows.Forms.Button();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -356,6 +357,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ClearButton1);
             this.panel1.Controls.Add(this.LoadFile);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.panel54);
@@ -378,6 +380,55 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(786, 532);
             this.panel1.TabIndex = 11;
+            // 
+            // LoadFile
+            // 
+            this.LoadFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadFile.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LoadFile.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LoadFile.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LoadFile.Location = new System.Drawing.Point(462, 398);
+            this.LoadFile.Name = "LoadFile";
+            this.LoadFile.Size = new System.Drawing.Size(25, 25);
+            this.LoadFile.TabIndex = 37;
+            this.LoadFile.Text = "▽";
+            this.LoadFile.UseVisualStyleBackColor = true;
+            this.LoadFile.Click += new System.EventHandler(this.LoadFile_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label13.Location = new System.Drawing.Point(9, 401);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(131, 24);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "attachment:";
+            // 
+            // panel54
+            // 
+            this.panel54.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel54.Location = new System.Drawing.Point(146, 423);
+            this.panel54.Name = "panel54";
+            this.panel54.Size = new System.Drawing.Size(310, 2);
+            this.panel54.TabIndex = 35;
+            // 
+            // LocalPathBox
+            // 
+            this.LocalPathBox.BackColor = System.Drawing.SystemColors.Control;
+            this.LocalPathBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LocalPathBox.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LocalPathBox.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LocalPathBox.Location = new System.Drawing.Point(146, 396);
+            this.LocalPathBox.Name = "LocalPathBox";
+            this.LocalPathBox.ReadOnly = true;
+            this.LocalPathBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.LocalPathBox.Size = new System.Drawing.Size(310, 23);
+            this.LocalPathBox.TabIndex = 34;
             // 
             // ChatBox
             // 
@@ -1493,58 +1544,23 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.FlooderBack_Click);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(9, 401);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(131, 24);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "attachment:";
-            // 
-            // panel54
-            // 
-            this.panel54.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel54.Location = new System.Drawing.Point(146, 423);
-            this.panel54.Name = "panel54";
-            this.panel54.Size = new System.Drawing.Size(310, 2);
-            this.panel54.TabIndex = 35;
-            // 
-            // LocalPathBox
-            // 
-            this.LocalPathBox.BackColor = System.Drawing.SystemColors.Control;
-            this.LocalPathBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LocalPathBox.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LocalPathBox.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.LocalPathBox.Location = new System.Drawing.Point(146, 396);
-            this.LocalPathBox.Name = "LocalPathBox";
-            this.LocalPathBox.ReadOnly = true;
-            this.LocalPathBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.LocalPathBox.Size = new System.Drawing.Size(310, 23);
-            this.LocalPathBox.TabIndex = 34;
-            // 
-            // LoadFile
-            // 
-            this.LoadFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadFile.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LoadFile.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.LoadFile.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LoadFile.Location = new System.Drawing.Point(462, 398);
-            this.LoadFile.Name = "LoadFile";
-            this.LoadFile.Size = new System.Drawing.Size(25, 25);
-            this.LoadFile.TabIndex = 37;
-            this.LoadFile.Text = "▽";
-            this.LoadFile.UseVisualStyleBackColor = true;
-            this.LoadFile.Click += new System.EventHandler(this.LoadFile_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // ClearButton1
+            // 
+            this.ClearButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearButton1.Font = new System.Drawing.Font("Letter Gothic Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ClearButton1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ClearButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ClearButton1.Location = new System.Drawing.Point(493, 398);
+            this.ClearButton1.Name = "ClearButton1";
+            this.ClearButton1.Size = new System.Drawing.Size(25, 25);
+            this.ClearButton1.TabIndex = 38;
+            this.ClearButton1.Text = "✖";
+            this.ClearButton1.UseVisualStyleBackColor = true;
+            this.ClearButton1.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // Messages
             // 
@@ -1727,5 +1743,6 @@
         private System.Windows.Forms.TextBox LocalPathBox;
         private System.Windows.Forms.Button LoadFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button ClearButton1;
     }
 }

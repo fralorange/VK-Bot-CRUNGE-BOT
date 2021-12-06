@@ -124,88 +124,145 @@ namespace VK_Control_Panel_Bot.Controls
                     string msg = string.Join("\n", ((TextBox)control).Lines);
                     foreach (Control chat in ((Button)sender).Parent.Controls)
                     {
-                        if (chat is CheckBox && chat.Name.StartsWith("Chat"))
+                        ulong? captcha_sid = null;
+                        string? captcha_key = null;
+                        try
                         {
-                            if (!((CheckBox)chat).Checked)
+                            if (chat is CheckBox box && chat.Name.StartsWith("Chat")) //send message to user
                             {
-                                ulong? captcha_sid = null;
-                                string? captcha_key = null;
-                                try { 
+                                if (!box.Checked)
+                                {
                                     foreach (Control userid in ((Button)sender).Parent.Controls)
                                     {
                                         if (userid is TextBox && userid.Name.StartsWith("User"))
                                         {
-                                            foreach(Control attach in ((Button)sender).Parent.Controls)
+                                            foreach (Control attach in ((Button)sender).Parent.Controls)
                                             {
-                                                if (attach is TextBox && attach.Name.StartsWith("Local") && !string.IsNullOrEmpty(attach.Text))
+                                                if (attach is TextBox && attach.Name.StartsWith("Local"))
                                                 {
-                                                    var uploadServer = _api.Photo.GetMessagesUploadServer(long.Parse(userid.Text));
-                                                    var response = await Upload(uploadServer.UploadUrl, attach.Text, Path.GetExtension(attach.Text));
-                                                    IEnumerable <MediaAttachment> attachment;
-                                                    try {
-                                                        Image.FromFile(attach.Text);
-                                                        attachment = _api.Photo.SaveMessagesPhoto(response);
-                                                    } catch (OutOfMemoryException)
+                                                    if (!string.IsNullOrEmpty(attach.Text))
                                                     {
-                                                        var title = "123";
-                                                        attachment = new List<MediaAttachment>
+                                                        IEnumerable<MediaAttachment> attachment;
+                                                        try
+                                                        {
+                                                            Image.FromFile(attach.Text);
+                                                            var uploadServer = _api.Photo.GetMessagesUploadServer(long.Parse(userid.Text));
+                                                            var response = await Upload(uploadServer.UploadUrl, attach.Text, Path.GetExtension(attach.Text));
+                                                            attachment = _api.Photo.SaveMessagesPhoto(response);
+                                                        }
+                                                        catch (OutOfMemoryException)
+                                                        {
+                                                            var uploadServer = _api.Docs.GetMessagesUploadServer(long.Parse(userid.Text));
+                                                            var response = await Upload(uploadServer.UploadUrl, attach.Text, Path.GetExtension(attach.Text));
+                                                            var title = RandomString.Random(7);
+                                                            attachment = new List<MediaAttachment>
                                                         {
                                                             _api.Docs.Save(response, title, null ?? Guid.NewGuid().ToString())[0].Instance
                                                         };
+                                                        }
+
+                                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                        {
+                                                            RandomId = new Random().Next(),
+                                                            Attachments = attachment,
+                                                            UserId = long.Parse(userid.Text),
+                                                            Message = msg
+                                                        }); ;
                                                     }
-                                                    _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                    else
                                                     {
-                                                        RandomId = new Random().Next(),
-                                                        Attachments = attachment,
-                                                        UserId = long.Parse(userid.Text),
-                                                        Message = msg
-                                                    });;
-                                                } else
-                                                {
-                                                    _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
-                                                    {
-                                                        RandomId = new Random().Next(),
-                                                        UserId = long.Parse(userid.Text),
-                                                        Message = msg
-                                                    });
+                                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                        {
+                                                            RandomId = new Random().Next(),
+                                                            UserId = long.Parse(userid.Text),
+                                                            Message = msg
+                                                        });
+                                                    }
                                                 }
                                             }
                                         }
                                     }
-                                } catch (CaptchaNeededException ex)
-                                {
-                                    captcha_sid = ex.Sid;
-                                    var CaptchaForm = new CaptchaForm(ex.Img);
-                                    MainForm.CreateChildForm(CaptchaForm, true);
-                                    captcha_key = CaptchaForm.CaptchaKey;
                                 }
-                            }
-                            else
-                            {
-                                foreach (Control chatid in ((Button)sender).Parent.Controls)
+                                else //send message to chat
                                 {
-                                    if (chatid is TextBox && chatid.Name.StartsWith("User"))
+                                    foreach (Control chatid in ((Button)sender).Parent.Controls)
                                     {
-                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                        if (chatid is TextBox && chatid.Name.StartsWith("User"))
                                         {
-                                            RandomId = new Random().Next(),
-                                            ChatId = long.Parse(chatid.Text),
-                                            Message = msg
-                                        });
+                                            foreach (Control attach in ((Button)sender).Parent.Controls)
+                                            {
+                                                if (attach is TextBox && attach.Name.StartsWith("Local"))
+                                                {
+                                                    if (!string.IsNullOrEmpty(attach.Text))
+                                                    {
+                                                        IEnumerable<MediaAttachment> attachment;
+                                                        try
+                                                        {
+                                                            Image.FromFile(attach.Text);
+                                                            var uploadServer = _api.Photo.GetMessagesUploadServer(long.Parse(chatid.Text));
+                                                            var response = await Upload(uploadServer.UploadUrl, attach.Text, Path.GetExtension(attach.Text));
+                                                            attachment = _api.Photo.SaveMessagesPhoto(response);
+                                                        }
+                                                        catch (OutOfMemoryException)
+                                                        {
+                                                            var uploadServer = _api.Docs.GetMessagesUploadServer(long.Parse(chatid.Text));
+                                                            var response = await Upload(uploadServer.UploadUrl, attach.Text, Path.GetExtension(attach.Text));
+                                                            var title = RandomString.Random(7);
+                                                            attachment = new List<MediaAttachment>
+                                                        {
+                                                             _api.Docs.Save(response, title, Guid.NewGuid().ToString())[0].Instance
+                                                        };
+                                                        }
+
+                                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                        {
+                                                            RandomId = new Random().Next(),
+                                                            Attachments = attachment,
+                                                            ChatId = long.Parse(chatid.Text),
+                                                            Message = msg
+                                                        });
+                                                    }
+                                                    else
+                                                    {
+                                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                        {
+                                                            RandomId = new Random().Next(),
+                                                            ChatId = long.Parse(chatid.Text),
+                                                            Message = msg
+                                                        });
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
-                            MainForm.UpdateOutput("Message sent");
-                            if (((TextBox)control).ReadOnly == false) 
-                            { 
-                                ((TextBox)control).Invoke((MethodInvoker)delegate
-                                {
-                                    ((TextBox)control).Lines = null;
-                                });
-                            }
+                        }
+                        catch (CaptchaNeededException ex)
+                        {
+                            captcha_sid = ex.Sid;
+                            var CaptchaForm = new CaptchaForm(ex.Img);
+                            MainForm.CreateChildForm(CaptchaForm, true);
+                            captcha_key = CaptchaForm.CaptchaKey;
+                        }
+                        MainForm.UpdateOutput("Message sent");
+                        if (((TextBox)control).ReadOnly == false) 
+                        { 
+                            ((TextBox)control).Invoke((MethodInvoker)delegate
+                            {
+                                ((TextBox)control).Lines = null;
+                            });
                         }
                     }
                 }
+            }
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in ((Button)sender).Parent.Controls)
+            {
+                if (control is TextBox && control.Name.StartsWith("Local")) control.Text = "";
             }
         }
 
