@@ -152,6 +152,8 @@ namespace VK_Control_Panel_Bot.Controls
 
         private async void SendMessage_Click(object sender, EventArgs e)
         {
+            bool MessageSent = false;
+            Console.WriteLine("x");
             foreach (Control control in ((Button)sender).Parent.Controls)
             {
                 if (control is TextBox messageBox && control.Name.StartsWith("Message"))
@@ -175,6 +177,7 @@ namespace VK_Control_Panel_Bot.Controls
                                             {
                                                 if (attach is TextBox && attach.Name.StartsWith("Local"))
                                                 {
+                                                    MessageSent = true;
                                                     if (!string.IsNullOrEmpty(attach.Text))
                                                     {
                                                         var attachment = await GetAttachment(userid.Text,attach.Text);
@@ -188,6 +191,19 @@ namespace VK_Control_Panel_Bot.Controls
                                                     }
                                                     else
                                                     {
+                                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                        {
+                                                            RandomId = new Random().Next(),
+                                                            UserId = long.Parse(userid.Text),
+                                                            Message = msg
+                                                        });
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    if (!MessageSent)
+                                                    {
+                                                        MessageSent = true;
                                                         _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
                                                         {
                                                             RandomId = new Random().Next(),
@@ -212,17 +228,37 @@ namespace VK_Control_Panel_Bot.Controls
                                                 {
                                                     if (!string.IsNullOrEmpty(attach.Text))
                                                     {
-                                                        var attachment = await GetAttachment(chatid.Text, attach.Text);
-                                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                        if (!MessageSent)
                                                         {
-                                                            RandomId = new Random().Next(),
-                                                            Attachments = attachment,
-                                                            ChatId = long.Parse(chatid.Text),
-                                                            Message = msg
-                                                        });
+                                                            MessageSent = true;
+                                                            var attachment = await GetAttachment(chatid.Text, attach.Text);
+                                                            _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                            {
+                                                                RandomId = new Random().Next(),
+                                                                Attachments = attachment,
+                                                                ChatId = long.Parse(chatid.Text),
+                                                                Message = msg
+                                                            });
+                                                        }
                                                     }
                                                     else
                                                     {
+                                                        if (!MessageSent)
+                                                        {
+                                                            MessageSent = true;
+                                                            _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                            {
+                                                                RandomId = new Random().Next(),
+                                                                ChatId = long.Parse(chatid.Text),
+                                                                Message = msg
+                                                            });
+                                                        }
+                                                    }
+                                                } else
+                                                {
+                                                    if (!MessageSent)
+                                                    {
+                                                        MessageSent = true;
                                                         _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
                                                         {
                                                             RandomId = new Random().Next(),
@@ -393,7 +429,7 @@ namespace VK_Control_Panel_Bot.Controls
                         startflood = false;
                         ChatIdTextBox2.Invoke((MethodInvoker)delegate
                        {
-                           ChatIdTextBox2.ReadOnly = this.startflood;
+                           ChatIdTextBox2.ReadOnly = startflood;
                        });
                         StartButton2.Invoke((MethodInvoker)delegate
                        {
@@ -463,7 +499,7 @@ namespace VK_Control_Panel_Bot.Controls
                 StartButton4.Text = (!startflood) ? "Start" : "Stop";
                 UserIdTextBox3.ReadOnly = startflood;
                 MessageTextBoxFlood.ReadOnly = startflood;
-                DelayBar1.ReadOnly = startflood;
+                DelayBar1.Enabled = startflood;
                 await Task.Run(() =>
                 {
                     try
@@ -489,7 +525,7 @@ namespace VK_Control_Panel_Bot.Controls
                         });
                         DelayBar1.Invoke((MethodInvoker)delegate
                         {
-                            DelayBar1.ReadOnly = startflood;
+                            DelayBar1.Enabled = startflood;
                         });
                         StartButton4.Invoke((MethodInvoker)delegate
                         {
