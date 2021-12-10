@@ -98,7 +98,7 @@ namespace VK_Control_Panel_Bot.Controls
                 }
             });
         }
-        public async Task<string> Upload(string serverUrl, string file, string fileExtension)
+        private async Task<string> Upload(string serverUrl, string file, string fileExtension)
         {
             var data = GetBytes(file);
 
@@ -115,22 +115,57 @@ namespace VK_Control_Panel_Bot.Controls
         {
             return File.ReadAllBytes(filePath);
         }
+
+        private async Task<IEnumerable<MediaAttachment>> PushDocs(string id, string attachtext)
+        {
+            var uploadServer = _api.Docs.GetMessagesUploadServer(long.Parse(id));
+            var response = await Upload(uploadServer.UploadUrl, attachtext, Path.GetExtension(attachtext));
+            var title = Path.GetFileName(attachtext);
+            var attachment = new List<MediaAttachment>
+            {
+                _api.Docs.Save(response, title, Guid.NewGuid().ToString())[0].Instance
+            };
+            return attachment;
+        }
+
+        private async Task<IEnumerable<MediaAttachment>> GetAttachment(string id, string attachtext)
+        {
+            IEnumerable<MediaAttachment> attachment;
+            try
+            {
+                if (!Path.GetExtension(attachtext).ToLower().Equals(".gif")){
+                    Image.FromFile(attachtext);
+                    var uploadServer = _api.Photo.GetMessagesUploadServer(long.Parse(id));
+                    var response = await Upload(uploadServer.UploadUrl, attachtext, Path.GetExtension(attachtext));
+                    attachment = _api.Photo.SaveMessagesPhoto(response);
+                } else
+                {
+                    attachment = await PushDocs(id,attachtext);
+                }
+            }
+            catch (OutOfMemoryException)
+            {
+                attachment = await PushDocs(id, attachtext);
+            }
+            return attachment;
+        }
+
         private async void SendMessage_Click(object sender, EventArgs e)
         {
             foreach (Control control in ((Button)sender).Parent.Controls)
             {
-                if (control is TextBox && control.Name.StartsWith("Message"))
+                if (control is TextBox messageBox && control.Name.StartsWith("Message"))
                 {
-                    string msg = string.Join("\n", ((TextBox)control).Lines);
+                    string msg = string.Join("\n", messageBox.Lines);
                     foreach (Control chat in ((Button)sender).Parent.Controls)
                     {
                         ulong? captcha_sid = null;
                         string? captcha_key = null;
-                        try
+                        try // captcha
                         {
-                            if (chat is CheckBox box && chat.Name.StartsWith("Chat")) //send message to user
+                            if (chat is CheckBox CheckBoxVar && chat.Name.StartsWith("Chat")) //send message to user
                             {
-                                if (!box.Checked)
+                                if (!CheckBoxVar.Checked)
                                 {
                                     foreach (Control userid in ((Button)sender).Parent.Controls)
                                     {
@@ -142,25 +177,7 @@ namespace VK_Control_Panel_Bot.Controls
                                                 {
                                                     if (!string.IsNullOrEmpty(attach.Text))
                                                     {
-                                                        IEnumerable<MediaAttachment> attachment;
-                                                        try
-                                                        {
-                                                            Image.FromFile(attach.Text);
-                                                            var uploadServer = _api.Photo.GetMessagesUploadServer(long.Parse(userid.Text));
-                                                            var response = await Upload(uploadServer.UploadUrl, attach.Text, Path.GetExtension(attach.Text));
-                                                            attachment = _api.Photo.SaveMessagesPhoto(response);
-                                                        }
-                                                        catch (OutOfMemoryException)
-                                                        {
-                                                            var uploadServer = _api.Docs.GetMessagesUploadServer(long.Parse(userid.Text));
-                                                            var response = await Upload(uploadServer.UploadUrl, attach.Text, Path.GetExtension(attach.Text));
-                                                            var title = RandomString.Random(7);
-                                                            attachment = new List<MediaAttachment>
-                                                        {
-                                                            _api.Docs.Save(response, title, null ?? Guid.NewGuid().ToString())[0].Instance
-                                                        };
-                                                        }
-
+                                                        var attachment = await GetAttachment(userid.Text,attach.Text);
                                                         _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
                                                         {
                                                             RandomId = new Random().Next(),
@@ -195,25 +212,7 @@ namespace VK_Control_Panel_Bot.Controls
                                                 {
                                                     if (!string.IsNullOrEmpty(attach.Text))
                                                     {
-                                                        IEnumerable<MediaAttachment> attachment;
-                                                        try
-                                                        {
-                                                            Image.FromFile(attach.Text);
-                                                            var uploadServer = _api.Photo.GetMessagesUploadServer(long.Parse(chatid.Text));
-                                                            var response = await Upload(uploadServer.UploadUrl, attach.Text, Path.GetExtension(attach.Text));
-                                                            attachment = _api.Photo.SaveMessagesPhoto(response);
-                                                        }
-                                                        catch (OutOfMemoryException)
-                                                        {
-                                                            var uploadServer = _api.Docs.GetMessagesUploadServer(long.Parse(chatid.Text));
-                                                            var response = await Upload(uploadServer.UploadUrl, attach.Text, Path.GetExtension(attach.Text));
-                                                            var title = RandomString.Random(7);
-                                                            attachment = new List<MediaAttachment>
-                                                        {
-                                                             _api.Docs.Save(response, title, Guid.NewGuid().ToString())[0].Instance
-                                                        };
-                                                        }
-
+                                                        var attachment = await GetAttachment(chatid.Text, attach.Text);
                                                         _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
                                                         {
                                                             RandomId = new Random().Next(),
@@ -246,11 +245,11 @@ namespace VK_Control_Panel_Bot.Controls
                             captcha_key = CaptchaForm.CaptchaKey;
                         }
                         MainForm.UpdateOutput("Message sent");
-                        if (((TextBox)control).ReadOnly == false) 
+                        if (messageBox.ReadOnly == false) 
                         { 
-                            ((TextBox)control).Invoke((MethodInvoker)delegate
+                            messageBox.Invoke((MethodInvoker)delegate
                             {
-                                ((TextBox)control).Lines = null;
+                                messageBox.Lines = null;
                             });
                         }
                     }
