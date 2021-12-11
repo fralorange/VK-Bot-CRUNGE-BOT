@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.border5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ClearButton1 = new System.Windows.Forms.Button();
             this.LoadFile = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.panel54 = new System.Windows.Forms.Panel();
@@ -150,7 +151,6 @@
             this.ChatIdTextBox3 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.ClearButton1 = new System.Windows.Forms.Button();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -300,7 +300,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(167, 53);
             this.button4.TabIndex = 21;
-            this.button4.Text = "button4";
+            this.button4.Text = "Planned message";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.AnyButton_Clicked);
             // 
@@ -380,6 +380,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(786, 532);
             this.panel1.TabIndex = 11;
+            // 
+            // ClearButton1
+            // 
+            this.ClearButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearButton1.Font = new System.Drawing.Font("Letter Gothic Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ClearButton1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ClearButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ClearButton1.Location = new System.Drawing.Point(493, 398);
+            this.ClearButton1.Name = "ClearButton1";
+            this.ClearButton1.Size = new System.Drawing.Size(25, 25);
+            this.ClearButton1.TabIndex = 38;
+            this.ClearButton1.Text = "✖";
+            this.ClearButton1.UseVisualStyleBackColor = true;
+            this.ClearButton1.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // LoadFile
             // 
@@ -1547,20 +1561,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // ClearButton1
-            // 
-            this.ClearButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearButton1.Font = new System.Drawing.Font("Letter Gothic Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ClearButton1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.ClearButton1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ClearButton1.Location = new System.Drawing.Point(493, 398);
-            this.ClearButton1.Name = "ClearButton1";
-            this.ClearButton1.Size = new System.Drawing.Size(25, 25);
-            this.ClearButton1.TabIndex = 38;
-            this.ClearButton1.Text = "✖";
-            this.ClearButton1.UseVisualStyleBackColor = true;
-            this.ClearButton1.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // Messages
             // 

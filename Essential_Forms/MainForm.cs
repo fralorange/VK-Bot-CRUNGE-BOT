@@ -140,5 +140,14 @@ namespace VK_Control_Panel_Bot
             }
         }
 
+        private void LogOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("Accounts.txt")) File.Delete("Accounts.txt");
+            _api!.LogOut();
+            MenuShow(false);
+            LoginShow(true);
+            UpdateOutput("");
+            ActiveMdiChild.Close();
+        }
     }
 }

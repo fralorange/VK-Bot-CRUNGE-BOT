@@ -153,66 +153,6 @@
   <data name="&gt;&gt;Exit.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="StripMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
-    <value>UpPanel</value>
-  </data>
-  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;OutputLogin.Name" xml:space="preserve">
-    <value>OutputLogin</value>
-  </data>
-  <data name="&gt;&gt;OutputLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OutputLogin.Parent" xml:space="preserve">
-    <value>UpPanel</value>
-  </data>
-  <data name="&gt;&gt;OutputLogin.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;StripMenu.Name" xml:space="preserve">
-    <value>StripMenu</value>
-  </data>
-  <data name="&gt;&gt;StripMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StripMenu.Parent" xml:space="preserve">
-    <value>UpPanel</value>
-  </data>
-  <data name="&gt;&gt;StripMenu.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="UpPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="UpPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 40</value>
-  </data>
-  <data name="UpPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;UpPanel.Name" xml:space="preserve">
-    <value>UpPanel</value>
-  </data>
-  <data name="&gt;&gt;UpPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;UpPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;UpPanel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -267,11 +207,38 @@
   <data name="StripMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="MessagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="MessagesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="PhotosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="PhotosToolStripMenuItem.Text" xml:space="preserve">
+    <value>Photos</value>
+  </data>
+  <data name="LogOutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 24</value>
+  </data>
+  <data name="LogOutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="ControlsMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Letter Gothic Std, 12pt, style=Bold</value>
+  </data>
+  <data name="ControlsMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 24</value>
+  </data>
+  <data name="ControlsMenu.Text" xml:space="preserve">
+    <value>Open controls</value>
+  </data>
   <data name="StripMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 7</value>
   </data>
   <data name="StripMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 28</value>
+    <value>279, 28</value>
   </data>
   <data name="StripMenu.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -294,20 +261,26 @@
   <data name="&gt;&gt;StripMenu.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="ControlsMenu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Letter Gothic Std, 12pt, style=Bold</value>
+  <data name="UpPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="ControlsMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 24</value>
+  <data name="UpPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 40</value>
   </data>
-  <data name="ControlsMenu.Text" xml:space="preserve">
-    <value>Open controls</value>
+  <data name="UpPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="messagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 24</value>
+  <data name="&gt;&gt;UpPanel.Name" xml:space="preserve">
+    <value>UpPanel</value>
   </data>
-  <data name="messagesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Messages</value>
+  <data name="&gt;&gt;UpPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UpPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;UpPanel.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;RememberMeButton.Name" xml:space="preserve">
     <value>RememberMeButton</value>
@@ -461,6 +434,39 @@
   </data>
   <data name="&gt;&gt;LoginPanel.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="RememberMeButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RememberMeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Letter Gothic Std, 15.749998pt, style=Bold</value>
+  </data>
+  <data name="RememberMeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RememberMeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 402</value>
+  </data>
+  <data name="RememberMeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 30</value>
+  </data>
+  <data name="RememberMeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="RememberMeButton.Text" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.Name" xml:space="preserve">
+    <value>RememberMeButton</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="EyeButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
@@ -795,39 +801,6 @@
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RememberMeButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RememberMeButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Letter Gothic Std, 15.749998pt, style=Bold</value>
-  </data>
-  <data name="RememberMeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RememberMeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 402</value>
-  </data>
-  <data name="RememberMeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 30</value>
-  </data>
-  <data name="RememberMeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="RememberMeButton.Text" xml:space="preserve">
-    <value>Remember me</value>
-  </data>
-  <data name="&gt;&gt;RememberMeButton.Name" xml:space="preserve">
-    <value>RememberMeButton</value>
-  </data>
-  <data name="&gt;&gt;RememberMeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RememberMeButton.Parent" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;RememberMeButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -849,10 +822,22 @@
   <data name="&gt;&gt;ControlsMenu.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;messagesToolStripMenuItem.Name" xml:space="preserve">
-    <value>messagesToolStripMenuItem</value>
+  <data name="&gt;&gt;MessagesToolStripMenuItem.Name" xml:space="preserve">
+    <value>MessagesToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;messagesToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;MessagesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PhotosToolStripMenuItem.Name" xml:space="preserve">
+    <value>PhotosToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;PhotosToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LogOutToolStripMenuItem.Name" xml:space="preserve">
+    <value>LogOutToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;LogOutToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
