@@ -147,7 +147,7 @@ namespace VK_Control_Panel_Bot
             MenuShow(false);
             LoginShow(true);
             UpdateOutput("");
-            ActiveMdiChild.Close();
+            if (form!.MdiChildren.Length > 0) ActiveMdiChild.Close();
         }
     }
 }
