@@ -153,6 +153,66 @@
   <data name="&gt;&gt;Exit.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="StripMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>UpPanel</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Name" xml:space="preserve">
+    <value>OutputLogin</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.Parent" xml:space="preserve">
+    <value>UpPanel</value>
+  </data>
+  <data name="&gt;&gt;OutputLogin.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;StripMenu.Name" xml:space="preserve">
+    <value>StripMenu</value>
+  </data>
+  <data name="&gt;&gt;StripMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StripMenu.Parent" xml:space="preserve">
+    <value>UpPanel</value>
+  </data>
+  <data name="&gt;&gt;StripMenu.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="UpPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="UpPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 40</value>
+  </data>
+  <data name="UpPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;UpPanel.Name" xml:space="preserve">
+    <value>UpPanel</value>
+  </data>
+  <data name="&gt;&gt;UpPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UpPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;UpPanel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -207,21 +267,6 @@
   <data name="StripMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="messagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 24</value>
-  </data>
-  <data name="messagesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Messages</value>
-  </data>
-  <data name="ControlsMenu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Letter Gothic Std, 12pt, style=Bold</value>
-  </data>
-  <data name="ControlsMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 24</value>
-  </data>
-  <data name="ControlsMenu.Text" xml:space="preserve">
-    <value>Open controls</value>
-  </data>
   <data name="StripMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 7</value>
   </data>
@@ -249,26 +294,173 @@
   <data name="&gt;&gt;StripMenu.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="UpPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="ControlsMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Letter Gothic Std, 12pt, style=Bold</value>
   </data>
-  <data name="UpPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 40</value>
+  <data name="ControlsMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 24</value>
   </data>
-  <data name="UpPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="ControlsMenu.Text" xml:space="preserve">
+    <value>Open controls</value>
   </data>
-  <data name="&gt;&gt;UpPanel.Name" xml:space="preserve">
-    <value>UpPanel</value>
+  <data name="messagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 24</value>
   </data>
-  <data name="&gt;&gt;UpPanel.Type" xml:space="preserve">
+  <data name="messagesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.Name" xml:space="preserve">
+    <value>RememberMeButton</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;EyeButton.Name" xml:space="preserve">
+    <value>EyeButton</value>
+  </data>
+  <data name="&gt;&gt;EyeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EyeButton.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;EyeButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;EnterButton.Name" xml:space="preserve">
+    <value>EnterButton</value>
+  </data>
+  <data name="&gt;&gt;EnterButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnterButton.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;EnterButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
+    <value>pictureBox3</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;UpPanel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;LoginLabel.Name" xml:space="preserve">
+    <value>LoginLabel</value>
+  </data>
+  <data name="&gt;&gt;LoginLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LoginLabel.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;LoginLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;PassBox.Name" xml:space="preserve">
+    <value>PassBox</value>
+  </data>
+  <data name="&gt;&gt;PassBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PassBox.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;PassBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;LoginBox.Name" xml:space="preserve">
+    <value>LoginBox</value>
+  </data>
+  <data name="&gt;&gt;LoginBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LoginBox.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;LoginBox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="LoginPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 46</value>
+  </data>
+  <data name="LoginPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>986, 532</value>
+  </data>
+  <data name="LoginPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;LoginPanel.Name" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;LoginPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LoginPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;UpPanel.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;LoginPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="EyeButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
@@ -280,7 +472,7 @@
     <value>NoControl</value>
   </data>
   <data name="EyeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>618, 372</value>
+    <value>618, 360</value>
   </data>
   <data name="EyeButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 26</value>
@@ -298,7 +490,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;EyeButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="EnterButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -310,7 +502,7 @@
     <value>NoControl</value>
   </data>
   <data name="EnterButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 422</value>
+    <value>344, 444</value>
   </data>
   <data name="EnterButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 50</value>
@@ -331,13 +523,13 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;EnterButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 372</value>
+    <value>344, 360</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 24</value>
@@ -358,13 +550,13 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 254</value>
+    <value>344, 242</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 24</value>
@@ -385,10 +577,10 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 397</value>
+    <value>344, 385</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 2</value>
@@ -406,10 +598,10 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 279</value>
+    <value>344, 267</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 2</value>
@@ -427,7 +619,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="LoginLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -460,7 +652,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;LoginLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -487,13 +679,13 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="PassBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Letter Gothic Std, 14.25pt, style=Bold</value>
   </data>
   <data name="PassBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>382, 373</value>
+    <value>382, 361</value>
   </data>
   <data name="PassBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
@@ -514,13 +706,13 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;PassBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="LoginBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Letter Gothic Std, 14.25pt, style=Bold</value>
   </data>
   <data name="LoginBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>382, 255</value>
+    <value>382, 243</value>
   </data>
   <data name="LoginBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>262, 23</value>
@@ -538,28 +730,7 @@
     <value>LoginPanel</value>
   </data>
   <data name="&gt;&gt;LoginBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="LoginPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 46</value>
-  </data>
-  <data name="LoginPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>986, 532</value>
-  </data>
-  <data name="LoginPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;LoginPanel.Name" xml:space="preserve">
-    <value>LoginPanel</value>
-  </data>
-  <data name="&gt;&gt;LoginPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LoginPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LoginPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>10</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>1008, 0</value>
@@ -622,6 +793,39 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RememberMeButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RememberMeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Letter Gothic Std, 15.749998pt, style=Bold</value>
+  </data>
+  <data name="RememberMeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RememberMeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 402</value>
+  </data>
+  <data name="RememberMeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 30</value>
+  </data>
+  <data name="RememberMeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="RememberMeButton.Text" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.Name" xml:space="preserve">
+    <value>RememberMeButton</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.Parent" xml:space="preserve">
+    <value>LoginPanel</value>
+  </data>
+  <data name="&gt;&gt;RememberMeButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

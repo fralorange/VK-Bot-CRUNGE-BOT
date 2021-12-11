@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
@@ -22,6 +23,18 @@ namespace VK_Control_Panel_Bot
         {
             InitializeComponent();
             form = this;
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            if (File.Exists("Accounts.txt"))
+            {
+                Thread logThread = new(() => _api = Auth.Log(File.ReadAllLines("Accounts.txt")[0]));
+                logThread.Start();
+                Thread StatusThread = new(() => TextAnimations.Delaying("Welcome!"));
+                StatusThread.Start();
+                LoginPanel.Hide();
+                MenuShow(true);
+            }
         }
 
         public static void UpdateOutput(string s)
@@ -76,7 +89,7 @@ namespace VK_Control_Panel_Bot
         {
             pictureBox1.Focus();
             LoginPanel.Hide();
-            Thread logThread = new(() => _api = Auth.Log(LoginBox.Text, PassBox.Text));
+            Thread logThread = new(() => _api = Auth.Log(LoginBox.Text, PassBox.Text,RememberMeButton.Checked));
             logThread.Start();
         }
 
@@ -127,9 +140,5 @@ namespace VK_Control_Panel_Bot
             }
         }
 
-        private void LoginPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

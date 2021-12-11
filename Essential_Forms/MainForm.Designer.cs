@@ -33,6 +33,7 @@
             this.Iconified = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.UpPanel = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.OutputLogin = new System.Windows.Forms.TextBox();
             this.StripMenu = new System.Windows.Forms.MenuStrip();
             this.ControlsMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.RememberMeButton = new System.Windows.Forms.CheckBox();
             this.UpPanel.SuspendLayout();
             this.StripMenu.SuspendLayout();
             this.LoginPanel.SuspendLayout();
@@ -99,6 +100,12 @@
             this.UpPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UpPanel_MouseMove);
             this.UpPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UpPanel_MouseUp);
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.Highlight;
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
             // OutputLogin
             // 
             this.OutputLogin.BackColor = System.Drawing.SystemColors.HighlightText;
@@ -132,6 +139,7 @@
             // 
             // LoginPanel
             // 
+            this.LoginPanel.Controls.Add(this.RememberMeButton);
             this.LoginPanel.Controls.Add(this.EyeButton);
             this.LoginPanel.Controls.Add(this.EnterButton);
             this.LoginPanel.Controls.Add(this.pictureBox3);
@@ -144,7 +152,6 @@
             this.LoginPanel.Controls.Add(this.LoginBox);
             resources.ApplyResources(this.LoginPanel, "LoginPanel");
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.LoginPanel_Paint);
             // 
             // EyeButton
             // 
@@ -241,11 +248,12 @@
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
-            // panel7
+            // RememberMeButton
             // 
-            this.panel7.BackColor = System.Drawing.SystemColors.Highlight;
-            resources.ApplyResources(this.panel7, "panel7");
-            this.panel7.Name = "panel7";
+            resources.ApplyResources(this.RememberMeButton, "RememberMeButton");
+            this.RememberMeButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.RememberMeButton.Name = "RememberMeButton";
+            this.RememberMeButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -263,6 +271,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.UpPanel.ResumeLayout(false);
             this.UpPanel.PerformLayout();
             this.StripMenu.ResumeLayout(false);
@@ -300,5 +309,6 @@
         private System.Windows.Forms.ToolStripMenuItem messagesToolStripMenuItem;
         public System.Windows.Forms.Panel LoginPanel;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.CheckBox RememberMeButton;
     }
 }
