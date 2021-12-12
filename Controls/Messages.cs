@@ -98,7 +98,7 @@ namespace VK_Control_Panel_Bot.Controls
                 }
             });
         }
-        private async Task<string> Upload(string serverUrl, string file, string fileExtension)
+        private static async Task<string> Upload(string serverUrl, string file, string fileExtension)
         {
             var data = GetBytes(file);
 
@@ -111,7 +111,7 @@ namespace VK_Control_Panel_Bot.Controls
             var response = client.PostAsync(serverUrl, requestContent).Result;
             return Encoding.Default.GetString(await response.Content.ReadAsByteArrayAsync());
         }
-        private byte[] GetBytes(string filePath)
+        private static byte[] GetBytes(string filePath)
         {
             return File.ReadAllBytes(filePath);
         }
@@ -382,10 +382,9 @@ namespace VK_Control_Panel_Bot.Controls
         }
         //panel 3
 
-        private void FlooderBack_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
-            panel3.Focus();
-            panel3.BringToFront();
+            ((Button) sender).Parent.SendToBack();
         }
 
         private void FirstFlooderYesOption_Click(object sender, EventArgs e)
@@ -543,6 +542,20 @@ namespace VK_Control_Panel_Bot.Controls
             {
                 MainForm.UpdateOutput("Wrong chatId format");
             }
+
+
+        }
+        // panel 4
+
+        private void ScheduledMessageSend_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ScheduledMessageButton_Click(object sender, EventArgs e)
+        {
+            ScheduledMessagePanel.BringToFront();
+            TimePickerBox.Text = DateTime.Now.AddMinutes(1).ToString("HH:mm:ss");
         }
     }
 }

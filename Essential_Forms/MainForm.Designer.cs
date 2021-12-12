@@ -38,6 +38,8 @@
             this.StripMenu = new System.Windows.Forms.MenuStrip();
             this.ControlsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.MessagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PhotosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LogOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.RememberMeButton = new System.Windows.Forms.CheckBox();
             this.EyeButton = new System.Windows.Forms.Button();
@@ -53,8 +55,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.PhotosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LogOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UpPanel.SuspendLayout();
             this.StripMenu.SuspendLayout();
             this.LoginPanel.SuspendLayout();
@@ -140,6 +140,19 @@
             this.MessagesToolStripMenuItem.Name = "MessagesToolStripMenuItem";
             resources.ApplyResources(this.MessagesToolStripMenuItem, "MessagesToolStripMenuItem");
             this.MessagesToolStripMenuItem.Click += new System.EventHandler(this.MessagesToolStripMenuItem_Click);
+            // 
+            // PhotosToolStripMenuItem
+            // 
+            this.PhotosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.PhotosToolStripMenuItem.Name = "PhotosToolStripMenuItem";
+            resources.ApplyResources(this.PhotosToolStripMenuItem, "PhotosToolStripMenuItem");
+            // 
+            // LogOutToolStripMenuItem
+            // 
+            this.LogOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem";
+            resources.ApplyResources(this.LogOutToolStripMenuItem, "LogOutToolStripMenuItem");
+            this.LogOutToolStripMenuItem.Click += new System.EventHandler(this.LogOutToolStripMenuItem_Click);
             // 
             // LoginPanel
             // 
@@ -258,19 +271,6 @@
             this.panel6.BackColor = System.Drawing.SystemColors.Highlight;
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
-            // 
-            // PhotosToolStripMenuItem
-            // 
-            this.PhotosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.PhotosToolStripMenuItem.Name = "PhotosToolStripMenuItem";
-            resources.ApplyResources(this.PhotosToolStripMenuItem, "PhotosToolStripMenuItem");
-            // 
-            // LogOutToolStripMenuItem
-            // 
-            this.LogOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem";
-            resources.ApplyResources(this.LogOutToolStripMenuItem, "LogOutToolStripMenuItem");
-            this.LogOutToolStripMenuItem.Click += new System.EventHandler(this.LogOutToolStripMenuItem_Click);
             // 
             // MainForm
             // 
