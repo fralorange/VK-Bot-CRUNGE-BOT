@@ -181,7 +181,7 @@
             this.UserIdTextBox4 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.LoadTime = new System.Windows.Forms.Button();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -1627,7 +1627,7 @@
             // 
             // ScheduledMessagePanel
             // 
-            this.ScheduledMessagePanel.Controls.Add(this.button10);
+            this.ScheduledMessagePanel.Controls.Add(this.LoadTime);
             this.ScheduledMessagePanel.Controls.Add(this.panel64);
             this.ScheduledMessagePanel.Controls.Add(this.panel66);
             this.ScheduledMessagePanel.Controls.Add(this.panel65);
@@ -1953,18 +1953,18 @@
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // button10
+            // LoadTime
             // 
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Letter Gothic Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button10.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button10.Image = global::VK_Control_Panel_Bot.Properties.Resources.DropDownTriangle_;
-            this.button10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button10.Location = new System.Drawing.Point(423, 419);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(32, 27);
-            this.button10.TabIndex = 69;
-            this.button10.UseVisualStyleBackColor = true;
+            this.LoadTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadTime.Font = new System.Drawing.Font("Letter Gothic Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LoadTime.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LoadTime.Image = global::VK_Control_Panel_Bot.Properties.Resources.DropDownTriangle_;
+            this.LoadTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LoadTime.Location = new System.Drawing.Point(423, 419);
+            this.LoadTime.Name = "LoadTime";
+            this.LoadTime.Size = new System.Drawing.Size(32, 27);
+            this.LoadTime.TabIndex = 69;
+            this.LoadTime.UseVisualStyleBackColor = true;
             // 
             // Messages
             // 
@@ -2183,6 +2183,6 @@
         private System.Windows.Forms.Panel panel65;
         private System.Windows.Forms.Panel panel64;
         private System.Windows.Forms.Panel panel63;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button LoadTime;
     }
 }
