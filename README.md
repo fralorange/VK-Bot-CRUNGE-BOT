@@ -7,4 +7,4 @@ Control panel bot which gives user full control on his account and vk conversati
 - Information about other user by their id without violating VK TOS.
 
 ### Recent GUI changes::
-![image](https://i.imgur.com/Lu1WFoB.png)
+![image](https://i.imgur.com/uha4BAa.png)
