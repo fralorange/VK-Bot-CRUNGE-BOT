@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -8,8 +9,10 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VK_Control_Panel_Bot.Additional_Forms;
 using VK_Control_Panel_Bot.Extensions;
 using VkNet;
 using VkNet.Enums.Filters;
@@ -45,6 +48,8 @@ namespace VK_Control_Panel_Bot.Controls
             buttons.AddMultiple(button1, button2, button3, button4, button5, button6, button7, button8, button9);
             button1.Focus();
             panel1.BringToFront();
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.WorkerSupportsCancellation = true;
         }
 
         private void UserIdTextBox2_Leave(object sender, EventArgs e)
@@ -133,14 +138,16 @@ namespace VK_Control_Panel_Bot.Controls
             IEnumerable<MediaAttachment> attachment;
             try
             {
-                if (!Path.GetExtension(attachtext).ToLower().Equals(".gif")){
+                if (!Path.GetExtension(attachtext).ToLower().Equals(".gif"))
+                {
                     Image.FromFile(attachtext);
                     var uploadServer = _api.Photo.GetMessagesUploadServer(long.Parse(id));
                     var response = await Upload(uploadServer.UploadUrl, attachtext, Path.GetExtension(attachtext));
                     attachment = _api.Photo.SaveMessagesPhoto(response);
-                } else
+                }
+                else
                 {
-                    attachment = await PushDocs(id,attachtext);
+                    attachment = await PushDocs(id, attachtext);
                 }
             }
             catch (OutOfMemoryException)
@@ -180,7 +187,7 @@ namespace VK_Control_Panel_Bot.Controls
                                                     MessageSent = true;
                                                     if (!string.IsNullOrEmpty(attach.Text))
                                                     {
-                                                        var attachment = await GetAttachment(userid.Text,attach.Text);
+                                                        var attachment = await GetAttachment(userid.Text, attach.Text);
                                                         _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
                                                         {
                                                             RandomId = new Random().Next(),
@@ -254,7 +261,8 @@ namespace VK_Control_Panel_Bot.Controls
                                                             });
                                                         }
                                                     }
-                                                } else
+                                                }
+                                                else
                                                 {
                                                     if (!MessageSent)
                                                     {
@@ -281,8 +289,8 @@ namespace VK_Control_Panel_Bot.Controls
                             captcha_key = CaptchaForm.CaptchaKey;
                         }
                         MainForm.UpdateOutput("Message sent");
-                        if (messageBox.ReadOnly == false) 
-                        { 
+                        if (messageBox.ReadOnly == false)
+                        {
                             messageBox.Invoke((MethodInvoker)delegate
                             {
                                 messageBox.Lines = null;
@@ -384,7 +392,7 @@ namespace VK_Control_Panel_Bot.Controls
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            ((Button) sender).Parent.SendToBack();
+            ((Button)sender).Parent.SendToBack();
         }
 
         private void FirstFlooderYesOption_Click(object sender, EventArgs e)
@@ -543,19 +551,72 @@ namespace VK_Control_Panel_Bot.Controls
                 MainForm.UpdateOutput("Wrong chatId format");
             }
 
-
         }
         // panel 4
 
+
         private void ScheduledMessageSend_Click(object sender, EventArgs e)
         {
+            if (((Button)sender).Text.Equals("Send"))
+            {
+                if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync(new Tuple<object,EventArgs>(sender,e));
+                ((Button)sender).Text = "Stop";
+            }
+            else
+            {
+                if (backgroundWorker1.WorkerSupportsCancellation) backgroundWorker1.CancelAsync();
+                ((Button)sender).Text = "Send";
+            }
+        }
+        private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker? worker = sender as BackgroundWorker;
+            Tuple<object,EventArgs>? args = e.Argument as Tuple<object,EventArgs>; 
+            while (!string.Format("{0}:{1}", DateTime.Now.Hour.ToString("00"), DateTime.Now.Minute.ToString("00")).Equals(TimePickerBox.Text))
+            {
+                if (worker!.CancellationPending)
+                {
+                    e.Cancel = true;
+                    break;
+                }
+                Thread.Sleep(300);
+            }
+            SendMessage_Click(args!.Item1,args.Item2);
+            Invoke(new Action(() =>
+            {
+                ((Button)args!.Item1).Text = "Send";
+            }));
+        }
 
+        private void BackgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled == true)
+            {
+                MainForm.UpdateOutput("Message canceled");
+            }
+            else if (e.Error != null)
+            {
+                MainForm.UpdateOutput("Error: " + e.Error.Message);
+            }
+            else
+            {
+                MainForm.UpdateOutput("Message sent");
+            }
         }
 
         private void ScheduledMessageButton_Click(object sender, EventArgs e)
         {
             ScheduledMessagePanel.BringToFront();
-            TimePickerBox.Text = DateTime.Now.AddMinutes(1).ToString("HH:mm:ss");
+            TimePickerBox.Text = DateTime.Now.AddMinutes(1).ToString("HH:mm");
         }
+
+        private void LoadTime_Click(object sender, EventArgs e)
+        {
+            TimePicker timePickerForm = new();
+            timePickerForm.StartPosition = FormStartPosition.CenterParent;
+            timePickerForm.ShowDialog(this);
+            TimePickerBox.Text = (timePickerForm.DialogResult == DialogResult.Cancel) ? TimePickerBox.Text : timePickerForm.Time;
+        }
+
     }
 }

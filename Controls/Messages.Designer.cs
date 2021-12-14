@@ -154,6 +154,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ScheduledMessagePanel = new System.Windows.Forms.Panel();
+            this.LoadTimeButton = new System.Windows.Forms.Button();
             this.panel64 = new System.Windows.Forms.Panel();
             this.panel66 = new System.Windows.Forms.Panel();
             this.panel65 = new System.Windows.Forms.Panel();
@@ -181,7 +182,7 @@
             this.UserIdTextBox4 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
-            this.LoadTime = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -1627,7 +1628,7 @@
             // 
             // ScheduledMessagePanel
             // 
-            this.ScheduledMessagePanel.Controls.Add(this.LoadTime);
+            this.ScheduledMessagePanel.Controls.Add(this.LoadTimeButton);
             this.ScheduledMessagePanel.Controls.Add(this.panel64);
             this.ScheduledMessagePanel.Controls.Add(this.panel66);
             this.ScheduledMessagePanel.Controls.Add(this.panel65);
@@ -1659,6 +1660,20 @@
             this.ScheduledMessagePanel.Name = "ScheduledMessagePanel";
             this.ScheduledMessagePanel.Size = new System.Drawing.Size(786, 532);
             this.ScheduledMessagePanel.TabIndex = 24;
+            // 
+            // LoadTimeButton
+            // 
+            this.LoadTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadTimeButton.Font = new System.Drawing.Font("Letter Gothic Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LoadTimeButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LoadTimeButton.Image = global::VK_Control_Panel_Bot.Properties.Resources.DropDownTriangle_;
+            this.LoadTimeButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LoadTimeButton.Location = new System.Drawing.Point(423, 419);
+            this.LoadTimeButton.Name = "LoadTimeButton";
+            this.LoadTimeButton.Size = new System.Drawing.Size(32, 27);
+            this.LoadTimeButton.TabIndex = 69;
+            this.LoadTimeButton.UseVisualStyleBackColor = true;
+            this.LoadTimeButton.Click += new System.EventHandler(this.LoadTime_Click);
             // 
             // panel64
             // 
@@ -1702,6 +1717,7 @@
             // 
             // TimePickerBox
             // 
+            this.TimePickerBox.Enabled = false;
             this.TimePickerBox.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TimePickerBox.ForeColor = System.Drawing.SystemColors.Highlight;
             this.TimePickerBox.Location = new System.Drawing.Point(144, 418);
@@ -1709,7 +1725,7 @@
             this.TimePickerBox.Name = "TimePickerBox";
             this.TimePickerBox.Size = new System.Drawing.Size(279, 30);
             this.TimePickerBox.TabIndex = 67;
-            this.TimePickerBox.Text = "22:11:24";
+            this.TimePickerBox.Text = "22:11";
             // 
             // label18
             // 
@@ -1953,18 +1969,10 @@
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // LoadTime
+            // backgroundWorker1
             // 
-            this.LoadTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadTime.Font = new System.Drawing.Font("Letter Gothic Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LoadTime.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.LoadTime.Image = global::VK_Control_Panel_Bot.Properties.Resources.DropDownTriangle_;
-            this.LoadTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LoadTime.Location = new System.Drawing.Point(423, 419);
-            this.LoadTime.Name = "LoadTime";
-            this.LoadTime.Size = new System.Drawing.Size(32, 27);
-            this.LoadTime.TabIndex = 69;
-            this.LoadTime.UseVisualStyleBackColor = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
             // 
             // Messages
             // 
@@ -2183,6 +2191,7 @@
         private System.Windows.Forms.Panel panel65;
         private System.Windows.Forms.Panel panel64;
         private System.Windows.Forms.Panel panel63;
-        private System.Windows.Forms.Button LoadTime;
+        private System.Windows.Forms.Button LoadTimeButton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
