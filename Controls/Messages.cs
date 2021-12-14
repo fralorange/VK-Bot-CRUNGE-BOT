@@ -617,6 +617,5 @@ namespace VK_Control_Panel_Bot.Controls
             timePickerForm.ShowDialog(this);
             TimePickerBox.Text = (timePickerForm.DialogResult == DialogResult.Cancel) ? TimePickerBox.Text : timePickerForm.Time;
         }
-
     }
 }
