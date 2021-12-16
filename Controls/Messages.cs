@@ -262,19 +262,6 @@ namespace VK_Control_Panel_Bot.Controls
                                                         }
                                                     }
                                                 }
-                                                else
-                                                {
-                                                    if (!MessageSent)
-                                                    {
-                                                        MessageSent = true;
-                                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
-                                                        {
-                                                            RandomId = new Random().Next(),
-                                                            ChatId = long.Parse(chatid.Text),
-                                                            Message = msg
-                                                        });
-                                                    }
-                                                }
                                             }
                                         }
                                     }
@@ -369,7 +356,9 @@ namespace VK_Control_Panel_Bot.Controls
         private void LoadFile_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                LocalPathBox.Text = openFileDialog1.FileName;
+                foreach (Control control in ((Button)sender).Parent.Controls)
+                    if (control is TextBox && control.Name.StartsWith("Local"))
+                        control.Text = openFileDialog1.FileName;
         }
 
         //panel2
@@ -559,7 +548,7 @@ namespace VK_Control_Panel_Bot.Controls
         {
             if (((Button)sender).Text.Equals("Send"))
             {
-                if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync(new Tuple<object,EventArgs>(sender,e));
+                if (!backgroundWorker1.IsBusy) backgroundWorker1.RunWorkerAsync(new Tuple<object, EventArgs>(sender, e));
                 ((Button)sender).Text = "Stop";
             }
             else
@@ -571,7 +560,7 @@ namespace VK_Control_Panel_Bot.Controls
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker? worker = sender as BackgroundWorker;
-            Tuple<object,EventArgs>? args = e.Argument as Tuple<object,EventArgs>; 
+            Tuple<object, EventArgs>? args = e.Argument as Tuple<object, EventArgs>;
             while (!string.Format("{0}:{1}", DateTime.Now.Hour.ToString("00"), DateTime.Now.Minute.ToString("00")).Equals(TimePickerBox.Text))
             {
                 if (worker!.CancellationPending)
@@ -581,10 +570,11 @@ namespace VK_Control_Panel_Bot.Controls
                 }
                 Thread.Sleep(300);
             }
-            SendMessage_Click(args!.Item1,args.Item2);
+            SendMessage_Click(args!.Item1, args.Item2);
             Invoke(new Action(() =>
             {
                 ((Button)args!.Item1).Text = "Send";
+                TimePickerBox.Text = DateTime.Now.AddMinutes(1).ToString("HH:mm");
             }));
         }
 
@@ -602,12 +592,6 @@ namespace VK_Control_Panel_Bot.Controls
             {
                 MainForm.UpdateOutput("Message sent");
             }
-        }
-
-        private void ScheduledMessageButton_Click(object sender, EventArgs e)
-        {
-            ScheduledMessagePanel.BringToFront();
-            TimePickerBox.Text = DateTime.Now.AddMinutes(1).ToString("HH:mm");
         }
 
         private void LoadTime_Click(object sender, EventArgs e)

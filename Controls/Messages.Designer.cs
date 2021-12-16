@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.border5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ChatBox = new System.Windows.Forms.CheckBox();
             this.ClearButton1 = new System.Windows.Forms.Button();
             this.LoadFile = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -96,9 +97,6 @@
             this.ThirdFlooder = new System.Windows.Forms.Button();
             this.SecondFlooder = new System.Windows.Forms.Button();
             this.FirstFlooder = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.TimedMessageButton = new System.Windows.Forms.Button();
-            this.ScheduledMessageButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -117,6 +115,7 @@
             this.ChatIdTextBox2 = new System.Windows.Forms.TextBox();
             this.FlooderBack = new System.Windows.Forms.Button();
             this.SecondFlooderPanel = new System.Windows.Forms.Panel();
+            this.ChatBox2 = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel53 = new System.Windows.Forms.Panel();
@@ -151,7 +150,7 @@
             this.ChatIdTextBox3 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.ScheduledMessagePanel = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.LoadTimeButton = new System.Windows.Forms.Button();
             this.panel64 = new System.Windows.Forms.Panel();
             this.panel66 = new System.Windows.Forms.Panel();
@@ -172,17 +171,13 @@
             this.panel59 = new System.Windows.Forms.Panel();
             this.AvatarPicBox = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.userid = new System.Windows.Forms.Label();
             this.SendMessage1 = new System.Windows.Forms.Button();
             this.panel60 = new System.Windows.Forms.Panel();
             this.MessageTextBox1 = new System.Windows.Forms.TextBox();
             this.panel61 = new System.Windows.Forms.Panel();
             this.UserIdTextBox4 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.ChatBox2 = new System.Windows.Forms.CheckBox();
-            this.ChatBox = new System.Windows.Forms.CheckBox();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -192,7 +187,6 @@
             this.panel3.SuspendLayout();
             this.FirstFlooderAttentionPanel.SuspendLayout();
             this.panel28.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.FirstFlooderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic2)).BeginInit();
             this.SecondFlooderPanel.SuspendLayout();
@@ -200,7 +194,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic3)).BeginInit();
             this.ThirdFlooderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic3)).BeginInit();
-            this.ScheduledMessagePanel.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPicBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -335,7 +329,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(167, 53);
             this.button4.TabIndex = 21;
-            this.button4.Text = "Planned message";
+            this.button4.Text = "Scheduled message";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.AnyButton_Clicked);
             // 
@@ -415,6 +409,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(786, 532);
             this.panel1.TabIndex = 11;
+            // 
+            // ChatBox
+            // 
+            this.ChatBox.AutoSize = true;
+            this.ChatBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChatBox.Font = new System.Drawing.Font("Letter Gothic Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChatBox.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ChatBox.Location = new System.Drawing.Point(462, 129);
+            this.ChatBox.Name = "ChatBox";
+            this.ChatBox.Size = new System.Drawing.Size(61, 23);
+            this.ChatBox.TabIndex = 69;
+            this.ChatBox.Text = "Chat";
+            this.ChatBox.UseVisualStyleBackColor = true;
+            this.ChatBox.CheckedChanged += new System.EventHandler(this.ChatBox_CheckedChanged);
             // 
             // ClearButton1
             // 
@@ -984,42 +992,6 @@
             this.FirstFlooder.UseVisualStyleBackColor = true;
             this.FirstFlooder.Click += new System.EventHandler(this.FirstFlooder_Click);
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.TimedMessageButton);
-            this.panel4.Controls.Add(this.ScheduledMessageButton);
-            this.panel4.Location = new System.Drawing.Point(200, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(786, 532);
-            this.panel4.TabIndex = 15;
-            // 
-            // TimedMessageButton
-            // 
-            this.TimedMessageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TimedMessageButton.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TimedMessageButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.TimedMessageButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TimedMessageButton.Location = new System.Drawing.Point(462, 210);
-            this.TimedMessageButton.Name = "TimedMessageButton";
-            this.TimedMessageButton.Size = new System.Drawing.Size(296, 84);
-            this.TimedMessageButton.TabIndex = 25;
-            this.TimedMessageButton.Text = "Timed message";
-            this.TimedMessageButton.UseVisualStyleBackColor = true;
-            // 
-            // ScheduledMessageButton
-            // 
-            this.ScheduledMessageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ScheduledMessageButton.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ScheduledMessageButton.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.ScheduledMessageButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ScheduledMessageButton.Location = new System.Drawing.Point(47, 210);
-            this.ScheduledMessageButton.Name = "ScheduledMessageButton";
-            this.ScheduledMessageButton.Size = new System.Drawing.Size(296, 84);
-            this.ScheduledMessageButton.TabIndex = 24;
-            this.ScheduledMessageButton.Text = "Scheduled message";
-            this.ScheduledMessageButton.UseVisualStyleBackColor = true;
-            this.ScheduledMessageButton.Click += new System.EventHandler(this.ScheduledMessageButton_Click);
-            // 
             // panel5
             // 
             this.panel5.Location = new System.Drawing.Point(200, 0);
@@ -1219,6 +1191,19 @@
             this.SecondFlooderPanel.Name = "SecondFlooderPanel";
             this.SecondFlooderPanel.Size = new System.Drawing.Size(786, 532);
             this.SecondFlooderPanel.TabIndex = 22;
+            // 
+            // ChatBox2
+            // 
+            this.ChatBox2.AutoSize = true;
+            this.ChatBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChatBox2.Font = new System.Drawing.Font("Letter Gothic Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChatBox2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ChatBox2.Location = new System.Drawing.Point(553, 270);
+            this.ChatBox2.Name = "ChatBox2";
+            this.ChatBox2.Size = new System.Drawing.Size(61, 23);
+            this.ChatBox2.TabIndex = 68;
+            this.ChatBox2.Text = "Chat";
+            this.ChatBox2.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -1605,41 +1590,39 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // ScheduledMessagePanel
+            // panel4
             // 
-            this.ScheduledMessagePanel.Controls.Add(this.LoadTimeButton);
-            this.ScheduledMessagePanel.Controls.Add(this.panel64);
-            this.ScheduledMessagePanel.Controls.Add(this.panel66);
-            this.ScheduledMessagePanel.Controls.Add(this.panel65);
-            this.ScheduledMessagePanel.Controls.Add(this.panel63);
-            this.ScheduledMessagePanel.Controls.Add(this.panel62);
-            this.ScheduledMessagePanel.Controls.Add(this.TimePickerBox);
-            this.ScheduledMessagePanel.Controls.Add(this.label18);
-            this.ScheduledMessagePanel.Controls.Add(this.ClearButton2);
-            this.ScheduledMessagePanel.Controls.Add(this.LoadFile1);
-            this.ScheduledMessagePanel.Controls.Add(this.label15);
-            this.ScheduledMessagePanel.Controls.Add(this.panel55);
-            this.ScheduledMessagePanel.Controls.Add(this.LocalPathBox2);
-            this.ScheduledMessagePanel.Controls.Add(this.ChatBox1);
-            this.ScheduledMessagePanel.Controls.Add(this.panel56);
-            this.ScheduledMessagePanel.Controls.Add(this.panel57);
-            this.ScheduledMessagePanel.Controls.Add(this.panel58);
-            this.ScheduledMessagePanel.Controls.Add(this.panel59);
-            this.ScheduledMessagePanel.Controls.Add(this.AvatarPicBox);
-            this.ScheduledMessagePanel.Controls.Add(this.label16);
-            this.ScheduledMessagePanel.Controls.Add(this.label17);
-            this.ScheduledMessagePanel.Controls.Add(this.SendMessage1);
-            this.ScheduledMessagePanel.Controls.Add(this.panel60);
-            this.ScheduledMessagePanel.Controls.Add(this.MessageTextBox1);
-            this.ScheduledMessagePanel.Controls.Add(this.panel61);
-            this.ScheduledMessagePanel.Controls.Add(this.UserIdTextBox4);
-            this.ScheduledMessagePanel.Controls.Add(this.label14);
-            this.ScheduledMessagePanel.Controls.Add(this.button14);
-            this.ScheduledMessagePanel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.ScheduledMessagePanel.Location = new System.Drawing.Point(200, 0);
-            this.ScheduledMessagePanel.Name = "ScheduledMessagePanel";
-            this.ScheduledMessagePanel.Size = new System.Drawing.Size(786, 532);
-            this.ScheduledMessagePanel.TabIndex = 24;
+            this.panel4.Controls.Add(this.LoadTimeButton);
+            this.panel4.Controls.Add(this.panel64);
+            this.panel4.Controls.Add(this.panel66);
+            this.panel4.Controls.Add(this.panel65);
+            this.panel4.Controls.Add(this.panel63);
+            this.panel4.Controls.Add(this.panel62);
+            this.panel4.Controls.Add(this.TimePickerBox);
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.ClearButton2);
+            this.panel4.Controls.Add(this.LoadFile1);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.panel55);
+            this.panel4.Controls.Add(this.LocalPathBox2);
+            this.panel4.Controls.Add(this.ChatBox1);
+            this.panel4.Controls.Add(this.panel56);
+            this.panel4.Controls.Add(this.panel57);
+            this.panel4.Controls.Add(this.panel58);
+            this.panel4.Controls.Add(this.panel59);
+            this.panel4.Controls.Add(this.AvatarPicBox);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.userid);
+            this.panel4.Controls.Add(this.SendMessage1);
+            this.panel4.Controls.Add(this.panel60);
+            this.panel4.Controls.Add(this.MessageTextBox1);
+            this.panel4.Controls.Add(this.panel61);
+            this.panel4.Controls.Add(this.UserIdTextBox4);
+            this.panel4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.panel4.Location = new System.Drawing.Point(200, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(786, 532);
+            this.panel4.TabIndex = 24;
             // 
             // LoadTimeButton
             // 
@@ -1853,19 +1836,19 @@
             this.label16.TabIndex = 53;
             this.label16.Text = "message:";
             // 
-            // label17
+            // userid
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(53, 76);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(87, 24);
-            this.label17.TabIndex = 52;
-            this.label17.Text = "userid:";
+            this.userid.AutoSize = true;
+            this.userid.BackColor = System.Drawing.Color.Transparent;
+            this.userid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userid.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.userid.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.userid.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.userid.Location = new System.Drawing.Point(53, 76);
+            this.userid.Name = "userid";
+            this.userid.Size = new System.Drawing.Size(87, 24);
+            this.userid.TabIndex = 52;
+            this.userid.Text = "userid:";
             // 
             // SendMessage1
             // 
@@ -1923,64 +1906,10 @@
             this.UserIdTextBox4.TabIndex = 47;
             this.UserIdTextBox4.Leave += new System.EventHandler(this.UserIdTextBox_Leave);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label14.Location = new System.Drawing.Point(204, 20);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(197, 24);
-            this.label14.TabIndex = 46;
-            this.label14.Text = "Scheduled message";
-            // 
-            // button14
-            // 
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button14.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button14.Location = new System.Drawing.Point(18, 16);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(108, 26);
-            this.button14.TabIndex = 22;
-            this.button14.Text = "Back";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.BackButton_Click);
-            // 
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
-            // 
-            // ChatBox2
-            // 
-            this.ChatBox2.AutoSize = true;
-            this.ChatBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChatBox2.Font = new System.Drawing.Font("Letter Gothic Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ChatBox2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.ChatBox2.Location = new System.Drawing.Point(553, 270);
-            this.ChatBox2.Name = "ChatBox2";
-            this.ChatBox2.Size = new System.Drawing.Size(61, 23);
-            this.ChatBox2.TabIndex = 68;
-            this.ChatBox2.Text = "Chat";
-            this.ChatBox2.UseVisualStyleBackColor = true;
-            // 
-            // ChatBox
-            // 
-            this.ChatBox.AutoSize = true;
-            this.ChatBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChatBox.Font = new System.Drawing.Font("Letter Gothic Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ChatBox.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.ChatBox.Location = new System.Drawing.Point(462, 129);
-            this.ChatBox.Name = "ChatBox";
-            this.ChatBox.Size = new System.Drawing.Size(61, 23);
-            this.ChatBox.TabIndex = 69;
-            this.ChatBox.Text = "Chat";
-            this.ChatBox.UseVisualStyleBackColor = true;
             // 
             // Messages
             // 
@@ -1993,10 +1922,6 @@
             this.Controls.Add(this.border4);
             this.Controls.Add(this.border3);
             this.Controls.Add(this.ButtonsPanel);
-            this.Controls.Add(this.SecondFlooderPanel);
-            this.Controls.Add(this.ThirdFlooderPanel);
-            this.Controls.Add(this.FirstFlooderPanel);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel9);
@@ -2004,8 +1929,11 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.ScheduledMessagePanel);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.SecondFlooderPanel);
+            this.Controls.Add(this.ThirdFlooderPanel);
+            this.Controls.Add(this.FirstFlooderPanel);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -2026,7 +1954,6 @@
             this.FirstFlooderAttentionPanel.ResumeLayout(false);
             this.FirstFlooderAttentionPanel.PerformLayout();
             this.panel28.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.FirstFlooderPanel.ResumeLayout(false);
             this.FirstFlooderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic2)).EndInit();
@@ -2037,8 +1964,8 @@
             this.ThirdFlooderPanel.ResumeLayout(false);
             this.ThirdFlooderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic3)).EndInit();
-            this.ScheduledMessagePanel.ResumeLayout(false);
-            this.ScheduledMessagePanel.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPicBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -2072,7 +1999,6 @@
         private System.Windows.Forms.TextBox UserIdTextBox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
@@ -2167,9 +2093,7 @@
         private System.Windows.Forms.Button LoadFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button ClearButton1;
-        private System.Windows.Forms.Button TimedMessageButton;
-        private System.Windows.Forms.Button ScheduledMessageButton;
-        private System.Windows.Forms.Panel ScheduledMessagePanel;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button ClearButton2;
         private System.Windows.Forms.Button LoadFile1;
         private System.Windows.Forms.Label label15;
@@ -2182,14 +2106,12 @@
         private System.Windows.Forms.Panel panel59;
         private System.Windows.Forms.PictureBox AvatarPicBox;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label userid;
         private System.Windows.Forms.Button SendMessage1;
         private System.Windows.Forms.Panel panel60;
         private System.Windows.Forms.TextBox MessageTextBox1;
         private System.Windows.Forms.Panel panel61;
         private System.Windows.Forms.TextBox UserIdTextBox4;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox TimePickerBox;
         private System.Windows.Forms.Panel panel62;
