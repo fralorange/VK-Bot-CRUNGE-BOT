@@ -49,7 +49,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel54 = new System.Windows.Forms.Panel();
             this.LocalPathBox = new System.Windows.Forms.TextBox();
-            this.ChatBox = new System.Windows.Forms.CheckBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -119,7 +118,6 @@
             this.FlooderBack = new System.Windows.Forms.Button();
             this.SecondFlooderPanel = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.ChatBox2 = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel53 = new System.Windows.Forms.Panel();
             this.MessageTextBoxFlood = new System.Windows.Forms.TextBox();
@@ -183,6 +181,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ChatBox2 = new System.Windows.Forms.CheckBox();
+            this.ChatBox = new System.Windows.Forms.CheckBox();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -392,12 +392,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ChatBox);
             this.panel1.Controls.Add(this.ClearButton1);
             this.panel1.Controls.Add(this.LoadFile);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.panel54);
             this.panel1.Controls.Add(this.LocalPathBox);
-            this.panel1.Controls.Add(this.ChatBox);
             this.panel1.Controls.Add(this.panel15);
             this.panel1.Controls.Add(this.panel14);
             this.panel1.Controls.Add(this.panel13);
@@ -478,17 +478,6 @@
             this.LocalPathBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.LocalPathBox.Size = new System.Drawing.Size(310, 23);
             this.LocalPathBox.TabIndex = 34;
-            // 
-            // ChatBox
-            // 
-            this.ChatBox.AutoSize = true;
-            this.ChatBox.Location = new System.Drawing.Point(462, 132);
-            this.ChatBox.Name = "ChatBox";
-            this.ChatBox.Size = new System.Drawing.Size(51, 19);
-            this.ChatBox.TabIndex = 33;
-            this.ChatBox.Text = "Chat";
-            this.ChatBox.UseVisualStyleBackColor = true;
-            this.ChatBox.CheckedChanged += new System.EventHandler(this.ChatBox_CheckedChanged);
             // 
             // panel15
             // 
@@ -1204,8 +1193,8 @@
             // 
             // SecondFlooderPanel
             // 
-            this.SecondFlooderPanel.Controls.Add(this.label10);
             this.SecondFlooderPanel.Controls.Add(this.ChatBox2);
+            this.SecondFlooderPanel.Controls.Add(this.label10);
             this.SecondFlooderPanel.Controls.Add(this.label12);
             this.SecondFlooderPanel.Controls.Add(this.panel53);
             this.SecondFlooderPanel.Controls.Add(this.MessageTextBoxFlood);
@@ -1244,17 +1233,6 @@
             this.label10.Size = new System.Drawing.Size(140, 14);
             this.label10.TabIndex = 67;
             this.label10.Text = "(2,5 - recommended)";
-            // 
-            // ChatBox2
-            // 
-            this.ChatBox2.AutoSize = true;
-            this.ChatBox2.Location = new System.Drawing.Point(563, 268);
-            this.ChatBox2.Name = "ChatBox2";
-            this.ChatBox2.Size = new System.Drawing.Size(51, 19);
-            this.ChatBox2.TabIndex = 66;
-            this.ChatBox2.Text = "Chat";
-            this.ChatBox2.UseVisualStyleBackColor = true;
-            this.ChatBox2.CheckedChanged += new System.EventHandler(this.ChatBox_CheckedChanged);
             // 
             // label12
             // 
@@ -1342,6 +1320,7 @@
             // 
             this.DelayBar1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DelayBar1.DecimalPlaces = 1;
+            this.DelayBar1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.DelayBar1.Increment = new decimal(new int[] {
             1,
             0,
@@ -1656,6 +1635,7 @@
             this.ScheduledMessagePanel.Controls.Add(this.UserIdTextBox4);
             this.ScheduledMessagePanel.Controls.Add(this.label14);
             this.ScheduledMessagePanel.Controls.Add(this.button14);
+            this.ScheduledMessagePanel.ForeColor = System.Drawing.SystemColors.Highlight;
             this.ScheduledMessagePanel.Location = new System.Drawing.Point(200, 0);
             this.ScheduledMessagePanel.Name = "ScheduledMessagePanel";
             this.ScheduledMessagePanel.Size = new System.Drawing.Size(786, 532);
@@ -1807,9 +1787,11 @@
             // ChatBox1
             // 
             this.ChatBox1.AutoSize = true;
-            this.ChatBox1.Location = new System.Drawing.Point(462, 81);
+            this.ChatBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChatBox1.Font = new System.Drawing.Font("Letter Gothic Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChatBox1.Location = new System.Drawing.Point(466, 82);
             this.ChatBox1.Name = "ChatBox1";
-            this.ChatBox1.Size = new System.Drawing.Size(51, 19);
+            this.ChatBox1.Size = new System.Drawing.Size(61, 23);
             this.ChatBox1.TabIndex = 59;
             this.ChatBox1.Text = "Chat";
             this.ChatBox1.UseVisualStyleBackColor = true;
@@ -1974,6 +1956,32 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
             // 
+            // ChatBox2
+            // 
+            this.ChatBox2.AutoSize = true;
+            this.ChatBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChatBox2.Font = new System.Drawing.Font("Letter Gothic Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChatBox2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ChatBox2.Location = new System.Drawing.Point(553, 270);
+            this.ChatBox2.Name = "ChatBox2";
+            this.ChatBox2.Size = new System.Drawing.Size(61, 23);
+            this.ChatBox2.TabIndex = 68;
+            this.ChatBox2.Text = "Chat";
+            this.ChatBox2.UseVisualStyleBackColor = true;
+            // 
+            // ChatBox
+            // 
+            this.ChatBox.AutoSize = true;
+            this.ChatBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChatBox.Font = new System.Drawing.Font("Letter Gothic Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ChatBox.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ChatBox.Location = new System.Drawing.Point(462, 129);
+            this.ChatBox.Name = "ChatBox";
+            this.ChatBox.Size = new System.Drawing.Size(61, 23);
+            this.ChatBox.TabIndex = 69;
+            this.ChatBox.Text = "Chat";
+            this.ChatBox.UseVisualStyleBackColor = true;
+            // 
             // Messages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1985,8 +1993,6 @@
             this.Controls.Add(this.border4);
             this.Controls.Add(this.border3);
             this.Controls.Add(this.ButtonsPanel);
-            this.Controls.Add(this.ScheduledMessagePanel);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.SecondFlooderPanel);
             this.Controls.Add(this.ThirdFlooderPanel);
             this.Controls.Add(this.FirstFlooderPanel);
@@ -1998,6 +2004,8 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.ScheduledMessagePanel);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -2074,7 +2082,6 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.CheckBox ChatBox;
         private System.Windows.Forms.Button ConfirmButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel17;
@@ -2153,7 +2160,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel53;
         private System.Windows.Forms.TextBox MessageTextBoxFlood;
-        private System.Windows.Forms.CheckBox ChatBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel54;
@@ -2193,5 +2199,7 @@
         private System.Windows.Forms.Panel panel63;
         private System.Windows.Forms.Button LoadTimeButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.CheckBox ChatBox2;
+        private System.Windows.Forms.CheckBox ChatBox;
     }
 }
