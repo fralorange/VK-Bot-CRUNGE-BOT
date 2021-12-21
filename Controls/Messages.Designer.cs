@@ -1204,6 +1204,7 @@
             this.ChatBox2.TabIndex = 68;
             this.ChatBox2.Text = "Chat";
             this.ChatBox2.UseVisualStyleBackColor = true;
+            this.ChatBox2.CheckedChanged += new System.EventHandler(this.ChatBox_CheckedChanged);
             // 
             // label10
             // 
@@ -1922,6 +1923,10 @@
             this.Controls.Add(this.border4);
             this.Controls.Add(this.border3);
             this.Controls.Add(this.ButtonsPanel);
+            this.Controls.Add(this.SecondFlooderPanel);
+            this.Controls.Add(this.ThirdFlooderPanel);
+            this.Controls.Add(this.FirstFlooderPanel);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel9);
@@ -1930,10 +1935,6 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.SecondFlooderPanel);
-            this.Controls.Add(this.ThirdFlooderPanel);
-            this.Controls.Add(this.FirstFlooderPanel);
-            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

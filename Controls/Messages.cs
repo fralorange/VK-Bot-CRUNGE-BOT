@@ -184,39 +184,33 @@ namespace VK_Control_Panel_Bot.Controls
                                             {
                                                 if (attach is TextBox && attach.Name.StartsWith("Local"))
                                                 {
-                                                    MessageSent = true;
                                                     if (!string.IsNullOrEmpty(attach.Text))
                                                     {
-                                                        var attachment = await GetAttachment(userid.Text, attach.Text);
-                                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                        if (!MessageSent)
                                                         {
-                                                            RandomId = new Random().Next(),
-                                                            Attachments = attachment,
-                                                            UserId = long.Parse(userid.Text),
-                                                            Message = msg
-                                                        }); ;
+                                                            MessageSent = true;
+                                                            var attachment = await GetAttachment(userid.Text, attach.Text);
+                                                            _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                            {
+                                                                RandomId = new Random().Next(),
+                                                                Attachments = attachment,
+                                                                UserId = long.Parse(userid.Text),
+                                                                Message = msg
+                                                            });
+                                                        }
                                                     }
                                                     else
                                                     {
-                                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                        if (!MessageSent)
                                                         {
-                                                            RandomId = new Random().Next(),
-                                                            UserId = long.Parse(userid.Text),
-                                                            Message = msg
-                                                        });
-                                                    }
-                                                }
-                                                else
-                                                {
-                                                    if (!MessageSent)
-                                                    {
-                                                        MessageSent = true;
-                                                        _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
-                                                        {
-                                                            RandomId = new Random().Next(),
-                                                            UserId = long.Parse(userid.Text),
-                                                            Message = msg
-                                                        });
+                                                            MessageSent = true;
+                                                            _api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+                                                            {
+                                                                RandomId = new Random().Next(),
+                                                                UserId = long.Parse(userid.Text),
+                                                                Message = msg
+                                                            });
+                                                        }
                                                     }
                                                 }
                                             }
@@ -503,13 +497,14 @@ namespace VK_Control_Panel_Bot.Controls
                         while (startflood)
                         {
                             SendMessage_Click(sender, e);
-                            System.Threading.Thread.Sleep((int)(DelayBar1.Value * 1000));
+                            Thread.Sleep((int)(DelayBar1.Value * 1000));
                             if (!startflood)
                                 break;
                         }
                     }
                     catch (CaptchaNeededException ex)
                     {
+                        // make anonym method
                         startflood = false;
                         UserIdTextBox3.Invoke((MethodInvoker)delegate
                         {
