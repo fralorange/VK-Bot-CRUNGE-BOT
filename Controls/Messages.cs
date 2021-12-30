@@ -569,7 +569,7 @@ namespace VK_Control_Panel_Bot.Controls
                 if (worker!.CancellationPending)
                 {
                     e.Cancel = true;
-                    break;
+                    return;
                 }
                 Thread.Sleep(300);
             }

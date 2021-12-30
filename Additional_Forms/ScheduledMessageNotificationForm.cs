@@ -15,17 +15,17 @@ namespace VK_Control_Panel_Bot.Additional_Forms
         private void Exit_Click(object sender, EventArgs e)
         {
             timer1.Interval = 1;
-            action = enmAction.close;
+            status = enumStatus.close;
         }
 
-        public enum enmAction
+        public enum enumStatus
         {
             wait,
             start,
             close
         }
 
-        private enmAction action;
+        private enumStatus status;
 
         private int x, y;
         public void showPopup(Image? image, string receiver)
@@ -55,21 +55,21 @@ namespace VK_Control_Panel_Bot.Additional_Forms
             label2.Text = label2.Text.Replace("Placeholder", receiver);
 
             Show();
-            action = enmAction.start;
+            status = enumStatus.start;
             timer1.Interval = 1;
             timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            switch (action)
+            switch (status)
             {
-                case enmAction.wait:
+                case enumStatus.wait:
                     timer1.Interval = 5000;
-                    action = enmAction.close;
+                    status = enumStatus.close;
                     break;
 
-                case enmAction.start:
+                case enumStatus.start:
                     timer1.Interval = 1;
                     Opacity += 0.1;
                     if (x < Location.X)
@@ -80,12 +80,12 @@ namespace VK_Control_Panel_Bot.Additional_Forms
                     {
                         if (Opacity == 1.0)
                         {
-                            action = enmAction.wait;
+                            status = enumStatus.wait;
                         }
                     }
                     break;
 
-                case enmAction.close:
+                case enumStatus.close:
                     timer1.Interval = 1;
                     Opacity -= 0.1;
 
