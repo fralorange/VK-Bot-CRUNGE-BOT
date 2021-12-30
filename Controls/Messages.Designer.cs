@@ -115,6 +115,11 @@
             this.ChatIdTextBox2 = new System.Windows.Forms.TextBox();
             this.FlooderBack = new System.Windows.Forms.Button();
             this.SecondFlooderPanel = new System.Windows.Forms.Panel();
+            this.ClearButton3 = new System.Windows.Forms.Button();
+            this.LoadFile2 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel67 = new System.Windows.Forms.Panel();
+            this.LocalPathBox3 = new System.Windows.Forms.TextBox();
             this.ChatBox2 = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -178,6 +183,13 @@
             this.panel61 = new System.Windows.Forms.Panel();
             this.UserIdTextBox4 = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel68 = new System.Windows.Forms.Panel();
+            this.panel69 = new System.Windows.Forms.Panel();
+            this.panel70 = new System.Windows.Forms.Panel();
+            this.panel71 = new System.Windows.Forms.Panel();
+            this.delayBar2 = new System.Windows.Forms.NumericUpDown();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -196,6 +208,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayBar2)).BeginInit();
             this.SuspendLayout();
             // 
             // border3
@@ -1029,6 +1042,13 @@
             // 
             // FirstFlooderPanel
             // 
+            this.FirstFlooderPanel.Controls.Add(this.label17);
+            this.FirstFlooderPanel.Controls.Add(this.label19);
+            this.FirstFlooderPanel.Controls.Add(this.panel68);
+            this.FirstFlooderPanel.Controls.Add(this.panel69);
+            this.FirstFlooderPanel.Controls.Add(this.panel70);
+            this.FirstFlooderPanel.Controls.Add(this.panel71);
+            this.FirstFlooderPanel.Controls.Add(this.delayBar2);
             this.FirstFlooderPanel.Controls.Add(this.label5);
             this.FirstFlooderPanel.Controls.Add(this.panel38);
             this.FirstFlooderPanel.Controls.Add(this.panel36);
@@ -1165,6 +1185,11 @@
             // 
             // SecondFlooderPanel
             // 
+            this.SecondFlooderPanel.Controls.Add(this.ClearButton3);
+            this.SecondFlooderPanel.Controls.Add(this.LoadFile2);
+            this.SecondFlooderPanel.Controls.Add(this.label14);
+            this.SecondFlooderPanel.Controls.Add(this.panel67);
+            this.SecondFlooderPanel.Controls.Add(this.LocalPathBox3);
             this.SecondFlooderPanel.Controls.Add(this.ChatBox2);
             this.SecondFlooderPanel.Controls.Add(this.label10);
             this.SecondFlooderPanel.Controls.Add(this.label12);
@@ -1191,6 +1216,69 @@
             this.SecondFlooderPanel.Name = "SecondFlooderPanel";
             this.SecondFlooderPanel.Size = new System.Drawing.Size(786, 532);
             this.SecondFlooderPanel.TabIndex = 22;
+            // 
+            // ClearButton3
+            // 
+            this.ClearButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearButton3.Font = new System.Drawing.Font("Letter Gothic Std", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ClearButton3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ClearButton3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ClearButton3.Location = new System.Drawing.Point(584, 388);
+            this.ClearButton3.Name = "ClearButton3";
+            this.ClearButton3.Size = new System.Drawing.Size(25, 25);
+            this.ClearButton3.TabIndex = 73;
+            this.ClearButton3.Text = "✖";
+            this.ClearButton3.UseVisualStyleBackColor = true;
+            this.ClearButton3.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // LoadFile2
+            // 
+            this.LoadFile2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadFile2.Font = new System.Drawing.Font("Letter Gothic Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LoadFile2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LoadFile2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LoadFile2.Location = new System.Drawing.Point(553, 388);
+            this.LoadFile2.Name = "LoadFile2";
+            this.LoadFile2.Size = new System.Drawing.Size(25, 25);
+            this.LoadFile2.TabIndex = 72;
+            this.LoadFile2.Text = "▽";
+            this.LoadFile2.UseVisualStyleBackColor = true;
+            this.LoadFile2.Click += new System.EventHandler(this.LoadFile_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label14.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label14.Location = new System.Drawing.Point(100, 391);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(131, 24);
+            this.label14.TabIndex = 71;
+            this.label14.Text = "attachment:";
+            // 
+            // panel67
+            // 
+            this.panel67.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel67.Location = new System.Drawing.Point(237, 413);
+            this.panel67.Name = "panel67";
+            this.panel67.Size = new System.Drawing.Size(310, 2);
+            this.panel67.TabIndex = 70;
+            // 
+            // LocalPathBox3
+            // 
+            this.LocalPathBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.LocalPathBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LocalPathBox3.Font = new System.Drawing.Font("Letter Gothic Std", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LocalPathBox3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LocalPathBox3.Location = new System.Drawing.Point(237, 386);
+            this.LocalPathBox3.Name = "LocalPathBox3";
+            this.LocalPathBox3.ReadOnly = true;
+            this.LocalPathBox3.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.LocalPathBox3.Size = new System.Drawing.Size(310, 23);
+            this.LocalPathBox3.TabIndex = 69;
             // 
             // ChatBox2
             // 
@@ -1237,7 +1325,7 @@
             // panel53
             // 
             this.panel53.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel53.Location = new System.Drawing.Point(237, 414);
+            this.panel53.Location = new System.Drawing.Point(237, 374);
             this.panel53.Name = "panel53";
             this.panel53.Size = new System.Drawing.Size(310, 2);
             this.panel53.TabIndex = 64;
@@ -1253,7 +1341,7 @@
             this.MessageTextBoxFlood.Multiline = true;
             this.MessageTextBoxFlood.Name = "MessageTextBoxFlood";
             this.MessageTextBoxFlood.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.MessageTextBoxFlood.Size = new System.Drawing.Size(310, 112);
+            this.MessageTextBoxFlood.Size = new System.Drawing.Size(310, 70);
             this.MessageTextBoxFlood.TabIndex = 63;
             // 
             // label11
@@ -1912,6 +2000,97 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Font = new System.Drawing.Font("Letter Gothic Std", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label17.Location = new System.Drawing.Point(407, 409);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(140, 14);
+            this.label17.TabIndex = 74;
+            this.label17.Text = "(2,5 - recommended)";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label19.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label19.Location = new System.Drawing.Point(161, 382);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(208, 24);
+            this.label19.TabIndex = 73;
+            this.label19.Text = "delay(in seconds):";
+            // 
+            // panel68
+            // 
+            this.panel68.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel68.Location = new System.Drawing.Point(570, 387);
+            this.panel68.Name = "panel68";
+            this.panel68.Size = new System.Drawing.Size(2, 19);
+            this.panel68.TabIndex = 72;
+            // 
+            // panel69
+            // 
+            this.panel69.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel69.Location = new System.Drawing.Point(370, 387);
+            this.panel69.Name = "panel69";
+            this.panel69.Size = new System.Drawing.Size(2, 19);
+            this.panel69.TabIndex = 71;
+            // 
+            // panel70
+            // 
+            this.panel70.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel70.Location = new System.Drawing.Point(370, 385);
+            this.panel70.Name = "panel70";
+            this.panel70.Size = new System.Drawing.Size(202, 2);
+            this.panel70.TabIndex = 70;
+            // 
+            // panel71
+            // 
+            this.panel71.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel71.Location = new System.Drawing.Point(370, 406);
+            this.panel71.Name = "panel71";
+            this.panel71.Size = new System.Drawing.Size(202, 2);
+            this.panel71.TabIndex = 69;
+            // 
+            // delayBar2
+            // 
+            this.delayBar2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.delayBar2.DecimalPlaces = 1;
+            this.delayBar2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.delayBar2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.delayBar2.Location = new System.Drawing.Point(372, 387);
+            this.delayBar2.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.delayBar2.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.delayBar2.Name = "delayBar2";
+            this.delayBar2.Size = new System.Drawing.Size(200, 19);
+            this.delayBar2.TabIndex = 68;
+            this.delayBar2.ThousandsSeparator = true;
+            this.delayBar2.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            65536});
+            // 
             // Messages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1923,8 +2102,6 @@
             this.Controls.Add(this.border4);
             this.Controls.Add(this.border3);
             this.Controls.Add(this.ButtonsPanel);
-            this.Controls.Add(this.SecondFlooderPanel);
-            this.Controls.Add(this.ThirdFlooderPanel);
             this.Controls.Add(this.FirstFlooderPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -1935,6 +2112,8 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.SecondFlooderPanel);
+            this.Controls.Add(this.ThirdFlooderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1968,6 +2147,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delayBar2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2124,5 +2304,17 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.CheckBox ChatBox2;
         private System.Windows.Forms.CheckBox ChatBox;
+        private System.Windows.Forms.Button ClearButton3;
+        private System.Windows.Forms.Button LoadFile2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel67;
+        private System.Windows.Forms.TextBox LocalPathBox3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel68;
+        private System.Windows.Forms.Panel panel69;
+        private System.Windows.Forms.Panel panel70;
+        private System.Windows.Forms.Panel panel71;
+        private System.Windows.Forms.NumericUpDown delayBar2;
     }
 }

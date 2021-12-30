@@ -402,14 +402,16 @@ namespace VK_Control_Panel_Bot.Controls
                 startflood = !startflood;
                 StartButton2.Text = (!startflood) ? "Start" : "Stop";
                 ChatIdTextBox2.ReadOnly = startflood;
+                delayBar2.Enabled = !startflood;
                 await Task.Run(() =>
                 {
                     try
                     {
                         while (startflood)
                         {
-                            _api.Messages.RemoveChatUser((ulong)id, (long)_api.UserId!);
-                            _api.Messages.AddChatUser(id, (long)_api.UserId!);
+                            _api.Messages.RemoveChatUser((ulong)id, _api.Users.Get(Array.Empty<long>()).FirstOrDefault()!.Id);
+                            _api.Messages.AddChatUser(id, _api.Users.Get(Array.Empty<long>()).FirstOrDefault()!.Id);
+                            Thread.Sleep((int)(delayBar2.Value * 1000));
                             if (!startflood)
                                 break;
                         }
@@ -424,6 +426,10 @@ namespace VK_Control_Panel_Bot.Controls
                         StartButton2.Invoke((MethodInvoker)delegate
                        {
                            StartButton2.Text = "Start";
+                       });
+                        delayBar2.Invoke((MethodInvoker)delegate
+                       {
+                           delayBar2.Enabled = !startflood;
                        });
                         MainForm.UpdateOutput("Flood control");
                     }
@@ -489,7 +495,7 @@ namespace VK_Control_Panel_Bot.Controls
                 StartButton4.Text = (!startflood) ? "Start" : "Stop";
                 UserIdTextBox3.ReadOnly = startflood;
                 MessageTextBoxFlood.ReadOnly = startflood;
-                DelayBar1.Enabled = startflood;
+                DelayBar1.Enabled = !startflood;
                 await Task.Run(() =>
                 {
                     try
