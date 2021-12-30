@@ -154,10 +154,10 @@
     <value>3</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>3, 0</value>
   </data>
   <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 2</value>
+    <value>1008, 2</value>
   </data>
   <data name="panel7.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -174,31 +174,31 @@
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="OutputLogin.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="Output.Font" type="System.Drawing.Font, System.Drawing">
     <value>Letter Gothic Std, 11.25pt, style=Bold</value>
   </data>
-  <data name="OutputLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 12</value>
+  <data name="Output.Location" type="System.Drawing.Point, System.Drawing">
+    <value>564, 14</value>
   </data>
-  <data name="OutputLogin.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Output.Size" type="System.Drawing.Size, System.Drawing">
     <value>354, 18</value>
   </data>
-  <data name="OutputLogin.TabIndex" type="System.Int32, mscorlib">
+  <data name="Output.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <data name="OutputLogin.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="Output.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;OutputLogin.Name" xml:space="preserve">
-    <value>OutputLogin</value>
+  <data name="&gt;&gt;Output.Name" xml:space="preserve">
+    <value>Output</value>
   </data>
-  <data name="&gt;&gt;OutputLogin.Type" xml:space="preserve">
+  <data name="&gt;&gt;Output.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;OutputLogin.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Output.Parent" xml:space="preserve">
     <value>UpPanel</value>
   </data>
-  <data name="&gt;&gt;OutputLogin.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Output.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="StripMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

@@ -41,9 +41,9 @@ namespace VK_Control_Panel_Bot
         {
             if (form != null)
             {
-                form.OutputLogin.Invoke((MethodInvoker)delegate
+                form.Output.Invoke((MethodInvoker)delegate
                 {
-                    form.OutputLogin.Text = s;
+                    form.Output.Text = s;
                 });
             }
         }

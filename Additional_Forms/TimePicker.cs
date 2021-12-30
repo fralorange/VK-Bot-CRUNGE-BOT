@@ -12,9 +12,11 @@ namespace VK_Control_Panel_Bot.Additional_Forms
 {
     public partial class TimePicker : Form
     {
-        public TimePicker()
+        public TimePicker(string hours, string minutes)
         {
             InitializeComponent();
+            HoursBox.Text = hours;
+            MinutesBox.Text = minutes;
         }
 
         public string Time { get { return (HoursBox.Text + ":" + MinutesBox.Text); } }

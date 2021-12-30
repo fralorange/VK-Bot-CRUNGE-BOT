@@ -103,6 +103,13 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.FirstFlooderPanel = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel68 = new System.Windows.Forms.Panel();
+            this.panel69 = new System.Windows.Forms.Panel();
+            this.panel70 = new System.Windows.Forms.Panel();
+            this.panel71 = new System.Windows.Forms.Panel();
+            this.delayBar2 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.panel38 = new System.Windows.Forms.Panel();
             this.panel36 = new System.Windows.Forms.Panel();
@@ -183,13 +190,6 @@
             this.panel61 = new System.Windows.Forms.Panel();
             this.UserIdTextBox4 = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panel68 = new System.Windows.Forms.Panel();
-            this.panel69 = new System.Windows.Forms.Panel();
-            this.panel70 = new System.Windows.Forms.Panel();
-            this.panel71 = new System.Windows.Forms.Panel();
-            this.delayBar2 = new System.Windows.Forms.NumericUpDown();
             this.ButtonsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic1)).BeginInit();
@@ -200,6 +200,7 @@
             this.FirstFlooderAttentionPanel.SuspendLayout();
             this.panel28.SuspendLayout();
             this.FirstFlooderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delayBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic2)).BeginInit();
             this.SecondFlooderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DelayBar1)).BeginInit();
@@ -208,7 +209,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayBar2)).BeginInit();
             this.SuspendLayout();
             // 
             // border3
@@ -1064,6 +1064,97 @@
             this.FirstFlooderPanel.Name = "FirstFlooderPanel";
             this.FirstFlooderPanel.Size = new System.Drawing.Size(786, 532);
             this.FirstFlooderPanel.TabIndex = 21;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Font = new System.Drawing.Font("Letter Gothic Std", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label17.Location = new System.Drawing.Point(407, 409);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(140, 14);
+            this.label17.TabIndex = 74;
+            this.label17.Text = "(2,5 - recommended)";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label19.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label19.Location = new System.Drawing.Point(161, 382);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(208, 24);
+            this.label19.TabIndex = 73;
+            this.label19.Text = "delay(in seconds):";
+            // 
+            // panel68
+            // 
+            this.panel68.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel68.Location = new System.Drawing.Point(570, 387);
+            this.panel68.Name = "panel68";
+            this.panel68.Size = new System.Drawing.Size(2, 19);
+            this.panel68.TabIndex = 72;
+            // 
+            // panel69
+            // 
+            this.panel69.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel69.Location = new System.Drawing.Point(370, 387);
+            this.panel69.Name = "panel69";
+            this.panel69.Size = new System.Drawing.Size(2, 19);
+            this.panel69.TabIndex = 71;
+            // 
+            // panel70
+            // 
+            this.panel70.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel70.Location = new System.Drawing.Point(370, 385);
+            this.panel70.Name = "panel70";
+            this.panel70.Size = new System.Drawing.Size(202, 2);
+            this.panel70.TabIndex = 70;
+            // 
+            // panel71
+            // 
+            this.panel71.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel71.Location = new System.Drawing.Point(370, 406);
+            this.panel71.Name = "panel71";
+            this.panel71.Size = new System.Drawing.Size(202, 2);
+            this.panel71.TabIndex = 69;
+            // 
+            // delayBar2
+            // 
+            this.delayBar2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.delayBar2.DecimalPlaces = 1;
+            this.delayBar2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.delayBar2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.delayBar2.Location = new System.Drawing.Point(372, 387);
+            this.delayBar2.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.delayBar2.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.delayBar2.Name = "delayBar2";
+            this.delayBar2.Size = new System.Drawing.Size(200, 19);
+            this.delayBar2.TabIndex = 68;
+            this.delayBar2.ThousandsSeparator = true;
+            this.delayBar2.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            65536});
             // 
             // label5
             // 
@@ -2000,97 +2091,6 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1_RunWorkerCompleted);
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.Font = new System.Drawing.Font("Letter Gothic Std", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(407, 409);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(140, 14);
-            this.label17.TabIndex = 74;
-            this.label17.Text = "(2,5 - recommended)";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label19.Font = new System.Drawing.Font("Letter Gothic Std", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label19.Location = new System.Drawing.Point(161, 382);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(208, 24);
-            this.label19.TabIndex = 73;
-            this.label19.Text = "delay(in seconds):";
-            // 
-            // panel68
-            // 
-            this.panel68.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel68.Location = new System.Drawing.Point(570, 387);
-            this.panel68.Name = "panel68";
-            this.panel68.Size = new System.Drawing.Size(2, 19);
-            this.panel68.TabIndex = 72;
-            // 
-            // panel69
-            // 
-            this.panel69.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel69.Location = new System.Drawing.Point(370, 387);
-            this.panel69.Name = "panel69";
-            this.panel69.Size = new System.Drawing.Size(2, 19);
-            this.panel69.TabIndex = 71;
-            // 
-            // panel70
-            // 
-            this.panel70.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel70.Location = new System.Drawing.Point(370, 385);
-            this.panel70.Name = "panel70";
-            this.panel70.Size = new System.Drawing.Size(202, 2);
-            this.panel70.TabIndex = 70;
-            // 
-            // panel71
-            // 
-            this.panel71.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel71.Location = new System.Drawing.Point(370, 406);
-            this.panel71.Name = "panel71";
-            this.panel71.Size = new System.Drawing.Size(202, 2);
-            this.panel71.TabIndex = 69;
-            // 
-            // delayBar2
-            // 
-            this.delayBar2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.delayBar2.DecimalPlaces = 1;
-            this.delayBar2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.delayBar2.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.delayBar2.Location = new System.Drawing.Point(372, 387);
-            this.delayBar2.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.delayBar2.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.delayBar2.Name = "delayBar2";
-            this.delayBar2.Size = new System.Drawing.Size(200, 19);
-            this.delayBar2.TabIndex = 68;
-            this.delayBar2.ThousandsSeparator = true;
-            this.delayBar2.Value = new decimal(new int[] {
-            25,
-            0,
-            0,
-            65536});
-            // 
             // Messages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2102,6 +2102,9 @@
             this.Controls.Add(this.border4);
             this.Controls.Add(this.border3);
             this.Controls.Add(this.ButtonsPanel);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.SecondFlooderPanel);
+            this.Controls.Add(this.ThirdFlooderPanel);
             this.Controls.Add(this.FirstFlooderPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -2111,9 +2114,6 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.SecondFlooderPanel);
-            this.Controls.Add(this.ThirdFlooderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -2136,6 +2136,7 @@
             this.panel28.ResumeLayout(false);
             this.FirstFlooderPanel.ResumeLayout(false);
             this.FirstFlooderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delayBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPic2)).EndInit();
             this.SecondFlooderPanel.ResumeLayout(false);
             this.SecondFlooderPanel.PerformLayout();
@@ -2147,7 +2148,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delayBar2)).EndInit();
             this.ResumeLayout(false);
 
         }

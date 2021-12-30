@@ -34,7 +34,7 @@
             this.Exit = new System.Windows.Forms.Button();
             this.UpPanel = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.OutputLogin = new System.Windows.Forms.TextBox();
+            this.Output = new System.Windows.Forms.TextBox();
             this.StripMenu = new System.Windows.Forms.MenuStrip();
             this.ControlsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.MessagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,7 +92,7 @@
             // 
             this.UpPanel.BackColor = System.Drawing.SystemColors.Menu;
             this.UpPanel.Controls.Add(this.panel7);
-            this.UpPanel.Controls.Add(this.OutputLogin);
+            this.UpPanel.Controls.Add(this.Output);
             this.UpPanel.Controls.Add(this.Iconified);
             this.UpPanel.Controls.Add(this.Exit);
             this.UpPanel.Controls.Add(this.StripMenu);
@@ -108,13 +108,13 @@
             resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
-            // OutputLogin
+            // Output
             // 
-            this.OutputLogin.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.OutputLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.OutputLogin, "OutputLogin");
-            this.OutputLogin.Name = "OutputLogin";
-            this.OutputLogin.ReadOnly = true;
+            this.Output.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.Output.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.Output, "Output");
+            this.Output.Name = "Output";
+            this.Output.ReadOnly = true;
             // 
             // StripMenu
             // 
@@ -316,7 +316,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox PassBox;
         private System.Windows.Forms.TextBox LoginBox;
-        private System.Windows.Forms.TextBox OutputLogin;
+        private System.Windows.Forms.TextBox Output;
         private System.Windows.Forms.Button EyeButton;
         public System.Windows.Forms.ToolStripMenuItem ControlsMenu;
         public System.Windows.Forms.MenuStrip StripMenu;

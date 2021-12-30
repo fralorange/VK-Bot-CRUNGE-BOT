@@ -91,13 +91,15 @@ namespace VK_Control_Panel_Bot.Controls
 
         private void AnyButton_Clicked(object sender, EventArgs e)
         {
-            var button = (System.Windows.Forms.Button)sender;
+            var button = (Button)sender;
             string numbersOnlyButton = Regex.Replace(button.Name, @"[^\d]", string.Empty);
             panels.ForEach(delegate (Panel p)
             {
                 string numbersOnlyPanel = Regex.Replace(p.Name, @"[^\d]", string.Empty);
                 if (numbersOnlyButton.Equals(numbersOnlyPanel))
                 {
+                    if (button.Text == "Scheduled message")
+                        TimePickerBox.Text = DateTime.Now.ToString("HH:mm");
                     p.BringToFront();
                     button.Focus();
                 }
@@ -592,12 +594,15 @@ namespace VK_Control_Panel_Bot.Controls
             else
             {
                 MainForm.UpdateOutput("Message sent");
+                ScheduledMessageNotificationForm notificationForm = new();
+                var user = _api.Users.Get(new long[] { long.Parse(UserIdTextBox4.Text) }).FirstOrDefault();
+                notificationForm.showPopup(AvatarPicBox.Image, $"{user!.FirstName} {user.LastName}");
             }
         }
 
         private void LoadTime_Click(object sender, EventArgs e)
         {
-            TimePicker timePickerForm = new();
+            TimePicker timePickerForm = new(TimePickerBox.Text.Split(":")[0],TimePickerBox.Text.Split(":")[1]);
             timePickerForm.StartPosition = FormStartPosition.CenterParent;
             timePickerForm.ShowDialog(this);
             TimePickerBox.Text = (timePickerForm.DialogResult == DialogResult.Cancel) ? TimePickerBox.Text : timePickerForm.Time;
