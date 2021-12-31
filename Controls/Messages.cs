@@ -595,8 +595,16 @@ namespace VK_Control_Panel_Bot.Controls
             {
                 MainForm.UpdateOutput("Message sent");
                 ScheduledMessageNotificationForm notificationForm = new();
-                var user = _api.Users.Get(new long[] { long.Parse(UserIdTextBox4.Text) }).FirstOrDefault();
-                notificationForm.showPopup(AvatarPicBox.Image, $"{user!.FirstName} {user.LastName}");
+                if (!ChatBox1.Checked)
+                {
+                    var user = _api.Users.Get(new long[] { long.Parse(UserIdTextBox4.Text) }).FirstOrDefault();
+                    notificationForm.showPopup(AvatarPicBox.Image, $"{user!.FirstName} {user.LastName}");
+                }
+                else
+                {
+                    var chat = _api.Messages.GetChat(new long[] { long.Parse(UserIdTextBox4.Text) }).FirstOrDefault();
+                    notificationForm.showPopup(AvatarPicBox.Image, $"{chat!.Title}");
+                }
             }
         }
 
