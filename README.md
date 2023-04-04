@@ -1,4 +1,4 @@
-﻿# VK_Control_Panel_Bot
+﻿# VK_Control_Panel_Bot [Abandoded]
 Control panel bot which gives user full control on his account and vk conversations, some troll functions and information about other people without violating TOS and more ___in future___.
 ## Planned features
 - Light/dark mode toggle
